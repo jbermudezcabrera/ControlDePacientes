@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/ACForm.ui" afterPath="$PROJECT_DIR$/resources/uis/ACForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/APPForm.ui" afterPath="$PROJECT_DIR$/resources/uis/APPForm.ui" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/PatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/PatientForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/TACForm.ui" afterPath="$PROJECT_DIR$/resources/uis/TACForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/ACForm.py" afterPath="$PROJECT_DIR$/forms/ACForm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/APPForm.py" afterPath="$PROJECT_DIR$/forms/APPForm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/PatientForm.py" afterPath="$PROJECT_DIR$/forms/PatientForm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/TACForm.py" afterPath="$PROJECT_DIR$/forms/TACForm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mario.iws" />
@@ -22,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mario$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1416335777838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1416336131398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416232809295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -40,10 +34,8 @@
       <file leaf-file-name="PatientForm.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forms/PatientForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.6019536" vertical-offset="0" max-vertical-offset="819">
-              <folding>
-                <element signature="e#70#84#0" expanded="true" />
-              </folding>
+            <state line="8" column="33" selection-start="149" selection-end="149" vertical-scroll-proportion="0.2509225" vertical-offset="0" max-vertical-offset="799">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -480,7 +472,11 @@
       <created>1416331109025</created>
       <updated>1416331109025</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="all main buttons reacting correctly.">
+      <created>1416335852021</created>
+      <updated>1416335852021</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -517,7 +513,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32781065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -541,7 +537,8 @@
     <MESSAGE value="creadas las clases para todos los formularios." />
     <MESSAGE value="forms package created." />
     <MESSAGE value="menu buttons reacting correctly." />
-    <option name="LAST_COMMIT_MESSAGE" value="menu buttons reacting correctly." />
+    <MESSAGE value="all main buttons reacting correctly." />
+    <option name="LAST_COMMIT_MESSAGE" value="all main buttons reacting correctly." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -645,10 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.6019536" vertical-offset="0" max-vertical-offset="819">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
+        <state line="8" column="33" selection-start="149" selection-end="149" vertical-scroll-proportion="0.2509225" vertical-offset="0" max-vertical-offset="799">
+          <folding />
         </state>
       </provider>
     </entry>
