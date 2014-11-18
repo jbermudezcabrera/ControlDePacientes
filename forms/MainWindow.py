@@ -3,18 +3,16 @@
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 import os.path
-import sys
 
 from PyQt5.uic import loadUi
-
-import PyQt5.QtCore as core
-import PyQt5.QtWidgets as gui
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QMainWindow
 
 from forms.PatientForm import PatientForm
 from forms.SearchPatientForm import SearchPatientForm
 
 
-class MainWindow(gui.QMainWindow):
+class MainWindow(QMainWindow):
     def __init__(self, *args):
         super(MainWindow, self).__init__(*args)
 
@@ -25,16 +23,10 @@ class MainWindow(gui.QMainWindow):
         self.addPatientAction.triggered.connect(self.on_add_patient)
         self.searchAction.triggered.connect(self.on_search_patient)
 
-    @core.pyqtSlot()
+    @pyqtSlot()
     def on_add_patient(self):
         self.setCentralWidget(PatientForm())
 
-    @core.pyqtSlot()
+    @pyqtSlot()
     def on_search_patient(self):
         self.setCentralWidget(SearchPatientForm())
-
-
-app = gui.QApplication(sys.argv)
-widget = MainWindow()
-widget.show()
-sys.exit(app.exec_())
