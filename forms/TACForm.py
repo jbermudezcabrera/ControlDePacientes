@@ -14,4 +14,4 @@ class TACForm(QWidget):
     def __init__(self, *args):
         super(TACForm, self).__init__(*args)
 
-        loadUi(os.path.join('../resources', 'uis', 'TACForm.ui'), self)
+        loadUi(os.path.join('resources', 'uis', 'TACForm.ui'), self)

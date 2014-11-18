@@ -14,4 +14,4 @@ class APPForm(QWidget):
     def __init__(self, *args):
         super(APPForm, self).__init__(*args)
 
-        loadUi(os.path.join('../resources', 'uis', 'APPForm.ui'), self)
+        loadUi(os.path.join('resources', 'uis', 'APPForm.ui'), self)

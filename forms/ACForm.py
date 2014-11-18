@@ -14,4 +14,4 @@ class ACForm(QWidget):
     def __init__(self, *args):
         super(ACForm, self).__init__(*args)
 
-        loadUi(os.path.join('../resources', 'uis', 'ACForm.ui'), self)
+        loadUi(os.path.join('resources', 'uis', 'ACForm.ui'), self)

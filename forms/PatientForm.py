@@ -14,4 +14,4 @@ class PatientForm(QWidget):
     def __init__(self, *args):
         super(PatientForm, self).__init__(*args)
 
-        loadUi(os.path.join('../resources', 'uis', 'SearchPatientForm.ui'), self)
+        loadUi(os.path.join('resources', 'uis', 'PatientForm.ui'), self)

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/forms/__init__.py" />
+    <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/ACForm.py" afterPath="$PROJECT_DIR$/forms/ACForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/APPForm.py" afterPath="$PROJECT_DIR$/forms/APPForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/MainWindow.py" afterPath="$PROJECT_DIR$/forms/MainWindow.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/PatientForm.py" afterPath="$PROJECT_DIR$/forms/PatientForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/SearchPatientForm.py" afterPath="$PROJECT_DIR$/forms/SearchPatientForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forms/TACForm.py" afterPath="$PROJECT_DIR$/forms/TACForm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\ACForm.py" afterPath="$PROJECT_DIR$/forms/ACForm.py" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\APPForm.py" afterPath="$PROJECT_DIR$/forms/APPForm.py" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\MainWindow.py" afterPath="$PROJECT_DIR$/forms/MainWindow.py" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\PatientForm.py" afterPath="$PROJECT_DIR$/forms/PatientForm.py" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\SearchPatientForm.py" afterPath="$PROJECT_DIR$/forms/SearchPatientForm.py" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\TACForm.py" afterPath="$PROJECT_DIR$/forms/TACForm.py" />
     </list>
     <ignored path="Mario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +20,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mario$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1416243918911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1416330995733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416232809295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -35,7 +34,17 @@
     <favorites_list name="Mario" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="MainWindow.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forms/MainWindow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.12423874" vertical-offset="0" max-vertical-offset="821">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -63,6 +72,12 @@
         <option value="$PROJECT_DIR$/APPForm.py" />
         <option value="$PROJECT_DIR$/SearchPatientForm.py" />
         <option value="$PROJECT_DIR$/TACForm.py" />
+        <option value="$PROJECT_DIR$/forms/SearchPatientForm.py" />
+        <option value="$PROJECT_DIR$/forms/TACForm.py" />
+        <option value="$PROJECT_DIR$/forms/ACForm.py" />
+        <option value="$PROJECT_DIR$/forms/PatientForm.py" />
+        <option value="$PROJECT_DIR$/forms/APPForm.py" />
+        <option value="$PROJECT_DIR$/forms/MainWindow.py" />
       </list>
     </option>
   </component>
@@ -117,7 +132,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -136,8 +150,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,13 +174,13 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="110" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="111" />
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="96" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -425,7 +454,11 @@
       <created>1416323695714</created>
       <updated>1416323695714</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="forms package created.">
+      <created>1416323754839</created>
+      <updated>1416323754839</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -450,24 +483,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33017752" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24149108" sideWeight="0.67218935" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19773096" sideWeight="0.6009445" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33017752" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -484,12 +517,13 @@
     <MESSAGE value="hgh" />
     <MESSAGE value="agregado el campo de fecha al formulario de TAC." />
     <MESSAGE value="creadas las clases para todos los formularios." />
-    <option name="LAST_COMMIT_MESSAGE" value="creadas las clases para todos los formularios." />
+    <MESSAGE value="forms package created." />
+    <option name="LAST_COMMIT_MESSAGE" value="forms package created." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -543,27 +577,23 @@
         <state line="104" column="0" selection-start="2853" selection-end="2853" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="10659" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms/ACForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/SearchPatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="332" selection-end="332" vertical-scroll-proportion="0.33211234" vertical-offset="0" max-vertical-offset="819">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
+        <state line="16" column="29" selection-start="338" selection-end="338" vertical-scroll-proportion="0.34438306" vertical-offset="0" max-vertical-offset="543">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms/MainWindow.py">
+    <entry file="file://$PROJECT_DIR$/forms/TACForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="819">
-          <folding>
-            <element signature="e#100#114#0" expanded="true" />
-          </folding>
+        <state line="16" column="29" selection-start="318" selection-end="318" vertical-scroll-proportion="0.34438306" vertical-offset="0" max-vertical-offset="543">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="70" selection-end="369" vertical-scroll-proportion="0.083028086" vertical-offset="0" max-vertical-offset="819">
+        <state line="16" column="29" selection-start="326" selection-end="326" vertical-scroll-proportion="0.50092083" vertical-offset="0" max-vertical-offset="543">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
           </folding>
@@ -572,28 +602,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forms/APPForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="52" selection-start="341" selection-end="341" vertical-scroll-proportion="0.33211234" vertical-offset="0" max-vertical-offset="391">
+        <state line="16" column="29" selection-start="318" selection-end="318" vertical-scroll-proportion="0.50092083" vertical-offset="0" max-vertical-offset="543">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms/TACForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/ACForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="27" selection-start="316" selection-end="316" vertical-scroll-proportion="0.33211234" vertical-offset="0" max-vertical-offset="391">
+        <state line="16" column="29" selection-start="316" selection-end="316" vertical-scroll-proportion="0.50092083" vertical-offset="0" max-vertical-offset="543">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forms/SearchPatientForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.24908425" vertical-offset="0" max-vertical-offset="819">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
+        <state line="6" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.12423874" vertical-offset="0" max-vertical-offset="821">
+          <folding />
         </state>
       </provider>
     </entry>
