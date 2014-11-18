@@ -9,9 +9,9 @@ from PyQt5.uic import loadUi
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget
 
-from forms.APPForm import APPForm
-from forms.ACForm import ACForm
-from forms.TACForm import TACForm
+from forms.APPDialog import APPDialog
+from forms.ACDialog import ACDialog
+from forms.TACDialog import TACDialog
 
 
 class PatientForm(QWidget):
@@ -24,9 +24,9 @@ class PatientForm(QWidget):
         self.acBtn.clicked.connect(self.on_ac_btn_clicked)
         self.tacBtn.clicked.connect(self.on_tac_btn_clicked)
 
-        self.__app_dialog = APPForm()
-        self.__ac_dialog = ACForm()
-        self.__tac_dialog = TACForm()
+        self.__app_dialog = APPDialog()
+        self.__ac_dialog = ACDialog()
+        self.__tac_dialog = TACDialog()
 
     @pyqtSlot()
     def on_app_btn_clicked(self):
