@@ -10,8 +10,8 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget
 
 
-class PatientForm(QWidget):
+class ACForm(QWidget):
     def __init__(self, *args):
-        super(PatientForm, self).__init__(*args)
+        super(ACForm, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'SearchPatientForm.ui'), self)
+        loadUi(os.path.join('../resources', 'uis', 'ACForm.ui'), self)

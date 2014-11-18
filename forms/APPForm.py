@@ -10,8 +10,8 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget
 
 
-class ACForm(QWidget):
+class APPForm(QWidget):
     def __init__(self, *args):
-        super(ACForm, self).__init__(*args)
+        super(APPForm, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'ACForm.ui'), self)
+        loadUi(os.path.join('../resources', 'uis', 'APPForm.ui'), self)

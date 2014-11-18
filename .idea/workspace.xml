@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ACForm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/APPForm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SearchPatientForm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TACForm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MainWindow.py" afterPath="$PROJECT_DIR$/MainWindow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PatientForm.py" afterPath="$PROJECT_DIR$/PatientForm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/forms/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\ACForm.py" afterPath="$PROJECT_DIR$/forms/ACForm.py" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\APPForm.py" afterPath="$PROJECT_DIR$/forms/APPForm.py" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\MainWindow.py" afterPath="$PROJECT_DIR$/forms/MainWindow.py" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\PatientForm.py" afterPath="$PROJECT_DIR$/forms/PatientForm.py" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\SearchPatientForm.py" afterPath="$PROJECT_DIR$/forms/SearchPatientForm.py" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\TACForm.py" afterPath="$PROJECT_DIR$/forms/TACForm.py" />
     </list>
     <ignored path="Mario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -179,6 +180,7 @@
       <recent name="D:\Proyectos\PyCharm Projects\Mario" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Proyectos\PyCharm Projects\Mario\forms" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\Resources\UIs" />
     </key>
   </component>
@@ -215,7 +217,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Mario" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainWindow.py" />
+      <option name="SCRIPT_NAME" value="D:\Proyectos\PyCharm Projects\Mario\forms\MainWindow.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -419,7 +421,11 @@
       <created>1416322779481</created>
       <updated>1416322779481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="creadas las clases para todos los formularios.">
+      <created>1416323695714</created>
+      <updated>1416323695714</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -477,7 +483,8 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="hgh" />
     <MESSAGE value="agregado el campo de fecha al formulario de TAC." />
-    <option name="LAST_COMMIT_MESSAGE" value="agregado el campo de fecha al formulario de TAC." />
+    <MESSAGE value="creadas las clases para todos los formularios." />
+    <option name="LAST_COMMIT_MESSAGE" value="creadas las clases para todos los formularios." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -486,17 +493,17 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MainWindow.py">
+    <entry file="file://$PROJECT_DIR$/forms/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="646" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PatientForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="35" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="408" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.py">
+    <entry file="file://$PROJECT_DIR$/forms/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="8" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612" />
       </provider>
@@ -536,7 +543,7 @@
         <state line="104" column="0" selection-start="2853" selection-end="2853" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="10659" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ACForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/ACForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="45" selection-start="332" selection-end="332" vertical-scroll-proportion="0.33211234" vertical-offset="0" max-vertical-offset="819">
           <folding>
@@ -545,16 +552,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.py">
+    <entry file="file://$PROJECT_DIR$/forms/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.2905983" vertical-offset="0" max-vertical-offset="819">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#100#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PatientForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="70" selection-end="369" vertical-scroll-proportion="0.083028086" vertical-offset="0" max-vertical-offset="819">
           <folding>
@@ -563,7 +570,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/APPForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/APPForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="52" selection-start="341" selection-end="341" vertical-scroll-proportion="0.33211234" vertical-offset="0" max-vertical-offset="391">
           <folding>
@@ -572,7 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TACForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/TACForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="27" selection-start="316" selection-end="316" vertical-scroll-proportion="0.33211234" vertical-offset="0" max-vertical-offset="391">
           <folding>
@@ -581,7 +588,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SearchPatientForm.py">
+    <entry file="file://$PROJECT_DIR$/forms/SearchPatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="18" selection-start="206" selection-end="206" vertical-scroll-proportion="0.24908425" vertical-offset="0" max-vertical-offset="819">
           <folding>
