@@ -17,8 +17,8 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__(*args)
 
         loadUi(os.path.join('resources', 'uis', 'MainWindow.ui'), self)
-        #compileUi(os.path.join('resources', 'uis', 'MainWindow.ui'),
-        # open('test.py', 'w'))
+        #compileUi(os.path.join('resources', 'uis', 'ACDialog.ui'),
+        #open('test.py', 'w'))
 
         self.addPatientAction.triggered.connect(self.on_add_patient)
         self.searchAction.triggered.connect(self.on_search_patient)
