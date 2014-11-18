@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+__author__ = 'Juan Manuel Bermúdez Cabrera'
+
 import os.path
 import sys
 
@@ -10,7 +12,6 @@ import PyQt5.QtWidgets as gui
 
 from PatientForm import PatientForm
 
-__author__ = 'Juan Manuel Bermúdez Cabrera'
 
 class MainWindow(gui.QMainWindow):
     def __init__(self, *args):
