@@ -8,6 +8,8 @@ if __name__ == '__main__':
 
     from PyQt5.QtWidgets import QApplication
 
+    from gui.forms.MainWindow import MainWindow
+
     app = QApplication(sys.argv)
     widget = MainWindow()
     widget.show()
