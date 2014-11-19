@@ -4,7 +4,7 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 import sqlite3 as sql
 
-con = sql.connect("Pacientes.sqlite")
+con = sql.connect("resources/Pacientes.sqlite")
 
 con.executescript("""
 CREATE TABLE APPs(
