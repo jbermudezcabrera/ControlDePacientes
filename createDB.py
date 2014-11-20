@@ -9,7 +9,7 @@ con = sql.connect("resources/Pacientes.sqlite")
 con.executescript("""
 CREATE TABLE APPs(
     ID              INTEGER         NOT NULL,
-    ID_PERSONA      INTEGER         NOT NULL,
+    ID_PACIENTE      INTEGER         NOT NULL,
     HTA             BIT             NOT NULL,
     DM              SMALLINT        NOT NULL,
     CI              BIT             NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE APPs(
     otro            VARCHAR(200),
     IDiagnostico    VARCHAR(200),
     PRIMARY KEY (ID),
-	FOREIGN KEY (ID_PERSONA) REFERENCES Personas(ID)
+	FOREIGN KEY (ID_PACIENTE) REFERENCES Pacientes(ID)
 )
 ;
 
@@ -48,7 +48,7 @@ CREATE TABLE Arterias(
 --
 
 CREATE TABLE Complementarios(
-    ID_PERSONA       INTEGER      NOT NULL,
+    ID_PACIENTE       INTEGER      NOT NULL,
     ID               INTEGER      NOT NULL,
     Hb               FLOAT(10)    DEFAULT 0 NOT NULL,
     glicemia         FLOAT(10)    DEFAULT 0 NOT NULL,
@@ -57,17 +57,17 @@ CREATE TABLE Complementarios(
     trigliceridos    FLOAT(10)    DEFAULT 0 NOT NULL,
     acido_urico      FLOAT(10)    DEFAULT 0 NOT NULL,
     PRIMARY KEY (ID),
-	FOREIGN KEY (ID_PERSONA) REFERENCES Personas(ID)
+	FOREIGN KEY (ID_PACIENTE) REFERENCES Pacientes(ID)
 )
 ;
 
 
 
 --
--- TABLE: Personas
+-- TABLE: Pacientes
 --
 
-CREATE TABLE Personas(
+CREATE TABLE Pacientes(
     ID                   INTEGER         NOT NULL,
     ID_PROVINCIA         INTEGER         NOT NULL,
     ID_APP               INTEGER,
@@ -102,11 +102,11 @@ CREATE TABLE Provincias(
 
 CREATE TABLE TACs(
     ID            INTEGER     NOT NULL,
-    ID_PERSONA    INTEGER     NOT NULL,
+    ID_PACIENTE    INTEGER     NOT NULL,
     angio_ct      CHAR(10)    DEFAULT "" NOT NULL,
     fecha         DATE        NOT NULL,
     PRIMARY KEY (ID),
-	FOREIGN KEY (ID_PERSONA) REFERENCES Personas(ID)
+	FOREIGN KEY (ID_PACIENTE) REFERENCES Pacientes(ID)
 )
 ;
 """)

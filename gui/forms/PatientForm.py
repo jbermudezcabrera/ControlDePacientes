@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from gui.forms import APPDialog, TACDialog, ACDialog
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
@@ -9,6 +8,10 @@ from PyQt5.uic import loadUi
 
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget
+
+from gui.forms.APPDialog import APPDialog
+from gui.forms.TACDialog import TACDialog
+from gui.forms.ACDialog import ACDialog
 
 
 class PatientForm(QWidget):

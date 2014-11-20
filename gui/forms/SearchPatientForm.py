@@ -17,3 +17,8 @@ class SearchPatientForm(QWidget):
         loadUi(os.path.join('resources', 'uis', 'SearchPatientForm.ui'), self)
 
         self.controller = controller
+
+        self.searchBtn.clicked.connect(self.on_search_clicked)
+
+    def on_search_clicked(self):
+        print(self.controller.find_patients(self.queryInput.text().strip()))

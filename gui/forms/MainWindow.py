@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from gui.forms import PatientForm, SearchPatientForm
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
@@ -10,6 +9,8 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow
 
 from gui.Controller import Controller
+from gui.forms.PatientForm import PatientForm
+from gui.forms.SearchPatientForm import SearchPatientForm
 
 class MainWindow(QMainWindow):
     def __init__(self, *args):
