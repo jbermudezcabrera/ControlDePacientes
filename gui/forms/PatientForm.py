@@ -33,8 +33,8 @@ class PatientForm(QWidget):
         self.__init_provinces()
 
     def __init_provinces(self):
-        for ID, name in self.controller.provinces.items():
-            self.provinceCombo.addItem(name, ID)
+        for p in self.controller.provinces:
+            self.provinceCombo.addItem(p.nombre, p.id)
 
     @pyqtSlot()
     def on_app_btn_clicked(self):

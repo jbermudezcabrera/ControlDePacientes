@@ -5,35 +5,24 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 import os.path
 import sqlite3 as sql
 
+import pony.orm as pony
 
-def __connect():
-    return sql.connect(os.path.join('resources', 'Pacientes.sqlite'))
+from data.model import *
 
-
+@pony.db_session
 def provinces():
-    query = 'SELECT ID, nombre FROM Provincias ORDER BY nombre'
+    return Provincia.select()[:]
 
-    con = __connect()
-    id_to_name = dict(con.execute(query))
-    con.close()
-
-    return id_to_name
-
-
+@pony.db_session
 def find_patients(query):
-    con = __connect()
-
     if len(query) == 0:
-        sql_query = 'SELECT * FROM Pacientes'
-        result = dict(con.execute(sql_query))
-    elif query.isalpha():
-        sql_query = 'SELECT * FROM Pacientes WHERE nombre LIKE ?'
-        result = dict(con.execute(sql_query, ('%' + query + '%', )))
-    elif query.isdigit():
-        sql_query = 'SELECT * FROM Pacientes WHERE CI LIKE ?'
-        result = dict(con.execute(sql_query, ('%' + query + '%', )))
-    else:
-        result = {}
+        return Paciente.select()[:]
 
-    con.close()
-    return result
+    if query.isalpha():
+        lquery = query.lower()
+        return pony.select(p for p in Paciente if lquery in p.nombre.lower())[:]
+
+    if query.isdigit():
+        return pony.select(p for p in Paciente if query in p.ci)[:]
+
+    return []
