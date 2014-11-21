@@ -2,7 +2,7 @@
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
-from core import DAO
+from data import DAO
 
 class Controller():
 
