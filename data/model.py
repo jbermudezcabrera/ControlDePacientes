@@ -12,7 +12,7 @@ db = pony.Database("sqlite", db_path, create_db=True)
 
 class Provincia(db.Entity):
     nombre = pony.Required(str)
-    paciente = pony.Optional('Paciente')
+    paciente = pony.Set('Paciente')
 
 class APP(db.Entity):
     hta = pony.Required(bool)

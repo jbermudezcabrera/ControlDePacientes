@@ -7,7 +7,7 @@ import os.path
 from PyQt5.uic import loadUi
 
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QWidget, QMessageBox
 
 from gui.forms.APPDialog import APPDialog
 from gui.forms.TACDialog import TACDialog
@@ -25,6 +25,8 @@ class PatientForm(QWidget):
         self.appBtn.clicked.connect(self.on_app_btn_clicked)
         self.acBtn.clicked.connect(self.on_ac_btn_clicked)
         self.tacBtn.clicked.connect(self.on_tac_btn_clicked)
+
+        self.saveBtn.clicked.connect(self.on_save_clicked)
 
         self.__app_dialog = APPDialog(self.controller)
         self.__ac_dialog = ACDialog(self.controller)
@@ -47,3 +49,16 @@ class PatientForm(QWidget):
     @pyqtSlot()
     def on_tac_btn_clicked(self):
         self.__tac_dialog.show()
+
+    @pyqtSlot()
+    def on_save_clicked(self):
+        ci = self.ciInput.text().strip()
+        name = self.nameInput.text().strip()
+        age = self.ageInput.value()
+        selected_prov_id = self.provinceCombo.currentData()
+
+        self.controller.add_patient(ci, name, age, selected_prov_id)
+
+        QMessageBox.information(self, 'Información',
+                                'Paciente registrado satisfactoriamente')
+        self.close()

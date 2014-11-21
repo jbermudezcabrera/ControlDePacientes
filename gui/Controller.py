@@ -12,3 +12,6 @@ class Controller():
 
     def find_patients(self, search_text):
         return DAO.find_patients(search_text)
+
+    def add_patient(self, ci, name, age, province_id):
+        DAO.save_patient(ci, name, age, province_id)

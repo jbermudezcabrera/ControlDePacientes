@@ -26,3 +26,7 @@ def find_patients(query):
         return pony.select(p for p in Paciente if query in p.ci)[:]
 
     return []
+
+@pony.db_session
+def save_patient(ci, name, age, province_id):
+    Paciente(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
