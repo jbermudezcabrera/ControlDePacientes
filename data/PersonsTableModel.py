@@ -2,7 +2,6 @@
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
-from PyQt5 import Qt
 from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex
 
 
@@ -26,4 +25,6 @@ class PersonsTableModel(QAbstractTableModel):
         return None
 
     def headerData(self, section, orientation, role=Qt.DisplayRole):
-        return self.__column_to_name[section].capitalize()
+        if role == Qt.DisplayRole:
+            return self.__column_to_name[section].capitalize()
+        return None
