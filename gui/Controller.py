@@ -10,8 +10,14 @@ class Controller():
     def provinces(self):
         return DAO.provinces()
 
-    def find_patients(self, search_text):
+    @staticmethod
+    def find_patients(search_text):
         return DAO.find_patients(search_text)
 
-    def add_patient(self, ci, name, age, province_id):
+    @staticmethod
+    def add_patient(ci, name, age, province_id):
         DAO.save_patient(ci, name, age, province_id)
+
+    @staticmethod
+    def patient(patient_id):
+        return DAO.get_patient(patient_id)

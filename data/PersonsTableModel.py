@@ -22,9 +22,16 @@ class PersonsTableModel(QAbstractTableModel):
         if role == Qt.DisplayRole and model_index.isValid():
             return getattr(self.patients[model_index.row()],
                            self.__column_to_name[model_index.column()])
+
+        if role == Qt.UserRole:
+            return self.patients[model_index.row()].id
+
         return None
 
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         if role == Qt.DisplayRole:
-            return self.__column_to_name[section].capitalize()
+            name = self.__column_to_name[section]
+
+            return name.upper() if section == 1 else name.capitalize()
+
         return None

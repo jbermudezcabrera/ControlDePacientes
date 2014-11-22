@@ -79,11 +79,17 @@
    </item>
    <item>
     <widget class="QTableView" name="patientsTable">
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked</set>
+     </property>
      <property name="selectionMode">
       <enum>QAbstractItemView::SingleSelection</enum>
      </property>
      <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
      </property>
      <attribute name="horizontalHeaderVisible">
       <bool>true</bool>
@@ -138,6 +144,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="modifyBtn">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Modificar</string>
         </property>

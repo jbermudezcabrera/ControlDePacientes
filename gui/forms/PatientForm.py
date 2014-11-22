@@ -45,13 +45,13 @@ class PatientForm(QWidget):
 
         # fill input fields with patient data
         self.ciInput.setText(patient.ci)
-        self.nameInput.setText(patient.name)
-        self.ageInput.setValue(patient.age)
+        self.nameInput.setText(patient.nombre)
+        self.ageInput.setValue(patient.edad)
 
-        index = provinceCombo.findData(patient.provincia.id)
+        index = self.provinceCombo.findData(patient.provincia.id)
 
         if index >= 0:
-            provinceCombo.setCurrentIndex(index)
+           self.provinceCombo.setCurrentIndex(index)
         else:
             msg = 'No se ha podido cargar la provincia ' + patient.provincia.nombre
             QMessageBox.critical(self, 'Error', msg)

@@ -5,7 +5,7 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 import os.path
 
 from PyQt5.uic import loadUi
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtWidgets import QWidget, QDialog
 
 from gui.forms.PatientForm import PatientForm
@@ -21,6 +21,8 @@ class SearchPatientForm(QWidget):
 
         self.searchBtn.clicked.connect(self.on_search_clicked)
         self.modifyBtn.clicked.connect(self.on_modify_clicked)
+        self.patientsTable.doubleClicked.connect(self.on_modify_clicked)
+        self.patientsTable.clicked.connect(lambda: self.modifyBtn.setEnabled(True))
 
     @pyqtSlot()
     def on_search_clicked(self):
@@ -37,7 +39,10 @@ class SearchPatientForm(QWidget):
         form = PatientForm(self.controller)
         form.setParent(dialog)
 
+        index_model = self.patientsTable.selectedIndexes()[0]
+        patient_id = self.patientsTable.model().data(index_model, Qt.UserRole)
+        
         # TODO: pass selected patient if any
-        form.modify_patient(None)
+        form.modify_patient(self.controller.patient(patient_id))
 
         dialog.show()
