@@ -61,6 +61,10 @@ class PatientForm(QWidget):
         self.cancelBtn.clicked.disconnect(self.close)
         self.cancelBtn.clicked.connect(lambda: self.parent().close())
 
+        # make an update not an insert
+        self.saveBtn.clicked.disconnect(self.on_save_clicked)
+        self.saveBtn.clicked.connect(self.on_save_modified_clicked)
+
     @pyqtSlot()
     def on_app_btn_clicked(self):
         self.__app_dialog.show()
@@ -85,3 +89,17 @@ class PatientForm(QWidget):
         QMessageBox.information(self, 'Información',
                                 'Paciente registrado satisfactoriamente')
         self.close()
+
+    @pyqtSlot()
+    def on_save_modified_clicked(self):
+        ci = self.ciInput.text().strip()
+        name = self.nameInput.text().strip()
+        age = self.ageInput.value()
+        selected_prov_id = self.provinceCombo.currentData()
+
+        self.controller.update_patient(self.patient.id, ci, name, age,
+                                       selected_prov_id)
+
+        QMessageBox.information(self, 'Información',
+                                'Paciente actualizado satisfactoriamente')
+        self.parent().close()

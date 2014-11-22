@@ -29,12 +29,14 @@ class SearchPatientForm(QWidget):
         patients = self.controller.find_patients(self.queryInput.text().strip())
         model = PersonsTableModel(patients)
         self.patientsTable.setModel(model)
+        self.nodifyBtn.setEnabled(False)
 
     @pyqtSlot()
     def on_modify_clicked(self):
         dialog = QDialog(self)
         dialog.setModal(True)
         dialog.setWindowTitle('Modificar paciente')
+        dialog.finished.connect(self.on_search_clicked)
 
         form = PatientForm(self.controller)
         form.setParent(dialog)
@@ -42,7 +44,5 @@ class SearchPatientForm(QWidget):
         index_model = self.patientsTable.selectedIndexes()[0]
         patient_id = self.patientsTable.model().data(index_model, Qt.UserRole)
         
-        # TODO: pass selected patient if any
         form.modify_patient(self.controller.patient(patient_id))
-
         dialog.show()

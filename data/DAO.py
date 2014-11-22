@@ -34,5 +34,10 @@ def save_patient(ci, name, age, province_id):
     Paciente(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
 
 @pony.db_session
+def update_patient(patient_id, ci, name, age, province_id):
+    p = Paciente[patient_id]
+    p.set(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
+
+@pony.db_session
 def get_patient(id):
     return Paciente[id]

@@ -19,5 +19,9 @@ class Controller():
         DAO.save_patient(ci, name, age, province_id)
 
     @staticmethod
+    def update_patient(patient_id, ci, name, age, province_id):
+        DAO.update_patient(patient_id, ci, name, age, province_id)
+
+    @staticmethod
     def patient(patient_id):
         return DAO.get_patient(patient_id)
