@@ -9,6 +9,7 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget, QDialog
 
 from gui.forms.PatientForm import PatientForm
+from data.PersonsTableModel import PersonsTableModel
 
 class SearchPatientForm(QWidget):
     def __init__(self, controller, *args):
@@ -23,7 +24,9 @@ class SearchPatientForm(QWidget):
 
     @pyqtSlot()
     def on_search_clicked(self):
-        print(self.controller.find_patients(self.queryInput.text().strip()))
+        patients = self.controller.find_patients(self.queryInput.text().strip())
+        model = PersonsTableModel(patients)
+        self.patientsTable.setModel(model)
 
     @pyqtSlot()
     def on_modify_clicked(self):

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="$PROJECT_DIR$/resources/Pacientes.sqlite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/PersonsTableModel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DAO.py" afterPath="$PROJECT_DIR$/data/DAO.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" afterPath="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mario.iws" />
@@ -20,7 +23,7 @@
     <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416618347622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416627509464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -34,12 +37,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DAO.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DAO.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/DAO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="16" selection-start="592" selection-end="592" vertical-scroll-proportion="0.6019536" vertical-offset="0" max-vertical-offset="819">
+            <state line="23" column="50" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
               <folding>
                 <element signature="e#70#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonsTableModel.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/PersonsTableModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="950" selection-end="950" vertical-scroll-proportion="0.6019536" vertical-offset="0" max-vertical-offset="819">
+              <folding>
+                <element signature="e#70#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,9 +62,9 @@
       <file leaf-file-name="model.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+            <state line="57" column="24" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1173">
               <folding>
-                <element signature="e#70#84#0" expanded="true" />
+                <marker date="1416601705647" expanded="true" signature="70:135" placeholder="import ..." />
               </folding>
             </state>
           </provider>
@@ -60,7 +74,10 @@
         <entry file="file://$PROJECT_DIR$/gui/Controller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <folding />
+              <folding>
+                <marker date="1416600337589" expanded="true" signature="111:380" placeholder="..." />
+                <marker date="1416600337589" expanded="true" signature="327:380" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,10 +85,8 @@
       <file leaf-file-name="PatientForm.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="36" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1581">
-              <folding>
-                <element signature="e#70#84#0" expanded="true" />
-              </folding>
+            <state line="8" column="0" selection-start="116" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +94,7 @@
       <file leaf-file-name="SearchPatientForm.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="24" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+            <state line="28" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
               <folding>
                 <element signature="e#70#84#0" expanded="true" />
               </folding>
@@ -106,7 +121,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/StartApp.py" />
         <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
@@ -117,11 +131,12 @@
         <option value="$PROJECT_DIR$/createDBPony.py" />
         <option value="$PROJECT_DIR$/core/core.py" />
         <option value="$PROJECT_DIR$/gui/Controller.py" />
-        <option value="$PROJECT_DIR$/data/DAO.py" />
-        <option value="$PROJECT_DIR$/data/model.py" />
-        <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
         <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
+        <option value="$PROJECT_DIR$/data/model.py" />
+        <option value="$PROJECT_DIR$/data/DAO.py" />
+        <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
+        <option value="$PROJECT_DIR$/data/PersonsTableModel.py" />
       </list>
     </option>
   </component>
@@ -223,6 +238,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -654,7 +683,11 @@
       <created>1416617652763</created>
       <updated>1416617652763</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="two more provinces added">
+      <created>1416618396597</created>
+      <updated>1416618396597</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -752,7 +785,8 @@
     <MESSAGE value="old sql queries replaced for Pony ORM" />
     <MESSAGE value="adding patients works" />
     <MESSAGE value="adding some behaviour to forms actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding some behaviour to forms actions" />
+    <MESSAGE value="two more provinces added" />
+    <option name="LAST_COMMIT_MESSAGE" value="two more provinces added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -767,11 +801,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="421" selection-end="421" vertical-scroll-proportion="0.26984128" vertical-offset="0" max-vertical-offset="819" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="26" selection-start="418" selection-end="418" vertical-scroll-proportion="0.37362638" vertical-offset="0" max-vertical-offset="819" />
@@ -814,29 +843,16 @@
     <entry file="file://$PROJECT_DIR$/gui/Controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding />
+          <folding>
+            <marker date="1416600337589" expanded="true" signature="111:380" placeholder="..." />
+            <marker date="1416600337589" expanded="true" signature="327:380" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python34/Lib/site-packages/pony/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="14" selection-start="4610" selection-end="4610" vertical-scroll-proportion="0.7985348" vertical-offset="1420" max-vertical-offset="5372">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="50" selection-start="4678" selection-end="4689" vertical-scroll-proportion="0.8717949" vertical-offset="816" max-vertical-offset="1955">
           <folding />
         </state>
       </provider>
@@ -848,29 +864,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
+    <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="24" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
+        <state line="8" column="0" selection-start="116" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
+    <entry file="file://$PROJECT_DIR$/data/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="36" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1581">
+        <state line="57" column="24" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1173">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <marker date="1416601705647" expanded="true" signature="70:135" placeholder="import ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/DAO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="16" selection-start="592" selection-end="592" vertical-scroll-proportion="0.6019536" vertical-offset="0" max-vertical-offset="819">
+        <state line="23" column="50" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <folding>
+            <element signature="e#70#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="50" selection-start="4678" selection-end="4689" vertical-scroll-proportion="1.8681319" vertical-offset="0" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/PersonsTableModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="950" selection-end="950" vertical-scroll-proportion="0.6019536" vertical-offset="0" max-vertical-offset="819">
+          <folding>
+            <element signature="e#70#90#0" expanded="true" />
           </folding>
         </state>
       </provider>

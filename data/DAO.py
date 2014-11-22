@@ -11,7 +11,7 @@ from data.model import *
 
 @pony.db_session
 def provinces():
-    return Provincia.select()[:]
+    return Provincia.select().order_by(Provincia.nombre)[:]
 
 @pony.db_session
 def find_patients(query):
@@ -20,10 +20,12 @@ def find_patients(query):
 
     if query.isalpha():
         lquery = query.lower()
-        return pony.select(p for p in Paciente if lquery in p.nombre.lower())[:]
+        result = pony.select(p for p in Paciente if lquery in p.nombre.lower())
+        return result.order_by(Paciente.nombre)[:]
 
     if query.isdigit():
-        return pony.select(p for p in Paciente if query in p.ci)[:]
+        result = pony.select(p for p in Paciente if query in p.ci)
+        return result.order_by(Paciente.nombre)[:]
 
     return []
 
