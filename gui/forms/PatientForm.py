@@ -6,6 +6,7 @@ import os.path
 
 from PyQt5.uic import loadUi
 
+from PyQt5 import Qt
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget, QMessageBox
 
@@ -21,6 +22,7 @@ class PatientForm(QWidget):
         loadUi(os.path.join('resources', 'uis', 'PatientForm.ui'), self)
 
         self.controller = controller
+        self.patient = None
 
         self.appBtn.clicked.connect(self.on_app_btn_clicked)
         self.acBtn.clicked.connect(self.on_ac_btn_clicked)
@@ -37,6 +39,27 @@ class PatientForm(QWidget):
     def __init_provinces(self):
         for p in self.controller.provinces:
             self.provinceCombo.addItem(p.nombre, p.id)
+
+    def modify_patient(self, patient):
+        self.patient = patient
+
+        # fill input fields with patient data
+        self.ciInput.setText(patient.ci)
+        self.nameInput.setText(patient.name)
+        self.ageInput.setValue(patient.age)
+
+        index = provinceCombo.findData(patient.provincia.id)
+
+        if index >= 0:
+            provinceCombo.setCurrentIndex(index)
+        else:
+            msg = 'No se ha podido cargar la provincia ' + patient.provincia.nombre
+            QMessageBox.critical(self, 'Error', msg)
+
+        # modify form behaviour
+        # cancel no longer closes form, now closes form's container
+        self.cancelBtn.clicked.disconnect(self.close)
+        self.cancelBtn.clicked.connect(lambda: self.parent().close())
 
     @pyqtSlot()
     def on_app_btn_clicked(self):

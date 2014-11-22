@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__(*args)
 
         loadUi(os.path.join('resources', 'uis', 'MainWindow.ui'), self)
-        #compileUi(os.path.join('resources', 'uis', 'ACDialog.ui'),
+        #compileUi(os.path.join('resources', 'uis', 'PatientForm.ui'),
         #open('test.py', 'w'))
 
         self.controller = Controller()
