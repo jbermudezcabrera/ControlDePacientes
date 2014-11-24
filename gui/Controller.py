@@ -17,7 +17,11 @@ class Controller():
 
     @staticmethod
     def add_patient(ci, name, age, province_id):
-        DAO.save_patient(ci, name, age, province_id)
+        return DAO.insert_patient(ci, name, age, province_id)
+
+    @staticmethod
+    def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+        DAO.set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag)
 
     @staticmethod
     def update_patient(patient_id, ci, name, age, province_id):

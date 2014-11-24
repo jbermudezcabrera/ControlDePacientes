@@ -5,43 +5,50 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 import os.path
 import sqlite3 as sql
 
-import pony.orm as pony
-
 from data.model import *
 
-@pony.db_session
+@db_session
 def provinces():
     return Provincia.select().order_by(Provincia.nombre)[:]
 
-@pony.db_session
+@db_session
 def find_patients(query):
     if len(query) == 0:
         return Paciente.select()[:]
 
     if query.isalpha():
         lquery = query.lower()
-        result = pony.select(p for p in Paciente if lquery in p.nombre.lower())
+        result = select(p for p in Paciente if lquery in p.nombre.lower())
         return result.order_by(Paciente.nombre)[:]
 
     if query.isdigit():
-        result = pony.select(p for p in Paciente if query in p.ci)
+        result = select(p for p in Paciente if query in p.ci)
         return result.order_by(Paciente.nombre)[:]
 
     return []
 
-@pony.db_session
-def save_patient(ci, name, age, province_id):
-    Paciente(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
+def insert_patient(ci, name, age, province_id):
+    with db_session:
+        p = Paciente(ci=ci, nombre=name, edad=age,
+                     provincia=Provincia[province_id])
+    return p.id
 
-@pony.db_session
-def update_patient(patient_id, ci, name, age, province_id):
+@db_session
+def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+    APP(paciente=Paciente[patient_id], hta=hta, ci=ci, hc=hc, ht=ht, dm=dm,
+        fumador=smoker, otro=other, idiagnostico=idiag)
+
+@db_session
+def update_patient(patient_id, ci, name, age, province_id, app=None,
+                   ac=None, tac=None):
     p = Paciente[patient_id]
-    p.set(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
+    p.set(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id],
+          app=app, ac=ac, tac=tac)
 
-@pony.db_session
+@db_session
 def delete_patient(patient_id):
     Paciente[patient_id].delete()
 
-@pony.db_session
+@db_session
 def get_patient(patient_id):
     return Paciente[patient_id]

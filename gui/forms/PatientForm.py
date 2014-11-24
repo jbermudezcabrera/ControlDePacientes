@@ -84,7 +84,16 @@ class PatientForm(QWidget):
         age = self.ageInput.value()
         selected_prov_id = self.provinceCombo.currentData()
 
-        self.controller.add_patient(ci, name, age, selected_prov_id)
+        patient_id = self.controller.add_patient(ci, name, age, selected_prov_id)
+        self.controller.set_patient_app(patient_id,
+                                        self.__app_dialog.hta,
+                                        self.__app_dialog.ci,
+                                        self.__app_dialog.hc,
+                                        self.__app_dialog.ht,
+                                        self.__app_dialog.dm,
+                                        self.__app_dialog.smoker,
+                                        self.__app_dialog.other,
+                                        self.__app_dialog.idiag)
 
         QMessageBox.information(self, 'Información',
                                 'Paciente registrado satisfactoriamente')
