@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Control de Pacientes</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/app 128.png</normaloff>../icons/app 128.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -31,6 +35,10 @@
    <addaction name="addPatientAction"/>
   </widget>
   <action name="addPatientAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/add_patient 128.png</normaloff>../icons/add_patient 128.png</iconset>
+   </property>
    <property name="text">
     <string>Agregar</string>
    </property>
@@ -39,6 +47,10 @@
    </property>
   </action>
   <action name="searchAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/search_patient 128.png</normaloff>../icons/search_patient 128.png</iconset>
+   </property>
    <property name="text">
     <string>Buscar</string>
    </property>
