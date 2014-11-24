@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\icons\add_patient 128.png" afterPath="$PROJECT_DIR$/resources/add_patient 128.png" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\icons\app 128.png" afterPath="$PROJECT_DIR$/resources/app 128.png" />
-      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\icons\search_patient 128.png" afterPath="$PROJECT_DIR$/resources/search_patient 128.png" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\add_patient 128.png" afterPath="$PROJECT_DIR$/resources/icons/add_patient 128.png" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\app 128.png" afterPath="$PROJECT_DIR$/resources/icons/app 128.png" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\search_patient 128.png" afterPath="$PROJECT_DIR$/resources/icons/search_patient 128.png" />
     </list>
     <ignored path="Mario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -291,11 +292,11 @@
       <recent name="D:\Proyectos\PyCharm Projects\Mario" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Proyectos\PyCharm Projects\Mario\resources\icons" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\resources" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\gui" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\forms" />
-      <recent name="D:\Proyectos\PyCharm Projects\Mario\Resources\UIs" />
     </key>
   </component>
   <component name="RunManager" selected="Python.StartApp">
@@ -710,7 +711,11 @@
       <created>1416865067316</created>
       <updated>1416865067316</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="temp step">
+      <created>1416865083717</created>
+      <updated>1416865083717</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -787,7 +792,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="menu buttons reacting correctly." />
     <MESSAGE value="all main buttons reacting correctly." />
     <MESSAGE value="adding a few horizontal lines" />
     <MESSAGE value="Moved start application code to StartApp script" />
@@ -812,7 +816,8 @@
     <MESSAGE value="modified DB some model restrictions" />
     <MESSAGE value="save a patient with APP data correctly, but there are some DB issues when removing patients" />
     <MESSAGE value="added icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="added icons" />
+    <MESSAGE value="temp step" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp step" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
