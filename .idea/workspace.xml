@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/add_patient 128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/app 128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/search_patient 128.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/MainWindow.ui" afterPath="$PROJECT_DIR$/resources/uis/MainWindow.ui" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\icons\add_patient 128.png" afterPath="$PROJECT_DIR$/resources/add_patient 128.png" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\icons\app 128.png" afterPath="$PROJECT_DIR$/resources/app 128.png" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\Mario\resources\icons\search_patient 128.png" afterPath="$PROJECT_DIR$/resources/search_patient 128.png" />
     </list>
     <ignored path="Mario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,7 +71,7 @@
       <file leaf-file-name="model.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="32" selection-start="927" selection-end="927" vertical-scroll-proportion="0.17904994" vertical-offset="635" max-vertical-offset="1479">
+            <state line="46" column="32" selection-start="927" selection-end="927" vertical-scroll-proportion="0.17948718" vertical-offset="635" max-vertical-offset="1479">
               <folding>
                 <element signature="e#70#84#0" expanded="true" />
               </folding>
@@ -211,24 +210,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -310,8 +291,8 @@
       <recent name="D:\Proyectos\PyCharm Projects\Mario" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Proyectos\PyCharm Projects\Mario" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\resources" />
+      <recent name="D:\Proyectos\PyCharm Projects\Mario" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\gui" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\forms" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario\Resources\UIs" />
@@ -725,7 +706,11 @@
       <created>1416861366235</created>
       <updated>1416861366235</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added icons">
+      <created>1416865067316</created>
+      <updated>1416865067316</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -752,6 +737,7 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -767,7 +753,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -802,7 +787,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="forms package created." />
     <MESSAGE value="menu buttons reacting correctly." />
     <MESSAGE value="all main buttons reacting correctly." />
     <MESSAGE value="adding a few horizontal lines" />
@@ -827,7 +811,8 @@
     <MESSAGE value="delete patients now available" />
     <MESSAGE value="modified DB some model restrictions" />
     <MESSAGE value="save a patient with APP data correctly, but there are some DB issues when removing patients" />
-    <option name="LAST_COMMIT_MESSAGE" value="save a patient with APP data correctly, but there are some DB issues when removing patients" />
+    <MESSAGE value="added icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="added icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,7 +915,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="32" selection-start="927" selection-end="927" vertical-scroll-proportion="0.17904994" vertical-offset="635" max-vertical-offset="1479">
+        <state line="46" column="32" selection-start="927" selection-end="927" vertical-scroll-proportion="0.17948718" vertical-offset="635" max-vertical-offset="1479">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
           </folding>
