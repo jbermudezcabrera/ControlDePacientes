@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Control de Pacientes</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QToolBar" name="toolBar">
@@ -34,10 +34,16 @@
    <property name="text">
     <string>Agregar</string>
    </property>
+   <property name="toolTip">
+    <string>Agregar Paciente</string>
+   </property>
   </action>
   <action name="searchAction">
    <property name="text">
     <string>Buscar</string>
+   </property>
+   <property name="toolTip">
+    <string>Buscar Paciente</string>
    </property>
   </action>
  </widget>

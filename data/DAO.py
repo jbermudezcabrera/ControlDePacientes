@@ -39,5 +39,9 @@ def update_patient(patient_id, ci, name, age, province_id):
     p.set(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
 
 @pony.db_session
-def get_patient(id):
-    return Paciente[id]
+def delete_patient(patient_id):
+    Paciente[patient_id].delete()
+
+@pony.db_session
+def get_patient(patient_id):
+    return Paciente[patient_id]
