@@ -23,7 +23,7 @@ class APP(db.Entity):
     ht = pony.Required(bool)
     otro = pony.Required(str)
     idiagnostico = pony.Required(str)
-    paciente = pony.Optional('Paciente')
+    paciente = pony.Required('Paciente')
 
 class Complementario(db.Entity):
     hb = pony.Required(float)
@@ -32,7 +32,7 @@ class Complementario(db.Entity):
     colesterol = pony.Required(float)
     trigliceridos = pony.Required(float)
     acido_urico = pony.Required(float)
-    paciente = pony.Optional('Paciente')
+    paciente = pony.Required('Paciente')
 
 class Arteria(db.Entity):
     nombre = pony.Required(str)
@@ -47,7 +47,7 @@ class TAC(db.Entity):
     angio_ct = pony.Required(int)
     fecha = pony.Required(date)
 
-    paciente = pony.Optional('Paciente')
+    paciente = pony.Required('Paciente')
     arterias = pony.Set(Arteria)
 
 class Paciente(db.Entity):
@@ -61,3 +61,8 @@ class Paciente(db.Entity):
     tac = pony.Optional(TAC)
 
 db.generate_mapping(check_tables=True, create_tables=True)
+
+with pony.db_session:
+    Provincia(nombre='Villa Clara')
+    Provincia(nombre='Cienfuegos')
+    Provincia(nombre='Sancti Spíritus')

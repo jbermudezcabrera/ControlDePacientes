@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/MainWindow.ui" afterPath="$PROJECT_DIR$/resources/uis/MainWindow.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="$PROJECT_DIR$/resources/Pacientes.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/Controller.py" afterPath="$PROJECT_DIR$/gui/Controller.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DAO.py" afterPath="$PROJECT_DIR$/data/DAO.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" afterPath="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/model.py" afterPath="$PROJECT_DIR$/data/model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mario.iws" />
@@ -25,7 +21,7 @@
     <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416844172107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416845503769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -43,17 +39,8 @@
         <entry file="file://$PROJECT_DIR$/data/DAO.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="46" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchPatientForm.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="51" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.43956044" vertical-offset="371" max-vertical-offset="1207">
               <folding>
-                <element signature="e#70#84#0" expanded="true" />
+                <marker date="1416843347197" expanded="true" signature="1073:1107" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -68,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Controller.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui/Controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+            <state line="5" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.103785105" vertical-offset="0" max-vertical-offset="819">
               <folding />
             </state>
           </provider>
@@ -105,13 +92,13 @@
         <option value="$PROJECT_DIR$/core/model.py" />
         <option value="$PROJECT_DIR$/createDBPony.py" />
         <option value="$PROJECT_DIR$/core/core.py" />
-        <option value="$PROJECT_DIR$/data/model.py" />
         <option value="$PROJECT_DIR$/data/PersonsTableModel.py" />
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
         <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
         <option value="$PROJECT_DIR$/data/DAO.py" />
         <option value="$PROJECT_DIR$/gui/Controller.py" />
         <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
+        <option value="$PROJECT_DIR$/data/model.py" />
       </list>
     </option>
   </component>
@@ -181,6 +168,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -678,7 +679,11 @@
       <created>1416843094089</created>
       <updated>1416843094089</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="delete patients now available">
+      <created>1416844310681</created>
+      <updated>1416844310681</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -755,7 +760,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="hgh" />
     <MESSAGE value="agregado el campo de fecha al formulario de TAC." />
     <MESSAGE value="creadas las clases para todos los formularios." />
     <MESSAGE value="forms package created." />
@@ -780,7 +784,8 @@
     <MESSAGE value="showing  patients" />
     <MESSAGE value="can modify selected patients, no saving of modifications done yet." />
     <MESSAGE value="showing toolbar instead menubar and some bugfixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="showing toolbar instead menubar and some bugfixes" />
+    <MESSAGE value="delete patients now available" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete patients now available" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -842,23 +847,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="24" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.75152254" vertical-offset="301" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/PersonsTableModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="54" selection-start="867" selection-end="867" vertical-scroll-proportion="0.53836787" vertical-offset="0" max-vertical-offset="821">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/Controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
           <folding />
         </state>
       </provider>
@@ -867,15 +858,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="36" selection-start="696" selection-end="696" vertical-scroll-proportion="0.51892555" vertical-offset="0" max-vertical-offset="819">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#70#84#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/DAO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="46" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,10 +872,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="51" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.43956044" vertical-offset="371" max-vertical-offset="1207">
+        <state line="32" column="80" selection-start="1125" selection-end="1125" vertical-scroll-proportion="0.21123321" vertical-offset="371" max-vertical-offset="1207">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#70#84#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/DAO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="46" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding>
+            <marker date="1416843347197" expanded="true" signature="1073:1107" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="33" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.62637365" vertical-offset="82" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/Controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.103785105" vertical-offset="0" max-vertical-offset="819">
+          <folding />
         </state>
       </provider>
     </entry>
