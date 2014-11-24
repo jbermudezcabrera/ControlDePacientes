@@ -11,6 +11,7 @@ from PyQt5.QtWidgets import QWidget, QDialog
 from gui.forms.PatientForm import PatientForm
 from data.PersonsTableModel import PersonsTableModel
 
+
 class SearchPatientForm(QWidget):
     def __init__(self, controller, *args):
         super(SearchPatientForm, self).__init__(*args)
@@ -29,7 +30,7 @@ class SearchPatientForm(QWidget):
         patients = self.controller.find_patients(self.queryInput.text().strip())
         model = PersonsTableModel(patients)
         self.patientsTable.setModel(model)
-        self.nodifyBtn.setEnabled(False)
+        self.modifyBtn.setEnabled(False)
 
     @pyqtSlot()
     def on_modify_clicked(self):

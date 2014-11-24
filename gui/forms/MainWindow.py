@@ -12,6 +12,7 @@ from gui.Controller import Controller
 from gui.forms.PatientForm import PatientForm
 from gui.forms.SearchPatientForm import SearchPatientForm
 
+
 class MainWindow(QMainWindow):
     def __init__(self, *args):
         super(MainWindow, self).__init__(*args)
@@ -27,8 +28,10 @@ class MainWindow(QMainWindow):
 
     @pyqtSlot()
     def on_add_patient(self):
-        self.setCentralWidget(PatientForm(self.controller))
+        if not isinstance(self.centralWidget(), PatientForm):
+            self.setCentralWidget(PatientForm(self.controller))
 
     @pyqtSlot()
     def on_search_patient(self):
-        self.setCentralWidget(SearchPatientForm(self.controller))
+        if not isinstance(self.centralWidget(), SearchPatientForm):
+            self.setCentralWidget(SearchPatientForm(self.controller))
