@@ -5,11 +5,8 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 import os.path
 
 from PyQt5.uic import loadUi
-
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
-
-from data.model import APP
 
 
 class APPDialog(QDialog):
@@ -34,6 +31,8 @@ class APPDialog(QDialog):
         self.other = None
         self.idiag = None
 
+        self.__data_collected = False
+
         self.__init_dm()
         self.__init_smoker()
 
@@ -49,17 +48,22 @@ class APPDialog(QDialog):
         self.smokerCombo.addItem('Ex', 1)
         self.smokerCombo.addItem('Si', 2)
 
+    @property
+    def data_collected(self):
+        return self.__data_collected
+
     def modify_app(self, app):
-        self.htaCheck.setChecked(app.hta)
-        self.ciCheck.setChecked(app.ci)
-        self.hclCheck.setChecked(app.hc)
-        self.htdCheck.setChecked(app.ht)
+        if app is not None:
+            self.htaCheck.setChecked(app.hta)
+            self.ciCheck.setChecked(app.ci)
+            self.hclCheck.setChecked(app.hc)
+            self.htdCheck.setChecked(app.ht)
 
-        self.dmCombo.setCurrentIndex(self.dmCombo.findData(app.dm))
-        self.smokerCombo.setCurrentIndex(self.smokerCombo.findData(app.fumador))
+            self.dmCombo.setCurrentIndex(self.dmCombo.findData(app.dm))
+            self.smokerCombo.setCurrentIndex(self.smokerCombo.findData(app.fumador))
 
-        self.otherInput.setText(app.otro)
-        self.idInput.setPlainText(app.idiagnostico)
+            self.otherInput.setText(app.otro)
+            self.idInput.setPlainText(app.idiagnostico)
 
     @pyqtSlot()
     def on_save(self):
@@ -71,4 +75,7 @@ class APPDialog(QDialog):
         self.smoker = self.smokerCombo.currentData()
         self.other = self.otherInput.text().strip()
         self.idiag = self.idInput.toPlainText().strip()
+
+        # TODO: check if all fields pass validation
+        self.__data_collected = True
         self.close()

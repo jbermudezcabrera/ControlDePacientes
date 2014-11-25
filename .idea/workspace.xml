@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/ACDialog.ui" afterPath="$PROJECT_DIR$/resources/uis/ACDialog.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/APPDialog.ui" afterPath="$PROJECT_DIR$/resources/uis/APPDialog.ui" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="$PROJECT_DIR$/resources/Pacientes.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/TACDialog.ui" afterPath="$PROJECT_DIR$/resources/uis/TACDialog.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/ACDialog.py" afterPath="$PROJECT_DIR$/gui/forms/ACDialog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/APPDialog.py" afterPath="$PROJECT_DIR$/gui/forms/APPDialog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/Controller.py" afterPath="$PROJECT_DIR$/gui/Controller.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/DAO.py" afterPath="$PROJECT_DIR$/data/DAO.py" />
@@ -24,7 +28,7 @@
     <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416941112385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416946334326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -46,10 +50,8 @@
       <file leaf-file-name="model.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="35" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1479">
-              <folding>
-                <element signature="e#70#84#0" expanded="true" />
-              </folding>
+            <state line="41" column="35" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="1428">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,33 +59,7 @@
       <file leaf-file-name="DAO.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/DAO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="23" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="884">
-              <folding>
-                <element signature="e#70#84#0" expanded="true" />
-                <element signature="e#167#222#0" expanded="false" />
-                <element signature="e#270#420#0" expanded="false" />
-                <element signature="e#465#1041#0" expanded="false" />
-                <element signature="e#1096#1234#0" expanded="false" />
-                <element signature="e#1313#1411#0" expanded="false" />
-                <element signature="e#1729#1856#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PatientForm.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="30" selection-start="4086" selection-end="4086" vertical-scroll-proportion="0.62637365" vertical-offset="1374" max-vertical-offset="2210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="APPDialog.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="664" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1241">
+            <state line="63" column="0" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1615">
               <folding />
             </state>
           </provider>
@@ -92,7 +68,38 @@
       <file leaf-file-name="Controller.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/Controller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="8" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="782">
+            <state line="46" column="54" selection-start="1277" selection-end="1323" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="APPDialog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="55" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1479">
+              <folding>
+                <element signature="e#70#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientForm.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="155" column="29" selection-start="5663" selection-end="5663" vertical-scroll-proportion="3.2095006" vertical-offset="0" max-vertical-offset="3009">
+              <folding>
+                <element signature="e#70#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ACDialog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="23" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -127,11 +134,11 @@
         <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
         <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
         <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
-        <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
         <option value="$PROJECT_DIR$/data/model.py" />
-        <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
-        <option value="$PROJECT_DIR$/data/DAO.py" />
         <option value="$PROJECT_DIR$/gui/Controller.py" />
+        <option value="$PROJECT_DIR$/data/DAO.py" />
+        <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
+        <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
       </list>
     </option>
@@ -187,7 +194,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,6 +274,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,13 +282,13 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="110" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="111" />
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="96" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -749,7 +756,11 @@
       <created>1416935858909</created>
       <updated>1416935858909</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="updating patients data including APP">
+      <created>1416941194741</created>
+      <updated>1416941194741</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -776,22 +787,22 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16612642" sideWeight="0.6816568" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16855754" sideWeight="0.6824085" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3964497" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3183432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3175915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -813,9 +824,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21069692" sideWeight="0.6733728" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -826,7 +837,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="renamed some forms to dialog" />
     <MESSAGE value="translating default text in DialogButtonBoxes" />
     <MESSAGE value="added input mask to ci input field in PatientForm" />
     <MESSAGE value="restructuring project" />
@@ -851,7 +861,8 @@
     <MESSAGE value="icons added" />
     <MESSAGE value="deb model change" />
     <MESSAGE value="deleting patients and related APP works but is not done using the cleanest way(with cascade_delete)" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleting patients and related APP works but is not done using the cleanest way(with cascade_delete)" />
+    <MESSAGE value="updating patients data including APP" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating patients data including APP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -901,11 +912,6 @@
         <state line="10" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.20706455" vertical-offset="0" max-vertical-offset="821" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="570" selection-end="570" vertical-scroll-proportion="0.43483555" vertical-offset="0" max-vertical-offset="821" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/icons/remove 128.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -918,53 +924,54 @@
     </entry>
     <entry file="file://C:/Python34/Lib/site-packages/pony/orm/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="449" column="12" selection-start="16773" selection-end="16773" vertical-scroll-proportion="-1.7920792" vertical-offset="8622" max-vertical-offset="80257">
+        <state line="4101" column="4" selection-start="196779" selection-end="196779" vertical-scroll-proportion="85.92804" vertical-offset="0" max-vertical-offset="80257">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="35" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1479">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/DAO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="23" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="884">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-            <element signature="e#167#222#0" expanded="false" />
-            <element signature="e#270#420#0" expanded="false" />
-            <element signature="e#465#1041#0" expanded="false" />
-            <element signature="e#1096#1234#0" expanded="false" />
-            <element signature="e#1313#1411#0" expanded="false" />
-            <element signature="e#1729#1856#0" expanded="false" />
-          </folding>
+        <state line="41" column="35" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="1428">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/Controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="8" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="782">
+        <state line="46" column="54" selection-start="1277" selection-end="1323" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/DAO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="0" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="23" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="664" selection-end="858" vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1241">
-          <folding />
+        <state line="62" column="55" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1479">
+          <folding>
+            <element signature="e#70#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="30" selection-start="4086" selection-end="4086" vertical-scroll-proportion="0.62637365" vertical-offset="1374" max-vertical-offset="2210">
-          <folding />
+        <state line="155" column="29" selection-start="5663" selection-end="5663" vertical-scroll-proportion="3.2095006" vertical-offset="0" max-vertical-offset="3009">
+          <folding>
+            <element signature="e#70#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

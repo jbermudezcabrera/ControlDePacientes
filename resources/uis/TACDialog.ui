@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>TAC</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/app 128.png</normaloff>../icons/app 128.png</iconset>
+  </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>

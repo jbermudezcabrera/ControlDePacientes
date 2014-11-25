@@ -56,7 +56,12 @@ def delete_patient(patient_id):
     patient = Paciente[patient_id]
 
     # since cascade_delete raises an error, i worked around by deleting manually
-    APP.get(paciente=patient).delete()
+    if exists(app for app in APP if app.paciente == patient):
+        APP.get(paciente=patient).delete()
+
+    if exists(ac for ac in Complementario if ac.paciente == patient):
+        Complementario.get(paciente=patient).delete()
+
     patient.delete()
 
 
@@ -71,3 +76,17 @@ def update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag):
     app = APP[app_id]
     app.set(hta=hta, ci=ci, hc=hc, ht=ht, dm=dm, fumador=smoker,
             otro=other, idiagnostico=idiag)
+
+
+@db_session
+def set_patient_ac(patient_id, hb, gli, crea, col, trig, au):
+    Complementario(paciente=Paciente[patient_id], hb=hb, glicemia=gli,
+                   creatinina=crea, colesterol=col, trigliceridos=trig,
+                   acido_urico=au)
+
+
+@db_session
+def update_ac(ac_id, hb, gli, crea, col, trig, au):
+    ac = Complementario[ac_id]
+    ac.set(hb=hb, glicemia=gli, creatinina=crea, colesterol=col,
+           trigliceridos=trig, acido_urico=au)

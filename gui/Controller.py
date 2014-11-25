@@ -38,3 +38,11 @@ class Controller():
     @staticmethod
     def update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag):
         DAO.update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag)
+
+    @staticmethod
+    def set_patient_ac(patient_id, hb, gli, crea, col, trig, au):
+        DAO.set_patient_ac(patient_id, hb, gli, crea, col, trig, au)
+
+    @staticmethod
+    def update_ac(ac_id, hb, gli, crea, col, trig, au):
+        DAO.update_ac(ac_id, hb, gli, crea, col, trig, au)

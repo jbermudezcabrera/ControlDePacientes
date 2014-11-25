@@ -67,6 +67,7 @@ class PatientForm(QWidget):
 
         # put app, ac and tac forms in modify mode
         self.__app_dialog.modify_app(self.patient.app)
+        self.__ac_dialog.modify_ac(self.patient.complementario)
 
     @pyqtSlot()
     def on_app_btn_clicked(self):
@@ -82,21 +83,35 @@ class PatientForm(QWidget):
 
     @pyqtSlot()
     def on_save_clicked(self):
+        # insert patient
         ci = self.ciInput.text().strip()
         name = self.nameInput.text().strip()
         age = self.ageInput.value()
         selected_prov_id = self.provinceCombo.currentData()
 
         patient_id = self.controller.add_patient(ci, name, age, selected_prov_id)
-        self.controller.set_patient_app(patient_id,
-                                        self.__app_dialog.hta,
-                                        self.__app_dialog.ci,
-                                        self.__app_dialog.hc,
-                                        self.__app_dialog.ht,
-                                        self.__app_dialog.dm,
-                                        self.__app_dialog.smoker,
-                                        self.__app_dialog.other,
-                                        self.__app_dialog.idiag)
+
+        # insert patient APP
+        if self.__app_dialog.data_collected:
+            self.controller.set_patient_app(patient_id,
+                                            self.__app_dialog.hta,
+                                            self.__app_dialog.ci,
+                                            self.__app_dialog.hc,
+                                            self.__app_dialog.ht,
+                                            self.__app_dialog.dm,
+                                            self.__app_dialog.smoker,
+                                            self.__app_dialog.other,
+                                            self.__app_dialog.idiag)
+
+        # insert patient AC
+        if self.__ac_dialog.data_collected:
+            self.controller.set_patient_ac(patient_id,
+                                           self.__ac_dialog.hb,
+                                           self.__ac_dialog.gli,
+                                           self.__ac_dialog.crea,
+                                           self.__ac_dialog.col,
+                                           self.__ac_dialog.trig,
+                                           self.__ac_dialog.au)
 
         QMessageBox.information(self, 'Información',
                                 'Paciente registrado satisfactoriamente')
@@ -105,19 +120,41 @@ class PatientForm(QWidget):
     @pyqtSlot()
     def on_save_modified_clicked(self):
         # collect APP data
-        app_id = self.patient.app.id
-        hta = self.__app_dialog.hta
-        ci = self.__app_dialog.ci
-        hc = self.__app_dialog.hc
-        ht = self.__app_dialog.ht
-        dm = self.__app_dialog.dm
-        smoker = self.__app_dialog.smoker
-        other = self.__app_dialog.other
-        idiag = self.__app_dialog.idiag
+        if self.__app_dialog.data_collected:
+            hta = self.__app_dialog.hta
+            ci = self.__app_dialog.ci
+            hc = self.__app_dialog.hc
+            ht = self.__app_dialog.ht
+            dm = self.__app_dialog.dm
+            smoker = self.__app_dialog.smoker
+            other = self.__app_dialog.other
+            idiag = self.__app_dialog.idiag
 
-        # update APP
-        self.controller.update_app(app_id, hta, ci, hc, ht, dm, smoker,
-                                   other, idiag)
+            if not self.patient.app:
+                self.controller.set_patient_app(self.patient.id, hta, ci, hc,
+                                                ht, dm, smoker, other, idiag)
+            else:
+                # update APP
+                app_id = self.patient.app.id
+                self.controller.update_app(app_id, hta, ci, hc, ht, dm,
+                                           smoker, other, idiag)
+
+        # collect AC data
+        if self.__ac_dialog.data_collected:
+            hb = self.__ac_dialog.hb
+            gli = self.__ac_dialog.gli
+            crea = self.__ac_dialog.crea
+            col = self.__ac_dialog.col
+            trig = self.__ac_dialog.trig
+            au = self.__ac_dialog.au
+
+            if not self.patient.complementario:
+                self.controller.set_patient_ac(self.patient.id, hb, gli,
+                                               crea, col, trig, au)
+            else:
+                # update AC
+                ac_id = self.patient.complementario.id
+                self.controller.update_ac(ac_id, hb, gli, crea, col, trig, au)
 
         # collect patient data
         ci = self.ciInput.text().strip()
@@ -130,5 +167,5 @@ class PatientForm(QWidget):
                                        selected_prov_id)
 
         QMessageBox.information(self, 'Información',
-                                'Paciente actualizado satisfactoriamente')
+                                'Paciente actualizado correctamente')
         self.parent().close()

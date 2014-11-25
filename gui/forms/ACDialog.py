@@ -20,3 +20,40 @@ class ACDialog(QDialog):
 
         self.buttonBox.button(QDialogButtonBox.Save).setText('Guardar')
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')
+
+        self.buttonBox.accepted.connect(self.on_save)
+
+        self.hb = None
+        self.gli = None
+        self.crea = None
+        self.col = None
+        self.trig = None
+        self.au = None
+
+        self.__data_collected = False
+
+    def modify_ac(self, ac):
+        if ac is not None:
+            self.hbInput.setValue(ac.hb)
+            self.gliInput.setValue(ac.glicemia)
+            self.creaInput.setValue(ac.creatinina)
+            self.colInput.setValue(ac.colesterol)
+            self.trigInput.setValue(ac.trigliceridos)
+            self.acidInput.setValue(ac.acido_urico)
+
+    @property
+    def data_collected(self):
+        return self.__data_collected
+
+    @pyqtSlot()
+    def on_save(self):
+        self.hb = self.hbInput.value()
+        self.gli = self.gliInput.value()
+        self.crea = self.creaInput.value()
+        self.col = self.colInput.value()
+        self.trig = self.trigInput.value()
+        self.au = self.acidInput.value()
+
+        # TODO: check if all fields pass validation
+        self.__data_collected = True
+        self.close()
