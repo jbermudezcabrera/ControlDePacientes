@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/PatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/PatientForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/PatientForm.py" afterPath="$PROJECT_DIR$/gui/forms/PatientForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/ACDialog.py" afterPath="$PROJECT_DIR$/gui/forms/ACDialog.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/APPDialog.py" afterPath="$PROJECT_DIR$/gui/forms/APPDialog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mario.iws" />
@@ -40,13 +40,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PatientForm.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
+      <file leaf-file-name="APPDialog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="41" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.845735" vertical-offset="350" max-vertical-offset="3162">
+            <state line="78" column="36" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
               <folding>
                 <element signature="e#70#84#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ACDialog.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="10" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.74861366" vertical-offset="462" max-vertical-offset="1003">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,12 +89,12 @@
         <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
         <option value="$PROJECT_DIR$/gui/Controller.py" />
         <option value="$PROJECT_DIR$/data/DAO.py" />
-        <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
         <option value="$PROJECT_DIR$/StartApp.py" />
         <option value="$PROJECT_DIR$/data/model.py" />
         <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
-        <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
+        <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
+        <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
       </list>
     </option>
   </component>
@@ -718,7 +727,11 @@
       <created>1416948502922</created>
       <updated>1416948502922</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="adding validators to PatientForm">
+      <created>1416951189531</created>
+      <updated>1416951189531</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -748,15 +761,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16855754" sideWeight="0.6828402" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16855754" sideWeight="0.6710059" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3964497" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31715977" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31715977" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -795,7 +808,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="restructuring project" />
     <MESSAGE value="implementing something in DAO" />
     <MESSAGE value="re-adding forms to VCS, i don't know why they left it" />
     <MESSAGE value="implementing searc function and other fixes" />
@@ -820,7 +832,8 @@
     <MESSAGE value="updating patients data including APP" />
     <MESSAGE value="updating patients data including APP(bug fixed) and AC" />
     <MESSAGE value="bug fixed in main window actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixed in main window actions" />
+    <MESSAGE value="adding validators to PatientForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding validators to PatientForm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -886,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="23" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="51" selection-start="4100" selection-end="4100" vertical-scroll-proportion="0.2735043" vertical-offset="1119" max-vertical-offset="2040">
@@ -914,30 +920,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="923" selection-end="923" vertical-scroll-proportion="0.60805863" vertical-offset="114" max-vertical-offset="1479">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/MainWindow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="0" selection-start="895" selection-end="895" vertical-scroll-proportion="0.6642247" vertical-offset="0" max-vertical-offset="819">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#70#84#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="41" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.845735" vertical-offset="350" max-vertical-offset="3162">
+        <state line="43" column="0" selection-start="1257" selection-end="1511" vertical-scroll-proportion="0.45665446" vertical-offset="357" max-vertical-offset="3162">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="36" selection-start="2333" selection-end="2333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
+          <folding>
+            <element signature="e#70#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="10" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.74861366" vertical-offset="462" max-vertical-offset="1003">
+          <folding />
         </state>
       </provider>
     </entry>

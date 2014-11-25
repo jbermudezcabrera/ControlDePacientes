@@ -54,6 +54,5 @@ class ACDialog(QDialog):
         self.trig = self.trigInput.value()
         self.au = self.acidInput.value()
 
-        # TODO: check if all fields pass validation
         self.__data_collected = True
         self.close()

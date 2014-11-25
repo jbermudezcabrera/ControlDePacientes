@@ -76,6 +76,5 @@ class APPDialog(QDialog):
         self.other = self.otherInput.text().strip()
         self.idiag = self.idInput.toPlainText().strip()
 
-        # TODO: check if all fields pass validation
         self.__data_collected = True
         self.close()
