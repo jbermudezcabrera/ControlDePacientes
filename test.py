@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'resources\uis\PatientForm.ui'
 #
-# Created: Fri Nov 21 19:51:47 2014
+# Created: Tue Nov 25 09:42:40 2014
 #      by: PyQt5 UI code generator 5.3.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,6 +29,7 @@ class Ui_pacientForm(object):
         self.ciLabel.setObjectName("ciLabel")
         self.gridLayout.addWidget(self.ciLabel, 0, 0, 1, 1)
         self.ciInput = QtWidgets.QLineEdit(self.widget)
+        self.ciInput.setCursorMoveStyle(QtCore.Qt.VisualMoveStyle)
         self.ciInput.setObjectName("ciInput")
         self.gridLayout.addWidget(self.ciInput, 0, 2, 1, 1)
         self.label = QtWidgets.QLabel(self.widget)
@@ -80,6 +81,10 @@ class Ui_pacientForm(object):
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
         self.saveBtn = QtWidgets.QPushButton(self.buttonsWidget)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../icons/save 128.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.saveBtn.setIcon(icon)
+        self.saveBtn.setIconSize(QtCore.QSize(16, 16))
         self.saveBtn.setObjectName("saveBtn")
         self.horizontalLayout.addWidget(self.saveBtn)
         self.cancelBtn = QtWidgets.QPushButton(self.buttonsWidget)

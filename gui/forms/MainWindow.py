@@ -4,7 +4,7 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 import os.path
 
-from PyQt5.uic import loadUi
+from PyQt5.uic import loadUi, compileUi
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow
 
