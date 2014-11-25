@@ -62,7 +62,7 @@ class TAC(db.Entity):
 
 
 class Paciente(db.Entity):
-    ci = Required(str)
+    ci = Required(str, unique=True)
     edad = Required(int)
     nombre = Required(str)
 

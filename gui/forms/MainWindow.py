@@ -28,10 +28,14 @@ class MainWindow(QMainWindow):
 
     @pyqtSlot()
     def on_add_patient(self):
-        if not isinstance(self.centralWidget(), PatientForm):
+        central = self.centralWidget()
+
+        if not (isinstance(central, PatientForm) and central.isVisible()):
             self.setCentralWidget(PatientForm(self.controller))
 
     @pyqtSlot()
     def on_search_patient(self):
-        if not isinstance(self.centralWidget(), SearchPatientForm):
+        central = self.centralWidget()
+
+        if not isinstance(central, SearchPatientForm) or not central.isVisible():
             self.setCentralWidget(SearchPatientForm(self.controller))
