@@ -65,6 +65,9 @@ class PatientForm(QWidget):
         self.saveBtn.clicked.disconnect(self.on_save_clicked)
         self.saveBtn.clicked.connect(self.on_save_modified_clicked)
 
+        # put app, ac and tac forms in modify mode
+        self.__app_dialog.modify_app(self.patient.app)
+
     @pyqtSlot()
     def on_app_btn_clicked(self):
         self.__app_dialog.show()
@@ -101,11 +104,28 @@ class PatientForm(QWidget):
 
     @pyqtSlot()
     def on_save_modified_clicked(self):
+        # collect APP data
+        app_id = self.patient.app.id
+        hta = self.__app_dialog.hta
+        ci = self.__app_dialog.ci
+        hc = self.__app_dialog.hc
+        ht = self.__app_dialog.ht
+        dm = self.__app_dialog.dm
+        smoker = self.__app_dialog.smoker
+        other = self.__app_dialog.other
+        idiag = self.__app_dialog.idiag
+
+        # update APP
+        self.controller.update_app(app_id, hta, ci, hc, ht, dm, smoker,
+                                   other, idiag)
+
+        # collect patient data
         ci = self.ciInput.text().strip()
         name = self.nameInput.text().strip()
         age = self.ageInput.value()
         selected_prov_id = self.provinceCombo.currentData()
 
+        # update patient
         self.controller.update_patient(self.patient.id, ci, name, age,
                                        selected_prov_id)
 

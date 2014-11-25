@@ -11,21 +11,32 @@ from data.model import *
 def provinces():
     return Provincia.select().order_by(Provincia.nombre)[:]
 
+
+@db_session
+def get_patient(patient_id):
+    result = select(p for p in Paciente if p.id == patient_id)
+    result = result.prefetch(Provincia, APP, Complementario, TAC)
+    return result.first()
+
+
 @db_session
 def find_patients(query):
     if len(query) == 0:
-        return Paciente.select()[:]
+        return Paciente.select().prefetch(Provincia, APP, Complementario, TAC)[:]
 
     if query.isalpha():
         lquery = query.lower()
         result = select(p for p in Paciente if lquery in p.nombre.lower())
+        result = result.prefetch(Provincia, APP, Complementario, TAC)
         return result.order_by(Paciente.nombre)[:]
 
     if query.isdigit():
         result = select(p for p in Paciente if query in p.ci)
+        result = result.prefetch(Provincia, APP, Complementario, TAC)
         return result.order_by(Paciente.nombre)[:]
 
     return []
+
 
 def insert_patient(ci, name, age, province_id):
     with db_session:
@@ -33,17 +44,12 @@ def insert_patient(ci, name, age, province_id):
                      provincia=Provincia[province_id])
     return p.id
 
-@db_session
-def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
-    APP(paciente=Paciente[patient_id], hta=hta, ci=ci, hc=hc, ht=ht, dm=dm,
-        fumador=smoker, otro=other, idiagnostico=idiag)
 
 @db_session
-def update_patient(patient_id, ci, name, age, province_id, app=None,
-                   ac=None, tac=None):
+def update_patient(patient_id, ci, name, age, province_id):
     p = Paciente[patient_id]
-    p.set(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id],
-          app=app, ac=ac, tac=tac)
+    p.set(ci=ci, nombre=name, edad=age, provincia=Provincia[province_id])
+
 
 @db_session
 def delete_patient(patient_id):
@@ -53,6 +59,15 @@ def delete_patient(patient_id):
     APP.get(paciente=patient).delete()
     patient.delete()
 
+
 @db_session
-def get_patient(patient_id):
-    return Paciente[patient_id]
+def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+    APP(paciente=Paciente[patient_id], hta=hta, ci=ci, hc=hc, ht=ht, dm=dm,
+        fumador=smoker, otro=other, idiagnostico=idiag)
+
+
+@db_session
+def update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+    app = APP[app_id]
+    app.set(hta=hta, ci=ci, hc=hc, ht=ht, dm=dm, fumador=smoker,
+            otro=other, idiagnostico=idiag)

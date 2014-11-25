@@ -19,7 +19,6 @@ class APPDialog(QDialog):
         loadUi(os.path.join('resources', 'uis', 'APPDialog.ui'), self)
 
         self.controller = controller
-        self.app = None
 
         self.buttonBox.button(QDialogButtonBox.Save).setText('Guardar')
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')
@@ -51,18 +50,16 @@ class APPDialog(QDialog):
         self.smokerCombo.addItem('Si', 2)
 
     def modify_app(self, app):
-        self.app = app
-
         self.htaCheck.setChecked(app.hta)
         self.ciCheck.setChecked(app.ci)
         self.hclCheck.setChecked(app.hc)
         self.htdCheck.setChecked(app.ht)
 
-        self.dmCombo.setCurrentIndex(self.dmCombo.fta(self.app.dm))
-        self.smokerCombo.setCurrentIndex(self.smokerCombo.fta(self.app.fumador))
+        self.dmCombo.setCurrentIndex(self.dmCombo.findData(app.dm))
+        self.smokerCombo.setCurrentIndex(self.smokerCombo.findData(app.fumador))
 
-        self.otherInput.xt(self.app.otro)
-        self.idInput.xt(self.app.idiagnostico)
+        self.otherInput.setText(app.otro)
+        self.idInput.setPlainText(app.idiagnostico)
 
     @pyqtSlot()
     def on_save(self):

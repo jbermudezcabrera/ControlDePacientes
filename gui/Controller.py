@@ -12,16 +12,16 @@ class Controller():
         return DAO.provinces()
 
     @staticmethod
+    def patient(patient_id):
+        return DAO.get_patient(patient_id)
+
+    @staticmethod
     def find_patients(search_text):
         return DAO.find_patients(search_text)
 
     @staticmethod
     def add_patient(ci, name, age, province_id):
         return DAO.insert_patient(ci, name, age, province_id)
-
-    @staticmethod
-    def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
-        DAO.set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag)
 
     @staticmethod
     def update_patient(patient_id, ci, name, age, province_id):
@@ -32,5 +32,9 @@ class Controller():
         DAO.delete_patient(patient_id)
 
     @staticmethod
-    def patient(patient_id):
-        return DAO.get_patient(patient_id)
+    def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+        DAO.set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag)
+
+    @staticmethod
+    def update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+        DAO.update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag)
