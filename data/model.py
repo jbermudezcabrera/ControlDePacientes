@@ -57,7 +57,7 @@ class TAC(db.Entity):
     fecha = Required(date)
     angio_ct = Required(str)
 
-    arterias = Set(Arteria)
+    arterias = Set(Arteria, cascade_delete=True)
     paciente = Required('Paciente')
 
 

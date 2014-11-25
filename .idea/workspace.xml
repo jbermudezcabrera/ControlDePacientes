@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/remove 128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/save 128.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/PatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/PatientForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icons/app 128.png" afterPath="$PROJECT_DIR$/resources/icons/app 128.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/MainWindow.py" afterPath="$PROJECT_DIR$/gui/forms/MainWindow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/model.py" afterPath="$PROJECT_DIR$/data/model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mario.iws" />
@@ -26,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416926672427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1416927733833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -45,10 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DAO.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DAO.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/DAO.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="47" selection-start="638" selection-end="638" vertical-scroll-proportion="0.45554203" vertical-offset="0" max-vertical-offset="969">
+            <state line="52" column="28" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+              <folding>
+                <element signature="e#70#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="47" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.41880342" vertical-offset="609" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
@@ -84,11 +89,11 @@
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
         <option value="$PROJECT_DIR$/gui/Controller.py" />
         <option value="$PROJECT_DIR$/data/DAO.py" />
-        <option value="$PROJECT_DIR$/data/model.py" />
         <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
         <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
+        <option value="$PROJECT_DIR$/data/model.py" />
       </list>
     </option>
   </component>
@@ -711,7 +716,11 @@
       <created>1416865113697</created>
       <updated>1416865113697</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="icons added">
+      <created>1416926744865</created>
+      <updated>1416926744865</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -738,22 +747,22 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636953" sideWeight="0.6800472" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1636953" sideWeight="0.6804734" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3966942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3199528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3195266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -828,11 +837,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python34/Lib/site-packages/pony/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2083" selection-end="2083" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="5372" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python34/Lib/site-packages/pony/py23compat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1156" />
@@ -872,15 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="24" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1479">
-          <folding>
-            <element signature="e#70#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="99" selection-start="4342" selection-end="4462" vertical-scroll-proportion="0.62119365" vertical-offset="918" max-vertical-offset="2040">
@@ -899,7 +894,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.39220464" vertical-offset="1" max-vertical-offset="1411">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#70#84#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -908,7 +903,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.20706455" vertical-offset="0" max-vertical-offset="821">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#70#84#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -917,7 +912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="68" selection-start="570" selection-end="570" vertical-scroll-proportion="0.43483555" vertical-offset="0" max-vertical-offset="821">
           <folding>
-            <element signature="e#70#84#0" expanded="true" />
+            <element signature="e#70#84#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -929,9 +924,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/icons/remove 128.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/DAO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="47" selection-start="638" selection-end="638" vertical-scroll-proportion="0.45554203" vertical-offset="0" max-vertical-offset="969">
+        <state line="52" column="28" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#70#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="47" selection-start="1234" selection-end="1234" vertical-scroll-proportion="0.41880342" vertical-offset="609" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
