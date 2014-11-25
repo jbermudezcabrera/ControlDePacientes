@@ -62,9 +62,6 @@
       </item>
       <item row="0" column="2">
        <widget class="QLineEdit" name="ciInput">
-        <property name="inputMask">
-         <string>99999999999</string>
-        </property>
         <property name="cursorMoveStyle">
          <enum>Qt::VisualMoveStyle</enum>
         </property>

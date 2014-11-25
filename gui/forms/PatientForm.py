@@ -6,8 +6,8 @@ import os.path
 
 from PyQt5.uic import loadUi
 
-from PyQt5 import Qt
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, QRegExp, Qt
+from PyQt5.QtGui import QValidator, QRegExpValidator
 from PyQt5.QtWidgets import QWidget, QMessageBox
 
 from gui.forms.APPDialog import APPDialog
@@ -35,10 +35,19 @@ class PatientForm(QWidget):
         self.__tac_dialog = TACDialog(self.controller)
 
         self.__init_provinces()
+        self.__init_validators()
 
     def __init_provinces(self):
         for p in self.controller.provinces:
             self.provinceCombo.addItem(p.nombre, p.id)
+
+    def __init_validators(self):
+        rexp = QRegExpValidator(QRegExp('\d{11,11}'), self)
+        self.ciInput.setValidator(rexp)
+
+        rexp = QRegExpValidator(QRegExp('[a-z\s]+', Qt.CaseInsensitive), self)
+        self.nameInput.setValidator(rexp)
+
 
     def modify_patient(self, patient):
         self.patient = patient
