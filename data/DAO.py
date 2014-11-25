@@ -47,7 +47,11 @@ def update_patient(patient_id, ci, name, age, province_id, app=None,
 
 @db_session
 def delete_patient(patient_id):
-    Paciente[patient_id].delete()
+    patient = Paciente[patient_id]
+
+    # since cascade_delete raises an error, i worked around by deleting manually
+    APP.get(paciente=patient).delete()
+    patient.delete()
 
 @db_session
 def get_patient(patient_id):
