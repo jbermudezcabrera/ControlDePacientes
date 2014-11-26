@@ -44,18 +44,18 @@ class PatientForm(QWidget):
         self.__validator_to_input = {}
         self.__input_to_sheet = {}
 
-        self.appBtn.clicked.connect(self.on_app_btn_clicked)
-        self.acBtn.clicked.connect(self.on_ac_btn_clicked)
-        self.tacBtn.clicked.connect(self.on_tac_btn_clicked)
-
-        self.saveBtn.clicked.connect(self.on_save_clicked)
-
         self.__app_dialog = APPDialog(self.controller)
         self.__ac_dialog = ACDialog(self.controller)
         self.__tac_dialog = TACDialog(self.controller)
 
         self.__init_provinces()
         self.__init_validators()
+
+        self.appBtn.clicked.connect(self.__app_dialog.show)
+        self.acBtn.clicked.connect(self.__ac_dialog.show)
+        self.tacBtn.clicked.connect(self.__tac_dialog.show)
+
+        self.saveBtn.clicked.connect(self.on_save_clicked)
 
     def __init_provinces(self):
         for p in self.controller.provinces:
@@ -98,18 +98,6 @@ class PatientForm(QWidget):
         # put app, ac and tac forms in modify mode
         self.__app_dialog.modify_app(self.patient.app)
         self.__ac_dialog.modify_ac(self.patient.complementario)
-
-    @pyqtSlot()
-    def on_app_btn_clicked(self):
-        self.__app_dialog.show()
-
-    @pyqtSlot()
-    def on_ac_btn_clicked(self):
-        self.__ac_dialog.show()
-
-    @pyqtSlot()
-    def on_tac_btn_clicked(self):
-        self.__tac_dialog.show()
 
     @pyqtSlot()
     def on_save_clicked(self):
