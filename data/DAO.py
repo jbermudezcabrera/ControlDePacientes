@@ -22,19 +22,16 @@ def get_patient(patient_id):
 @db_session
 def find_patients(query):
     if len(query) == 0:
-        result = Paciente.select().prefetch(Provincia, APP, Complementario, TAC)
-        return result.order_by(Paciente.nombre)[:]
+        return Paciente.select().prefetch(Provincia, APP, Complementario, TAC)[:]
 
     if query.isalpha():
         lquery = query.lower()
         result = select(p for p in Paciente if lquery in p.nombre.lower())
-        result = result.prefetch(Provincia, APP, Complementario, TAC)
-        return result.order_by(Paciente.nombre)[:]
+        return result.prefetch(Provincia, APP, Complementario, TAC)[:]
 
     if query.isdigit():
         result = select(p for p in Paciente if query in p.ci)
-        result = result.prefetch(Provincia, APP, Complementario, TAC)
-        return result.order_by(Paciente.nombre)[:]
+        return result.prefetch(Provincia, APP, Complementario, TAC)[:]
 
     return []
 

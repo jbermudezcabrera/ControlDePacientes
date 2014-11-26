@@ -4,13 +4,15 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex
 
+PROVINCE_COLUMN = 2
 
 class PersonsTableModel(QAbstractTableModel):
 
     def __init__(self, patients=[]):
         QAbstractTableModel.__init__(self)
         self.patients = patients
-        self.__column_to_name = {0:'nombre', 1:'edad', 2:'provincia'}
+        self.__column_to_name = {0:'nombre', 1:'edad',
+                                 PROVINCE_COLUMN:'provincia'}
 
     def rowCount(self, model_index=QModelIndex()):
         return len(self.patients)
@@ -23,7 +25,7 @@ class PersonsTableModel(QAbstractTableModel):
             patient = self.patients[model_index.row()]
             col = model_index.column()
 
-            if col != 2:
+            if col != PROVINCE_COLUMN:
                 return getattr(patient, self.__column_to_name[col])
             return patient.provincia.nombre
 
@@ -36,3 +38,22 @@ class PersonsTableModel(QAbstractTableModel):
         if role == Qt.DisplayRole:
             return self.__column_to_name[section].capitalize()
         return None
+
+    def sort(self, column, order=Qt.AscendingOrder):
+        column_name = self.__column_to_name[column]
+        reverse = order == Qt.DescendingOrder
+
+        self.layoutAboutToBeChanged.emit()
+
+        if column != PROVINCE_COLUMN:
+            self.patients.sort(key=lambda p: getattr(p, column_name),
+                               reverse=reverse)
+        else:
+            self.patients.sort(key=lambda p: p.provincia.nombre,
+                               reverse=reverse)
+
+        ifrom = self.createIndex(0, 0)
+        ito = self.createIndex(len(self.patients),len(self.__column_to_name))
+
+        self.changePersistentIndex(ifrom, ito)
+        self.layoutChanged.emit()
