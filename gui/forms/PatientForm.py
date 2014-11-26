@@ -20,10 +20,10 @@ class CIValidator(QValidator):
     def __init__(self, controller):
         super().__init__()
         self.controller = controller
-        self.regexp = QRegExpValidator(QRegExp('\d{11,11}'), self)
+        self.__regexp = CIValidator.regexp(self)
 
     def validate(self, value, pos):
-        state = self.regexp.validate(value, pos)
+        state = self.__regexp.validate(value, pos)
 
         if state[0] == QValidator.Acceptable:
             if not self.controller.find_patients(value):
@@ -32,6 +32,9 @@ class CIValidator(QValidator):
 
         return state
 
+    @staticmethod
+    def regexp(parent):
+        return QRegExpValidator(QRegExp('\d{11,11}'), parent)
 
 class PatientForm(QWidget):
     def __init__(self, controller, *args):
@@ -39,10 +42,10 @@ class PatientForm(QWidget):
 
         loadUi(os.path.join('resources', 'uis', 'PatientForm.ui'), self)
 
-        self.controller = controller
         self.patient = None
-        self.__validator_to_input = {}
+        self.controller = controller
         self.__input_to_sheet = {}
+        self.__validator_to_input = {}
 
         self.__app_dialog = APPDialog(self.controller)
         self.__ac_dialog = ACDialog(self.controller)
@@ -83,8 +86,14 @@ class PatientForm(QWidget):
         if index >= 0:
            self.provinceCombo.setCurrentIndex(index)
         else:
-            msg = 'No se ha podido cargar la provincia ' + patient.provincia.nombre
-            QMessageBox.critical(self, 'Error', msg)
+            msg = 'No se ha podido cargar la provincia {}'
+            self.show_error(msg=msg.format(patient.provincia.nombre))
+
+        # change the concept of a valid CI, check only pattern correctness now
+        self.__validator_to_input.pop(self.ciInput.validator())
+
+        self.ciInput.setValidator(self.ciInput.validator().regexp(self))
+        self.__validator_to_input[self.ciInput.validator()] = self.ciInput
 
         # modify form behaviour
         # cancel no longer closes form, now closes form's container
@@ -110,29 +119,42 @@ class PatientForm(QWidget):
         age = self.ageInput.value()
         selected_prov_id = self.provinceCombo.currentData()
 
-        patient_id = self.controller.add_patient(ci, name, age, selected_prov_id)
+        try:
+            patient_id = self.controller.add_patient(ci, name, age,
+                                                     selected_prov_id)
+        except Exception as ex:
+            self.show_error(ex)
+            return
 
         # insert patient APP
         if self.__app_dialog.data_collected:
-            self.controller.set_patient_app(patient_id,
-                                            self.__app_dialog.hta,
-                                            self.__app_dialog.ci,
-                                            self.__app_dialog.hc,
-                                            self.__app_dialog.ht,
-                                            self.__app_dialog.dm,
-                                            self.__app_dialog.smoker,
-                                            self.__app_dialog.other,
-                                            self.__app_dialog.idiag)
+            try:
+                self.controller.set_patient_app(patient_id,
+                                                self.__app_dialog.hta,
+                                                self.__app_dialog.ci,
+                                                self.__app_dialog.hc,
+                                                self.__app_dialog.ht,
+                                                self.__app_dialog.dm,
+                                                self.__app_dialog.smoker,
+                                                self.__app_dialog.other,
+                                                self.__app_dialog.idiag)
+            except Exception as ex:
+                self.show_error(ex)
+                return
 
         # insert patient AC
         if self.__ac_dialog.data_collected:
-            self.controller.set_patient_ac(patient_id,
-                                           self.__ac_dialog.hb,
-                                           self.__ac_dialog.gli,
-                                           self.__ac_dialog.crea,
-                                           self.__ac_dialog.col,
-                                           self.__ac_dialog.trig,
-                                           self.__ac_dialog.au)
+            try:
+                self.controller.set_patient_ac(patient_id,
+                                               self.__ac_dialog.hb,
+                                               self.__ac_dialog.gli,
+                                               self.__ac_dialog.crea,
+                                               self.__ac_dialog.col,
+                                               self.__ac_dialog.trig,
+                                               self.__ac_dialog.au)
+            except Exception as ex:
+                self.show_error(ex)
+                return
 
         QMessageBox.information(self, 'Información',
                                 'Paciente registrado satisfactoriamente')
@@ -155,13 +177,23 @@ class PatientForm(QWidget):
             idiag = self.__app_dialog.idiag
 
             if not self.patient.app:
-                self.controller.set_patient_app(self.patient.id, hta, ci, hc,
-                                                ht, dm, smoker, other, idiag)
+                try:
+                    self.controller.set_patient_app(self.patient.id, hta, ci,
+                                                    hc, ht, dm, smoker, other,
+                                                    idiag)
+                except Exception as ex:
+                    self.show_error(ex)
+                    return
             else:
                 # update APP
                 app_id = self.patient.app.id
-                self.controller.update_app(app_id, hta, ci, hc, ht, dm,
-                                           smoker, other, idiag)
+
+                try:
+                    self.controller.update_app(app_id, hta, ci, hc, ht, dm,
+                                               smoker, other, idiag)
+                except Exception as ex:
+                    self.show_error(ex)
+                    return
 
         # collect AC data
         if self.__ac_dialog.data_collected:
@@ -173,12 +205,22 @@ class PatientForm(QWidget):
             au = self.__ac_dialog.au
 
             if not self.patient.complementario:
-                self.controller.set_patient_ac(self.patient.id, hb, gli,
-                                               crea, col, trig, au)
+                try:
+                    self.controller.set_patient_ac(self.patient.id, hb, gli,
+                                                   crea, col, trig, au)
+                except Exception as ex:
+                    self.show_error(ex)
+                    return
             else:
                 # update AC
                 ac_id = self.patient.complementario.id
-                self.controller.update_ac(ac_id, hb, gli, crea, col, trig, au)
+
+                try:
+                    self.controller.update_ac(ac_id, hb, gli, crea, col,
+                                              trig, au)
+                except Exception as ex:
+                    self.show_error(ex)
+                    return
 
         # collect patient data
         ci = self.ciInput.text().strip()
@@ -187,12 +229,14 @@ class PatientForm(QWidget):
         selected_prov_id = self.provinceCombo.currentData()
 
         # update patient
-        self.controller.update_patient(self.patient.id, ci, name, age,
-                                       selected_prov_id)
-
-        QMessageBox.information(self, 'Información',
-                                'Paciente actualizado correctamente')
-        self.parent().close()
+        try:
+            self.controller.update_patient(self.patient.id, ci, name, age,
+                                           selected_prov_id)
+            QMessageBox.information(self, 'Información',
+                                    'Paciente actualizado correctamente')
+            self.parent().close()
+        except Exception as ex:
+            self.show_error(ex)
 
     def validate_input(self):
         valid = True
@@ -209,3 +253,8 @@ class PatientForm(QWidget):
             QMessageBox.warning(self, 'Valores incorrectos',
                                 'Algunos campos contienen información inválida')
         return valid
+
+    def show_error(self, error='', title='Error',
+                   msg='Ha ocurrido el siguiente error:\n'):
+        text = msg + str(error)
+        QMessageBox.critical(self, title, text)
