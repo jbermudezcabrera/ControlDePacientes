@@ -14,6 +14,7 @@ from gui.forms.APPDialog import APPDialog
 from gui.forms.TACDialog import TACDialog
 from gui.forms.ACDialog import ACDialog
 
+
 class CIValidator(QValidator):
 
     def __init__(self, controller):
