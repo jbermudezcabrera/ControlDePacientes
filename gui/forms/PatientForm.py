@@ -14,6 +14,23 @@ from gui.forms.APPDialog import APPDialog
 from gui.forms.TACDialog import TACDialog
 from gui.forms.ACDialog import ACDialog
 
+class CIValidator(QValidator):
+
+    def __init__(self, controller):
+        super().__init__()
+        self.controller = controller
+        self.regexp = QRegExpValidator(QRegExp('\d{11,11}'), self)
+
+    def validate(self, value, pos):
+        state = self.regexp.validate(value, pos)
+
+        if state[0] == QValidator.Acceptable:
+            if not self.controller.find_patients(value):
+                return QValidator.Acceptable, state[1], state[2]
+            return QValidator.Invalid, state[1], state[2]
+
+        return state
+
 
 class PatientForm(QWidget):
     def __init__(self, controller, *args):
@@ -42,12 +59,10 @@ class PatientForm(QWidget):
             self.provinceCombo.addItem(p.nombre, p.id)
 
     def __init_validators(self):
-        rexp = QRegExpValidator(QRegExp('\d{11,11}'), self)
-        self.ciInput.setValidator(rexp)
+        regexp = QRegExpValidator(QRegExp('[a-z\s]+', Qt.CaseInsensitive), self)
+        self.nameInput.setValidator(regexp)
 
-        rexp = QRegExpValidator(QRegExp('[a-z\s]+', Qt.CaseInsensitive), self)
-        self.nameInput.setValidator(rexp)
-
+        self.ciInput.setValidator(CIValidator(self.controller))
 
     def modify_patient(self, patient):
         self.patient = patient
