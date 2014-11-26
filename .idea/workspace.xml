@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="doing some exception catching in PatientForm">
+    <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/MainWindow.py" afterPath="$PROJECT_DIR$/gui/forms/MainWindow.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/PatientForm.py" afterPath="$PROJECT_DIR$/gui/forms/PatientForm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/TACDialog.py" afterPath="$PROJECT_DIR$/gui/forms/TACDialog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mario.iws" />
@@ -20,7 +22,7 @@
     <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1417018939187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1417028216166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -39,13 +41,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PatientForm.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PatientForm.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="48" selection-start="511" selection-end="511" vertical-scroll-proportion="-0.42882884" vertical-offset="561" max-vertical-offset="4063">
+            <state line="206" column="30" selection-start="7507" selection-end="7507" vertical-scroll-proportion="0.0" vertical-offset="2734" max-vertical-offset="4216">
               <folding>
                 <element signature="e#70#84#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ACDialog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="8" selection-start="586" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1003">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TACDialog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="33" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gui/forms/MainWindow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="931" selection-end="931" vertical-scroll-proportion="0.51892555" vertical-offset="0" max-vertical-offset="819">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,16 +104,16 @@
         <option value="$PROJECT_DIR$/core/core.py" />
         <option value="$PROJECT_DIR$/data/PersonsTableModel.py" />
         <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
-        <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
         <option value="$PROJECT_DIR$/gui/Controller.py" />
         <option value="$PROJECT_DIR$/data/DAO.py" />
         <option value="$PROJECT_DIR$/StartApp.py" />
         <option value="$PROJECT_DIR$/data/model.py" />
-        <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
         <option value="$PROJECT_DIR$/gui/forms/APPDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/__init__.py" />
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
+        <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
+        <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
       </list>
     </option>
   </component>
@@ -745,10 +774,14 @@
       <created>1417018290454</created>
       <updated>1417018290454</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="CIValidator removed">
+      <created>1417018968346</created>
+      <updated>1417018968346</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="2">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -772,22 +805,22 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17909238" sideWeight="0.6859504" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17909238" sideWeight="0.6710059" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39526626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3140496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31360948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -822,8 +855,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="implementing search function and other fixes" />
-    <MESSAGE value="d" />
     <MESSAGE value="integrating wit Pony ORM" />
     <MESSAGE value="old sql queries replaced for Pony ORM" />
     <MESSAGE value="adding patients works" />
@@ -847,7 +878,9 @@
     <MESSAGE value="CIValidator finished" />
     <MESSAGE value="marking invalid fields in red and showing warning message in PatientForm" />
     <MESSAGE value="doing some exception catching in PatientForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="doing some exception catching in PatientForm" />
+    <MESSAGE value="CIValidator removed" />
+    <MESSAGE value="setting conditions to save TAC data&#10;- search patients is showed when app starts" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting conditions to save TAC data&#10;- search patients is showed when app starts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -865,11 +898,6 @@
     <entry file="file://C:/Python34/Lib/site-packages/pony/orm/dbapiprovider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="332" column="0" selection-start="12358" selection-end="12358" vertical-scroll-proportion="0.0" vertical-offset="5307" max-vertical-offset="11798" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.20706455" vertical-offset="0" max-vertical-offset="821" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/icons/remove 128.png">
@@ -897,11 +925,6 @@
         <state line="22" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.45665446" vertical-offset="0" max-vertical-offset="819" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/MainWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="895" selection-end="895" vertical-scroll-proportion="0.6642247" vertical-offset="0" max-vertical-offset="819" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="35" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.83394384" vertical-offset="150" max-vertical-offset="1428" />
@@ -910,11 +933,6 @@
     <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="36" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.6190476" vertical-offset="0" max-vertical-offset="1462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="22" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.6678877" vertical-offset="184" max-vertical-offset="1003" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/DAO.py">
@@ -941,10 +959,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="48" selection-start="511" selection-end="511" vertical-scroll-proportion="-0.42882884" vertical-offset="561" max-vertical-offset="4063">
+        <state line="206" column="30" selection-start="7507" selection-end="7507" vertical-scroll-proportion="0.0" vertical-offset="2734" max-vertical-offset="4216">
           <folding>
             <element signature="e#70#84#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="8" selection-start="586" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="33" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/MainWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="931" selection-end="931" vertical-scroll-proportion="0.51892555" vertical-offset="0" max-vertical-offset="819">
+          <folding />
         </state>
       </provider>
     </entry>

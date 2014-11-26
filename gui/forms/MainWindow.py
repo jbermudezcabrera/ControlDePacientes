@@ -26,6 +26,8 @@ class MainWindow(QMainWindow):
         self.addPatientAction.triggered.connect(self.on_add_patient)
         self.searchAction.triggered.connect(self.on_search_patient)
 
+        self.searchAction.trigger()
+
     @pyqtSlot()
     def on_add_patient(self):
         central = self.centralWidget()

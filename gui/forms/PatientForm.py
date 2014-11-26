@@ -80,6 +80,7 @@ class PatientForm(QWidget):
         # put app, ac and tac forms in modify mode
         self.__app_dialog.modify_app(self.patient.app)
         self.__ac_dialog.modify_ac(self.patient.complementario)
+        self.__tac_dialog.modify_tac(self.patient.tac)
 
     @pyqtSlot()
     def on_save_clicked(self):
@@ -128,6 +129,10 @@ class PatientForm(QWidget):
             except Exception as ex:
                 self.show_error(ex)
                 return
+
+        # TODO: insert patient TAC
+        if self.__tac_dialog.data_collected:
+            pass
 
         QMessageBox.information(self, 'Información',
                                 'Paciente registrado satisfactoriamente')
@@ -194,6 +199,10 @@ class PatientForm(QWidget):
                 except Exception as ex:
                     self.show_error(ex)
                     return
+
+        # TODO: collect TAC data
+        if self.__tac_dialog.data_collected:
+            pass
 
         # collect patient data
         ci = self.ciInput.text().strip()

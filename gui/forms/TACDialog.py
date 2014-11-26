@@ -17,6 +17,24 @@ class TACDialog(QDialog):
         loadUi(os.path.join('resources', 'uis', 'TACDialog.ui'), self)
 
         self.controller = controller
+        self.__data_collected = False
 
         self.buttonBox.button(QDialogButtonBox.Save).setText('Guardar')
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')
+
+        self.buttonBox.accepted.connect(self.on_save)
+
+    def modify_tac(self, tac):
+        if tac is not None:
+            # TODO: restore tac data
+            pass
+
+    @property
+    def data_collected(self):
+        return self.__data_collected
+
+    @pyqtSlot()
+    def on_save(self):
+        # TODO: save data
+        self.__data_collected = True
+        self.close()
