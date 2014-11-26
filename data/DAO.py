@@ -22,7 +22,8 @@ def get_patient(patient_id):
 @db_session
 def find_patients(query):
     if len(query) == 0:
-        return Paciente.select().prefetch(Provincia, APP, Complementario, TAC)[:]
+        result = Paciente.select().prefetch(Provincia, APP, Complementario, TAC)
+        return result.order_by(Paciente.nombre)[:]
 
     if query.isalpha():
         lquery = query.lower()

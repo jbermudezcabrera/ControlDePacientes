@@ -10,7 +10,7 @@ class PersonsTableModel(QAbstractTableModel):
     def __init__(self, patients=[]):
         QAbstractTableModel.__init__(self)
         self.patients = patients
-        self.__column_to_name = {0:'nombre', 1:'ci', 2:'edad'}
+        self.__column_to_name = {0:'nombre', 1:'edad', 2:'provincia'}
 
     def rowCount(self, model_index=QModelIndex()):
         return len(self.patients)
@@ -20,8 +20,12 @@ class PersonsTableModel(QAbstractTableModel):
 
     def data(self, model_index=QModelIndex(), role=Qt.DisplayRole):
         if role == Qt.DisplayRole and model_index.isValid():
-            return getattr(self.patients[model_index.row()],
-                           self.__column_to_name[model_index.column()])
+            patient = self.patients[model_index.row()]
+            col = model_index.column()
+
+            if col != 2:
+                return getattr(patient, self.__column_to_name[col])
+            return patient.provincia.nombre
 
         if role == Qt.UserRole:
             return self.patients[model_index.row()].id
@@ -30,8 +34,5 @@ class PersonsTableModel(QAbstractTableModel):
 
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         if role == Qt.DisplayRole:
-            name = self.__column_to_name[section]
-
-            return name.upper() if section == 1 else name.capitalize()
-
+            return self.__column_to_name[section].capitalize()
         return None
