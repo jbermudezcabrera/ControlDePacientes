@@ -70,7 +70,7 @@
       <item row="1" column="0" colspan="2">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Nombre</string>
+         <string>Nombre completo</string>
         </property>
        </widget>
       </item>

@@ -41,6 +41,8 @@ class PatientForm(QWidget):
 
         self.controller = controller
         self.patient = None
+        self.__validator_to_input = {}
+        self.__input_to_sheet = {}
 
         self.appBtn.clicked.connect(self.on_app_btn_clicked)
         self.acBtn.clicked.connect(self.on_ac_btn_clicked)
@@ -62,8 +64,11 @@ class PatientForm(QWidget):
     def __init_validators(self):
         regexp = QRegExpValidator(QRegExp('[a-z\s]+', Qt.CaseInsensitive), self)
         self.nameInput.setValidator(regexp)
+        self.__validator_to_input[regexp] = self.nameInput
 
-        self.ciInput.setValidator(CIValidator(self.controller))
+        civ = CIValidator(self.controller)
+        self.ciInput.setValidator(civ)
+        self.__validator_to_input[civ] = self.ciInput
 
     def modify_patient(self, patient):
         self.patient = patient
@@ -108,6 +113,9 @@ class PatientForm(QWidget):
 
     @pyqtSlot()
     def on_save_clicked(self):
+        if not self.validate_input():
+            return
+
         # insert patient
         ci = self.ciInput.text().strip()
         name = self.nameInput.text().strip()
@@ -144,6 +152,9 @@ class PatientForm(QWidget):
 
     @pyqtSlot()
     def on_save_modified_clicked(self):
+        if not self.validate_input():
+            return
+
         # collect APP data
         if self.__app_dialog.data_collected:
             hta = self.__app_dialog.hta
@@ -194,3 +205,19 @@ class PatientForm(QWidget):
         QMessageBox.information(self, 'Información',
                                 'Paciente actualizado correctamente')
         self.parent().close()
+
+    def validate_input(self):
+        valid = True
+
+        for v, i in self.__validator_to_input.items():
+            if v.validate(i.text(), len(i.text()))[0] != QValidator.Acceptable:
+                valid = False
+                self.__input_to_sheet[i] = i.styleSheet()
+                i.setStyleSheet('border: 1px solid red')
+            elif i in self.__input_to_sheet:
+                i.setStyleSheet(self.__input_to_sheet[i])
+
+        if not valid:
+            QMessageBox.warning(self, 'Valores incorrectos',
+                                'Algunos campos contienen información inválida')
+        return valid
