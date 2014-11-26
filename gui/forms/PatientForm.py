@@ -15,27 +15,6 @@ from gui.forms.TACDialog import TACDialog
 from gui.forms.ACDialog import ACDialog
 
 
-class CIValidator(QValidator):
-
-    def __init__(self, controller):
-        super().__init__()
-        self.controller = controller
-        self.__regexp = CIValidator.regexp(self)
-
-    def validate(self, value, pos):
-        state = self.__regexp.validate(value, pos)
-
-        if state[0] == QValidator.Acceptable:
-            if not self.controller.find_patients(value):
-                return QValidator.Acceptable, state[1], state[2]
-            return QValidator.Invalid, state[1], state[2]
-
-        return state
-
-    @staticmethod
-    def regexp(parent):
-        return QRegExpValidator(QRegExp('\d{11,11}'), parent)
-
 class PatientForm(QWidget):
     def __init__(self, controller, *args):
         super(PatientForm, self).__init__(*args)
@@ -69,7 +48,7 @@ class PatientForm(QWidget):
         self.nameInput.setValidator(regexp)
         self.__validator_to_input[regexp] = self.nameInput
 
-        civ = CIValidator(self.controller)
+        civ = QRegExpValidator(QRegExp('\d{11,11}'), self)
         self.ciInput.setValidator(civ)
         self.__validator_to_input[civ] = self.ciInput
 
@@ -88,12 +67,6 @@ class PatientForm(QWidget):
         else:
             msg = 'No se ha podido cargar la provincia {}'
             self.show_error(msg=msg.format(patient.provincia.nombre))
-
-        # change the concept of a valid CI, check only pattern correctness now
-        self.__validator_to_input.pop(self.ciInput.validator())
-
-        self.ciInput.setValidator(self.ciInput.validator().regexp(self))
-        self.__validator_to_input[self.ciInput.validator()] = self.ciInput
 
         # modify form behaviour
         # cancel no longer closes form, now closes form's container
@@ -255,6 +228,6 @@ class PatientForm(QWidget):
         return valid
 
     def show_error(self, error='', title='Error',
-                   msg='Ha ocurrido el siguiente error:\n'):
+                   msg='Ha ocurrido el siguiente error:\n\n'):
         text = msg + str(error)
         QMessageBox.critical(self, title, text)
