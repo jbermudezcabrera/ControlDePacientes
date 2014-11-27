@@ -54,5 +54,16 @@ class TACDialog(QDialog):
         self.close()
 
     def __fill_table(self, arteries=[]):
+        row_count = self.calcioScoreTable.rowCount()
+
+        for row in range(row_count):
+            item = self.calcioScoreTable.item(row, 0)
+            item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+
+        row_count -=1
+        for column in range(self.calcioScoreTable.columnCount()):
+            item = self.calcioScoreTable.item(row_count, column)
+            item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+
         if arteries:
             pass
