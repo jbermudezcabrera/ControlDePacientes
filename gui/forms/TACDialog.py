@@ -56,10 +56,12 @@ class TACDialog(QDialog):
     def __fill_table(self, arteries=[]):
         row_count = self.calcioScoreTable.rowCount()
 
+        # mark arteries column as non editable
         for row in range(row_count):
             item = self.calcioScoreTable.item(row, 0)
             item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
 
+        # mark totals row as non editable
         row_count -=1
         for column in range(self.calcioScoreTable.columnCount()):
             item = self.calcioScoreTable.item(row_count, column)
