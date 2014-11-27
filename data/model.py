@@ -19,10 +19,10 @@ class Provincia(db.Entity):
 class Arteria(db.Entity):
     nombre = Required(str)
 
-    masa = Required(float)
-    calcio = Required(float)
-    volumen = Required(float)
-    lesiones = Required(int, min=0)
+    masa = Required(float, min=0)
+    calcio = Required(float, min=0)
+    volumen = Required(float, min=0)
+    lesiones = Required(int, min=0, max=150)
 
     tac = Required('TAC')
 
@@ -43,12 +43,12 @@ class APP(db.Entity):
 
 
 class Complementario(db.Entity):
-    hb = Required(float)
-    creatinina = Required(float)
-    colesterol = Required(float)
-    acido_urico = Required(float)
-    trigliceridos = Required(float)
-    glicemia = Required(float, min=0)
+    hb = Required(float, min=0, max=20)
+    glicemia = Required(float, min=0, max=20)
+    colesterol = Required(float, min=0, max=20)
+    trigliceridos = Required(float, min=0, max=20)
+    creatinina = Required(float, min=0, max=200)
+    acido_urico = Required(float, min=0, max=1000)
 
     paciente = Required('Paciente')
 
@@ -75,7 +75,9 @@ class Paciente(db.Entity):
 db.generate_mapping(check_tables=True, create_tables=True)
 
 with db_session:
+
     if len(Provincia.select()) == 0:
         Provincia(nombre='Villa Clara')
         Provincia(nombre='Cienfuegos')
         Provincia(nombre='Sancti Spíritus')
+        Provincia(nombre='Ciego de Ávila')

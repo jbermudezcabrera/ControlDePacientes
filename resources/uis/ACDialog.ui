@@ -43,10 +43,18 @@
     <number>10</number>
    </property>
    <item row="3" column="1">
-    <widget class="QDoubleSpinBox" name="colInput"/>
+    <widget class="QDoubleSpinBox" name="colInput">
+     <property name="maximum">
+      <double>20.000000000000000</double>
+     </property>
+    </widget>
    </item>
    <item row="4" column="1">
-    <widget class="QDoubleSpinBox" name="trigInput"/>
+    <widget class="QDoubleSpinBox" name="trigInput">
+     <property name="maximum">
+      <double>20.000000000000000</double>
+     </property>
+    </widget>
    </item>
    <item row="4" column="0">
     <widget class="QLabel" name="label_5">
@@ -76,7 +84,14 @@
     </spacer>
    </item>
    <item row="5" column="1">
-    <widget class="QDoubleSpinBox" name="acidInput"/>
+    <widget class="QDoubleSpinBox" name="acidInput">
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>10.000000000000000</double>
+     </property>
+    </widget>
    </item>
    <item row="8" column="1">
     <widget class="QDialogButtonBox" name="buttonBox">
@@ -100,12 +115,19 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QDoubleSpinBox" name="creaInput"/>
+    <widget class="QDoubleSpinBox" name="creaInput">
+     <property name="maximum">
+      <double>200.000000000000000</double>
+     </property>
+    </widget>
    </item>
    <item row="0" column="1">
     <widget class="QDoubleSpinBox" name="hbInput">
      <property name="showGroupSeparator" stdset="0">
       <bool>false</bool>
+     </property>
+     <property name="maximum">
+      <double>20.000000000000000</double>
      </property>
     </widget>
    </item>
@@ -124,7 +146,11 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QDoubleSpinBox" name="gliInput"/>
+    <widget class="QDoubleSpinBox" name="gliInput">
+     <property name="maximum">
+      <double>20.000000000000000</double>
+     </property>
+    </widget>
    </item>
    <item row="7" column="0" colspan="2">
     <widget class="Line" name="line">
