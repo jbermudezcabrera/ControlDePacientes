@@ -16,13 +16,13 @@ class Provincia(db.Entity):
     pacientes = Set('Paciente')
 
 
-class NombreArteria(db.Entity):
+class TipoArteria(db.Entity):
     nombre = Required(str)
     arterias = Set('Arteria')
 
 
 class Arteria(db.Entity):
-    tipo = Required(NombreArteria)
+    tipo = Required(TipoArteria)
 
     masa = Required(float, min=0)
     calcio = Required(float, min=0)
@@ -87,8 +87,8 @@ with db_session:
         Provincia(nombre='Sancti Spíritus')
         Provincia(nombre='Ciego de Ávila')
 
-    if not NombreArteria.select():
-        NombreArteria(nombre='Tronco')
-        NombreArteria(nombre='DA')
-        NombreArteria(nombre='CX')
-        NombreArteria(nombre='CD')
+    if not TipoArteria.select():
+        TipoArteria(nombre='Tronco')
+        TipoArteria(nombre='DA')
+        TipoArteria(nombre='CX')
+        TipoArteria(nombre='CD')

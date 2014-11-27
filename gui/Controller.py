@@ -11,6 +11,10 @@ class Controller():
     def provinces(self):
         return DAO.provinces()
 
+    @property
+    def arteries(self):
+        return DAO.arteries()
+
     @staticmethod
     def patient(patient_id):
         return DAO.get_patient(patient_id)

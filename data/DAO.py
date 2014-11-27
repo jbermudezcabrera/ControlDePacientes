@@ -13,6 +13,11 @@ def provinces():
 
 
 @db_session
+def arteries():
+    return TipoArteria.select().order_by(TipoArteria.nombre)[:]
+
+
+@db_session
 def get_patient(patient_id):
     result = select(p for p in Paciente if p.id == patient_id)
     result = result.prefetch(Provincia, APP, Complementario, TAC)

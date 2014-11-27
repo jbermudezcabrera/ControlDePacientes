@@ -7,8 +7,8 @@ from datetime import date
 
 from PyQt5.uic import loadUi
 
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QTableWidgetItem
 
 from data.CalcioScoreTableModel import CalcioScoreTableModel
 
@@ -31,8 +31,11 @@ class TACDialog(QDialog):
         self.buttonBox.accepted.connect(self.on_save)
         self.dateInput.setDate(self.date)   # set today's date
 
+        self.__fill_table()
+
     def modify_tac(self, tac):
         if tac is not None:
+            self.__fill_table(tac.arterias)
             # TODO: restore tac data
             pass
 
@@ -49,3 +52,7 @@ class TACDialog(QDialog):
         # TODO: save data
         self.__data_collected = True
         self.close()
+
+    def __fill_table(self, arteries=[]):
+        if arteries:
+            pass
