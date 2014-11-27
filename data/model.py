@@ -16,8 +16,13 @@ class Provincia(db.Entity):
     pacientes = Set('Paciente')
 
 
-class Arteria(db.Entity):
+class NombreArteria(db.Entity):
     nombre = Required(str)
+    arterias = Set('Arteria')
+
+
+class Arteria(db.Entity):
+    nombre = Required(NombreArteria)
 
     masa = Required(float, min=0)
     calcio = Required(float, min=0)
@@ -76,8 +81,14 @@ db.generate_mapping(check_tables=True, create_tables=True)
 
 with db_session:
 
-    if len(Provincia.select()) == 0:
+    if not Provincia.select():
         Provincia(nombre='Villa Clara')
         Provincia(nombre='Cienfuegos')
         Provincia(nombre='Sancti Spíritus')
         Provincia(nombre='Ciego de Ávila')
+
+    if not NombreArteria.select():
+        NombreArteria(nombre='Tronco')
+        NombreArteria(nombre='DA')
+        NombreArteria(nombre='CX')
+        NombreArteria(nombre='CD')
