@@ -22,7 +22,7 @@ class NombreArteria(db.Entity):
 
 
 class Arteria(db.Entity):
-    nombre = Required(NombreArteria)
+    tipo = Required(NombreArteria)
 
     masa = Required(float, min=0)
     calcio = Required(float, min=0)

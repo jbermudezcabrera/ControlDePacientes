@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="$PROJECT_DIR$/resources/Pacientes.sqlite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/CalcioScoreTableModel.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" afterPath="$PROJECT_DIR$/resources/uis/SearchPatientForm.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/uis/TACDialog.ui" afterPath="$PROJECT_DIR$/resources/uis/TACDialog.ui" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/PersonsTableModel.py" afterPath="$PROJECT_DIR$/data/PersonsTableModel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gui/forms/TACDialog.py" afterPath="$PROJECT_DIR$/gui/forms/TACDialog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/model.py" afterPath="$PROJECT_DIR$/data/model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -22,7 +27,7 @@
     <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1417098204477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1417103147973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -41,14 +46,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="model.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="model.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="35" selection-start="965" selection-end="965" vertical-scroll-proportion="0.64346766" vertical-offset="0" max-vertical-offset="1309">
-              <folding>
-                <element signature="e#697#965#0" expanded="false" />
-                <element signature="e#1005#1322#0" expanded="false" />
-              </folding>
+            <state line="62" column="28" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="1649">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalcioScoreTableModel.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/CalcioScoreTableModel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="19" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.2635379" vertical-offset="563" max-vertical-offset="1394">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TACDialog.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/createExe.py" />
         <option value="$PROJECT_DIR$/core/model.py" />
         <option value="$PROJECT_DIR$/createDBPony.py" />
         <option value="$PROJECT_DIR$/core/core.py" />
@@ -82,12 +101,13 @@
         <option value="$PROJECT_DIR$/gui/forms/ACDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/__init__.py" />
         <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
-        <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
         <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
-        <option value="$PROJECT_DIR$/data/PersonsTableModel.py" />
         <option value="$PROJECT_DIR$/data/DAO.py" />
         <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
+        <option value="$PROJECT_DIR$/data/PersonsTableModel.py" />
         <option value="$PROJECT_DIR$/data/model.py" />
+        <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
+        <option value="$PROJECT_DIR$/data/CalcioScoreTableModel.py" />
       </list>
     </option>
   </component>
@@ -95,7 +115,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -184,7 +204,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mario" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -198,13 +236,13 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="110" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="111" />
-    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="96" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -230,6 +268,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Proyectos\PyCharm Projects\Mario\data" />
       <recent name="D:\Proyectos\PyCharm Projects\Mario" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -736,7 +775,11 @@
       <created>1417095895847</created>
       <updated>1417095895847</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="added NombreArteria to DB model">
+      <created>1417098290182</created>
+      <updated>1417098290182</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -760,25 +803,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32555425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18233387" sideWeight="0.6863905" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39526626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19205834" sideWeight="0.7176196" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39439908" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31360948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905483" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2823804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -800,9 +843,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21069692" sideWeight="0.6733728" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -813,7 +856,6 @@
       <TodoPanelSettings />
     </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="adding some behaviour to forms actions" />
     <MESSAGE value="two more provinces added" />
     <MESSAGE value="showing  patients" />
     <MESSAGE value="can modify selected patients, no saving of modifications done yet." />
@@ -838,7 +880,8 @@
     <MESSAGE value="showing province in search results&#10;bug fixed: when query is empty results aren't sorted." />
     <MESSAGE value="sorting enabled and fully functional&#10;&#10;DAO.find operation no longer return ordered results" />
     <MESSAGE value="adding range restrictions to DB model" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding range restrictions to DB model" />
+    <MESSAGE value="added NombreArteria to DB model" />
+    <option name="LAST_COMMIT_MESSAGE" value="added NombreArteria to DB model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -849,32 +892,10 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StartApp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.45665446" vertical-offset="0" max-vertical-offset="819" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/APPDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="36" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.6190476" vertical-offset="0" max-vertical-offset="1462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/Controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="358" selection-end="358" vertical-scroll-proportion="0.2759463" vertical-offset="97" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1442825926/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="767" column="6" selection-start="27771" selection-end="27771" vertical-scroll-proportion="0.33333334" vertical-offset="12766" max-vertical-offset="96373">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.062271062" vertical-offset="0" max-vertical-offset="819" />
@@ -885,11 +906,6 @@
         <state line="23" column="38" selection-start="669" selection-end="669" vertical-scroll-proportion="0.31135532" vertical-offset="0" max-vertical-offset="819" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="149" selection-end="149" vertical-scroll-proportion="0.16605617" vertical-offset="0" max-vertical-offset="819" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/ACDialog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="8" selection-start="586" selection-end="631" vertical-scroll-proportion="0.21123321" vertical-offset="133" max-vertical-offset="1003" />
@@ -898,11 +914,6 @@
     <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="206" column="30" selection-start="7507" selection-end="7507" vertical-scroll-proportion="0.93772894" vertical-offset="2734" max-vertical-offset="4216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="29" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.59205776" vertical-offset="267" max-vertical-offset="1088" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/DAO.py">
@@ -917,32 +928,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/createExe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="15" selection-start="269" selection-end="269" vertical-scroll-proportion="0.3313033" vertical-offset="0" max-vertical-offset="821">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/PersonsTableModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1744" selection-end="1744" vertical-scroll-proportion="0.75152254" vertical-offset="284" max-vertical-offset="1105">
-          <folding />
-        </state>
+        <state line="17" column="15" selection-start="269" selection-end="269" vertical-scroll-proportion="0.3313033" vertical-offset="0" max-vertical-offset="821" />
       </provider>
     </entry>
     <entry file="file://C:/Python34/Lib/site-packages/pony/orm/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4142" column="3" selection-start="198279" selection-end="198282" vertical-scroll-proportion="0.33333334" vertical-offset="69694" max-vertical-offset="80257">
-          <folding />
-        </state>
+        <state line="4142" column="3" selection-start="198279" selection-end="198282" vertical-scroll-proportion="0.33333334" vertical-offset="69694" max-vertical-offset="80257" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/pony/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.14163615" vertical-offset="116" max-vertical-offset="1394" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/pony/converting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.172161" vertical-offset="3417" max-vertical-offset="4284" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/pony/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.808303" vertical-offset="4757" max-vertical-offset="5576" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/PersonsTableModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="133" selection-end="152" vertical-scroll-proportion="0.058020476" vertical-offset="68" max-vertical-offset="1105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="29" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.6522262" vertical-offset="53" max-vertical-offset="1088" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="965" selection-end="965" vertical-scroll-proportion="0.64346766" vertical-offset="0" max-vertical-offset="1309">
-          <folding>
-            <element signature="e#697#965#0" expanded="false" />
-            <element signature="e#1005#1322#0" expanded="false" />
-          </folding>
+        <state line="62" column="28" selection-start="1400" selection-end="1400" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="1649">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CalcioScoreTableModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="19" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.2635379" vertical-offset="563" max-vertical-offset="1394">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -9,6 +9,8 @@ from PyQt5.uic import loadUi
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
+from data.CalcioScoreTableModel import CalcioScoreTableModel
+
 
 class TACDialog(QDialog):
     def __init__(self, controller, *args):
@@ -25,6 +27,9 @@ class TACDialog(QDialog):
         self.buttonBox.accepted.connect(self.on_save)
 
     def modify_tac(self, tac):
+        model = CalcioScoreTableModel([] if tac is None else tac.arterias)
+        self.calcioScoreTable.setModel(model)
+
         if tac is not None:
             # TODO: restore tac data
             pass
