@@ -32,9 +32,6 @@ class TACDialog(QDialog):
         self.dateInput.setDate(self.date)   # set today's date
 
     def modify_tac(self, tac):
-        model = CalcioScoreTableModel([] if tac is None else tac.arterias)
-        self.calcioScoreTable.setModel(model)
-
         if tac is not None:
             # TODO: restore tac data
             pass
