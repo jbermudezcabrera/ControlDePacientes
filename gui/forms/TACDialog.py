@@ -31,11 +31,12 @@ class TACDialog(QDialog):
         self.buttonBox.accepted.connect(self.on_save)
         self.dateInput.setDate(self.date)   # set today's date
 
-        self.__fill_table()
+        self.__init_table()
 
     def modify_tac(self, tac):
+        self.__init_table()
+
         if tac is not None:
-            self.__fill_table(tac.arterias)
             # TODO: restore tac data
             pass
 
@@ -53,19 +54,29 @@ class TACDialog(QDialog):
         self.__data_collected = True
         self.close()
 
-    def __fill_table(self, arteries=[]):
-        row_count = self.calcioScoreTable.rowCount()
+    def __init_table(self):
+        types = self.controller.arteries
+        row_count = len(types) + 1
+        self.calcioScoreTable.setRowCount(row_count)
 
-        # mark arteries column as non editable
-        for row in range(row_count):
-            item = self.calcioScoreTable.item(row, 0)
+        for row in range(row_count - 1):
+            artery_type = types[row]
+
+            item = QTableWidgetItem(artery_type.nombre)
+            item.setData(Qt.UserRole, artery_type.id)
             item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+            self.calcioScoreTable.setItem(row, 0, item)
 
-        # mark totals row as non editable
-        row_count -=1
-        for column in range(self.calcioScoreTable.columnCount()):
-            item = self.calcioScoreTable.item(row_count, column)
-            item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+        item = QTableWidgetItem('TOTAL')
+        item.setData(Qt.UserRole, -1)
+        item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+        self.calcioScoreTable.setItem(row_count - 1, 0, item)
 
-        if arteries:
-            pass
+        for column in range(1, self.calcioScoreTable.columnCount()):
+            for row in range(self.calcioScoreTable.rowCount()):
+                item = QTableWidgetItem()
+                item.setText('0')
+
+                if row == self.calcioScoreTable.rowCount() - 1:
+                    item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+                self.calcioScoreTable.setItem(row, column, item)

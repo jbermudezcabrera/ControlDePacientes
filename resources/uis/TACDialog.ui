@@ -99,7 +99,7 @@
       <enum>QAbstractItemView::SingleSelection</enum>
      </property>
      <property name="rowCount">
-      <number>5</number>
+      <number>0</number>
      </property>
      <attribute name="horizontalHeaderCascadingSectionResizes">
       <bool>true</bool>
@@ -110,11 +110,6 @@
      <attribute name="verticalHeaderVisible">
       <bool>false</bool>
      </attribute>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
      <column>
       <property name="text">
        <string>Arteria</string>
@@ -140,161 +135,6 @@
        <string>Cuantificación de calcio</string>
       </property>
      </column>
-     <item row="0" column="0">
-      <property name="text">
-       <string>Tronco</string>
-      </property>
-     </item>
-     <item row="0" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="0" column="2">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="0" column="3">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="0" column="4">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="0">
-      <property name="text">
-       <string>DA</string>
-      </property>
-     </item>
-     <item row="1" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="2">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="3">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="1" column="4">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="0">
-      <property name="text">
-       <string>CX</string>
-      </property>
-     </item>
-     <item row="2" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="2">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="3">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="2" column="4">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="0">
-      <property name="text">
-       <string>CD</string>
-      </property>
-     </item>
-     <item row="3" column="1">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="2">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="3">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="3" column="4">
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item row="4" column="0">
-      <property name="text">
-       <string>Total</string>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-     </item>
-     <item row="4" column="1">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-     </item>
-     <item row="4" column="2">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-     </item>
-     <item row="4" column="3">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-     </item>
-     <item row="4" column="4">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-     </item>
     </widget>
    </item>
    <item>
