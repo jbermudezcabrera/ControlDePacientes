@@ -70,6 +70,11 @@ class TACDialog(QDialog):
         item = QTableWidgetItem('TOTAL')
         item.setData(Qt.UserRole, -1)
         item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
+
+        font = item.font()
+        font.setBold(True)
+        item.setFont(font)
+
         self.calcioScoreTable.setItem(row_count - 1, 0, item)
 
         for column in range(1, self.calcioScoreTable.columnCount()):
@@ -77,6 +82,11 @@ class TACDialog(QDialog):
                 item = QTableWidgetItem()
                 item.setText('0')
 
+                # is Totals row?
                 if row == self.calcioScoreTable.rowCount() - 1:
+                    font = item.font()
+                    font.setBold(True)
+
+                    item.setFont(font)
                     item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
                 self.calcioScoreTable.setItem(row, column, item)
