@@ -78,12 +78,15 @@
     </widget>
    </item>
    <item>
-    <widget class="QTableView" name="calcioScoreTable">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+     </property>
      <property name="selectionMode">
       <enum>QAbstractItemView::SingleSelection</enum>
      </property>
-     <property name="sortingEnabled">
-      <bool>true</bool>
+     <property name="rowCount">
+      <number>5</number>
      </property>
      <attribute name="horizontalHeaderCascadingSectionResizes">
       <bool>true</bool>
@@ -91,6 +94,70 @@
      <attribute name="horizontalHeaderStretchLastSection">
       <bool>true</bool>
      </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column>
+      <property name="text">
+       <string>Arteria</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nº Lesiones</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Volumen</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Masa Eq.</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cuantificación de calcio</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>Tronco</string>
+      </property>
+     </item>
+     <item row="1" column="0">
+      <property name="text">
+       <string>DA</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>CX</string>
+      </property>
+     </item>
+     <item row="3" column="0">
+      <property name="text">
+       <string>CD</string>
+      </property>
+     </item>
+     <item row="4" column="0">
+      <property name="text">
+       <string>Total</string>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </item>
     </widget>
    </item>
    <item>

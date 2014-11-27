@@ -3,6 +3,7 @@
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 import os.path
+from datetime import date
 
 from PyQt5.uic import loadUi
 
@@ -21,10 +22,14 @@ class TACDialog(QDialog):
         self.controller = controller
         self.__data_collected = False
 
+        self.date = date.today()
+        self.angio = None
+
         self.buttonBox.button(QDialogButtonBox.Save).setText('Guardar')
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')
 
         self.buttonBox.accepted.connect(self.on_save)
+        self.dateInput.setDate(self.date)   # set today's date
 
     def modify_tac(self, tac):
         model = CalcioScoreTableModel([] if tac is None else tac.arterias)
@@ -40,6 +45,10 @@ class TACDialog(QDialog):
 
     @pyqtSlot()
     def on_save(self):
+        qdate = self.dateInput.date()
+        self.date = self.date.replace(qdate.year(), qdate.month(), qdate.day())
+        self.angio = self.angioInput.toPlainText().strip()
+
         # TODO: save data
         self.__data_collected = True
         self.close()
