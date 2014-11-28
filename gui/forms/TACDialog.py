@@ -25,6 +25,7 @@ class TACDialog(QDialog):
 
         self.date = date.today()
         self.angio = None
+        self.artery_to_data = {}
 
         self.buttonBox.button(QDialogButtonBox.Save).setText('Guardar')
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')
@@ -52,7 +53,15 @@ class TACDialog(QDialog):
         self.date = self.date.replace(qdate.year(), qdate.month(), qdate.day())
         self.angio = self.angioInput.toPlainText().strip()
 
-        # TODO: save arteries table data
+        for row in range(self.calcioScoreTable.rowCount() - 1):
+            artery_id = self.calcioScoreTable.item(row, 0).data(Qt.UserRole)
+            lessions = self.calcioScoreTable.item(row, 1).data(Qt.DisplayRole)
+            volume = self.calcioScoreTable.item(row, 2).data(Qt.DisplayRole)
+            mass = self.calcioScoreTable.item(row, 3).data(Qt.DisplayRole)
+            calcium = self.calcioScoreTable.item(row, 4).data(Qt.DisplayRole)
+
+            self.artery_to_data[artery_id] = lessions, volume, mass, calcium
+
         self.__data_collected = True
         self.close()
 
