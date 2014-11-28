@@ -20,7 +20,7 @@ def arteries():
 @db_session
 def get_patient(patient_id):
     result = select(p for p in Paciente if p.id == patient_id)
-    result = result.prefetch(Provincia, APP, Complementario, TAC)
+    result = result.prefetch(Provincia, APP, Complementario, TAC, TAC.arterias)
     return result.first()
 
 
@@ -64,6 +64,9 @@ def delete_patient(patient_id):
 
     if exists(ac for ac in Complementario if ac.paciente == patient):
         Complementario.get(paciente=patient).delete()
+
+    if exists(tac for tac in TAC if tac.paciente == patient):
+        TAC.get(paciente=patient).delete()
 
     patient.delete()
 

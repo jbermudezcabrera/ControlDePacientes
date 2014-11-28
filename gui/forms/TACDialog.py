@@ -41,6 +41,9 @@ class TACDialog(QDialog):
 
         if tac is not None:
             # TODO: restore tac data
+            self.dateInput.setDate(tac.fecha)
+            self.angioInput.setPlainText(tac.angio_ct)
+            self.__fill_table(tac.arterias)
             pass
 
     @property
@@ -125,6 +128,28 @@ class TACDialog(QDialog):
         # lesiones
         int_delegate = SpinBoxDelegate(self, maximum=150)
         self.calcioScoreTable.setItemDelegateForColumn(1, int_delegate)
+
+    def __fill_table(self, arteries):
+        for artery in arteries:
+            # find the corresponding row in the table
+            for row in range(self.calcioScoreTable.rowCount()):
+                artery_id = self.calcioScoreTable.item(row, 0).data(Qt.UserRole)
+
+                # I find it
+                if artery_id == artery.id:
+                    # fill columns with artery data
+                    item = self.calcioScoreTable.item(row, 1)
+                    item.setData(Qt.DisplayRole, artery.lesiones)
+
+                    item = self.calcioScoreTable.item(row, 2)
+                    item.setData(Qt.DisplayRole, artery.volumen)
+
+                    item = self.calcioScoreTable.item(row, 3)
+                    item.setData(Qt.DisplayRole, artery.masa)
+
+                    item = self.calcioScoreTable.item(row, 4)
+                    item.setData(Qt.DisplayRole, artery.calcio)
+                    break   # go to next artery
 
 
 class SpinBoxDelegate(QStyledItemDelegate):

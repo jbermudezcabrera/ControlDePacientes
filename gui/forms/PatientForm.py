@@ -130,7 +130,6 @@ class PatientForm(QWidget):
                 self.show_error(ex)
                 return
 
-        # TODO: insert patient TAC
         if self.__tac_dialog.data_collected:
             try:
                 self.controller.set_patient_tac(patient_id,
