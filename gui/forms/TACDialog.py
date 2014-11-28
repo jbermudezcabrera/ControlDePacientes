@@ -33,6 +33,7 @@ class TACDialog(QDialog):
         self.dateInput.setDate(self.date)   # set today's date
 
         self.__init_table()
+        self.calcioScoreTable.cellChanged.connect(self.on_cell_changed)
 
     def modify_tac(self, tac):
         self.__init_table()
@@ -54,6 +55,20 @@ class TACDialog(QDialog):
         # TODO: save arteries table data
         self.__data_collected = True
         self.close()
+
+    @pyqtSlot(int,int)
+    def on_cell_changed(self, row, column):
+        totals_row = self.calcioScoreTable.rowCount() - 1
+
+        if column > 0 and row < totals_row:
+             total = 0
+
+             for r in range(totals_row):
+                item = self.calcioScoreTable.item(r, column)
+                total += item.data(Qt.DisplayRole)
+
+             item = self.calcioScoreTable.item(totals_row, column)
+             item.setData(Qt.DisplayRole, total)
 
     def __init_table(self):
         types = self.controller.arteries
@@ -115,6 +130,9 @@ class SpinBoxDelegate(QStyledItemDelegate):
         editor.setFrame(False)
         editor.setMinimum(self.__min)
         editor.setMaximum(self.__max)
+
+        if self.__double:
+            editor.setSingleStep(0.5)
 
         return editor
 
