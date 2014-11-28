@@ -9,7 +9,7 @@ from PyQt5.uic import loadUi
 
 from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QTableWidgetItem
-from PyQt5.QtWidgets import QItemDelegate
+from PyQt5.QtWidgets import QSpinBox, QDoubleSpinBox, QStyledItemDelegate
 
 from data.CalcioScoreTableModel import CalcioScoreTableModel
 
@@ -81,7 +81,8 @@ class TACDialog(QDialog):
         for column in range(1, self.calcioScoreTable.columnCount()):
             for row in range(self.calcioScoreTable.rowCount()):
                 item = QTableWidgetItem()
-                item.setText('0')
+                item.setData(Qt.UserRole, 0)
+                item.setData(Qt.DisplayRole, 0)
 
                 # is Total's row?
                 if row == self.calcioScoreTable.rowCount() - 1:
@@ -94,45 +95,37 @@ class TACDialog(QDialog):
 
         #FIXME: se bloque cuando asigno estos delegados
         # set item delegates for columns
-        # lesiones
-        #int_delegate = SpinBoxDelegate(False, 0, 150)
-        #self.calcioScoreTable.setItemDelegateForColumn(1, int_delegate)
-        #
         ## volumen, masa y calcio
-        #delegate = SpinBoxDelegate(True, 0, 10000)
-        #self.calcioScoreTable.setItemDelegateForColumn(2, delegate)
-        #self.calcioScoreTable.setItemDelegateForColumn(3, delegate)
-        #self.calcioScoreTable.setItemDelegateForColumn(4, delegate)
+        delegate = SpinBoxDelegate(self, True)
+        self.calcioScoreTable.setItemDelegate(delegate)
+
+        # lesiones
+        int_delegate = SpinBoxDelegate(self, maximum=150)
+        self.calcioScoreTable.setItemDelegateForColumn(1, int_delegate)
 
 
-class SpinBoxDelegate(QItemDelegate):
-
-    def __init__(self, double, minimum, maximum, *args):
-        super(SpinBoxDelegate, self).__init__(*args)
-        self.double_spin = double
-        self.minimum = minimum
-        self.maximum = maximum
+class SpinBoxDelegate(QStyledItemDelegate):
+    def __init__(self, parent=None, double=False, minimum=0, maximum=10000):
+        super(SpinBoxDelegate, self).__init__(parent)
+        self.__double = double
+        self.__min = minimum
+        self.__max = maximum
 
     def createEditor(self, parent, option, index):
-        if self.double_spin:
-            editor = QDoubleSpinBox()
-        else:
-            editor = QSpinBox(parent)
-
-        editor.setMinimum(self.minimum)
-        editor.setMaximum(self.maximum)
+        editor = QDoubleSpinBox(parent) if self.__double else QSpinBox(parent)
+        editor.setFrame(False)
+        editor.setMinimum(self.__min)
+        editor.setMaximum(self.__max)
 
         return editor
 
     def setEditorData(self, spinBox, index):
         value = index.model().data(index, Qt.EditRole)
-
         spinBox.setValue(value)
 
     def setModelData(self, spinBox, model, index):
         spinBox.interpretText()
         value = spinBox.value()
-
         model.setData(index, value, Qt.EditRole)
 
     def updateEditorGeometry(self, editor, option, index):
