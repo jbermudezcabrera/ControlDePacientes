@@ -40,7 +40,6 @@ class TACDialog(QDialog):
         self.__init_table()
 
         if tac is not None:
-            # TODO: restore tac data
             self.dateInput.setDate(tac.fecha)
             self.angioInput.setPlainText(tac.angio_ct)
             self.__fill_table(tac.arterias)
