@@ -10,7 +10,6 @@ from pony.orm import *
 db_path = os.path.join('../resources', 'Pacientes.sqlite')
 db = Database("sqlite", db_path, create_db=True)
 
-
 class Provincia(db.Entity):
     nombre = Required(str)
     pacientes = Set('Paciente')
@@ -24,10 +23,10 @@ class TipoArteria(db.Entity):
 class Arteria(db.Entity):
     tipo = Required(TipoArteria)
 
+    lesiones = Required(int, min=0, max=150)
+    volumen = Required(float, min=0)
     masa = Required(float, min=0)
     calcio = Required(float, min=0)
-    volumen = Required(float, min=0)
-    lesiones = Required(int, min=0, max=150)
 
     tac = Required('TAC')
 

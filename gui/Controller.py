@@ -50,3 +50,11 @@ class Controller():
     @staticmethod
     def update_ac(ac_id, hb, gli, crea, col, trig, au):
         DAO.update_ac(ac_id, hb, gli, crea, col, trig, au)
+
+    @staticmethod
+    def set_patient_tac(patient_id, date, angio, arteries):
+        DAO.set_patient_tac(patient_id, date, angio, arteries)
+
+    @staticmethod
+    def update_tac(tac_id, date, angio, arteries):
+        DAO.update_tac(tac_id, date, angio, arteries)

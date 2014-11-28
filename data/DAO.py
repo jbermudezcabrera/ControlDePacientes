@@ -93,3 +93,18 @@ def update_ac(ac_id, hb, gli, crea, col, trig, au):
     ac = Complementario[ac_id]
     ac.set(hb=hb, glicemia=gli, creatinina=crea, colesterol=col,
            trigliceridos=trig, acido_urico=au)
+
+
+@db_session
+def set_patient_tac(patient_id, date, angio, arteries):
+    tac = TAC(paciente=Paciente[patient_id], fecha=date, angio_ct=angio)
+    commit()
+
+    for artery, data in arteries.items():
+        Arteria(tipo=TipoArteria[artery], lesiones=data[0], volumen=data[1],
+                masa=data[2], calcio=data[3], tac=tac)
+
+
+@db_session
+def update_tac(tac_id, date, angio, arteries):
+    pass

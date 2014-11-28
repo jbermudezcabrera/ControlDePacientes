@@ -132,7 +132,14 @@ class PatientForm(QWidget):
 
         # TODO: insert patient TAC
         if self.__tac_dialog.data_collected:
-            pass
+            try:
+                self.controller.set_patient_tac(patient_id,
+                                                self.__tac_dialog.date,
+                                                self.__tac_dialog.angio,
+                                                self.__tac_dialog.artery_to_data)
+            except Exception as ex:
+                self.show_error(ex)
+                return
 
         QMessageBox.information(self, 'Información',
                                 'Paciente registrado satisfactoriamente')
