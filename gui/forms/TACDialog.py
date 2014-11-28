@@ -51,7 +51,7 @@ class TACDialog(QDialog):
         self.date = self.date.replace(qdate.year(), qdate.month(), qdate.day())
         self.angio = self.angioInput.toPlainText().strip()
 
-        # TODO: save data
+        # TODO: save arteries table data
         self.__data_collected = True
         self.close()
 
@@ -93,7 +93,6 @@ class TACDialog(QDialog):
                     item.setFlags(Qt.ItemIsEnabled | Qt.ItemIsSelectable)
                 self.calcioScoreTable.setItem(row, column, item)
 
-        #FIXME: se bloque cuando asigno estos delegados
         # set item delegates for columns
         ## volumen, masa y calcio
         delegate = SpinBoxDelegate(self, True)
