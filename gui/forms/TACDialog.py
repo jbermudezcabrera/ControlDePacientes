@@ -169,13 +169,13 @@ class SpinBoxDelegate(QStyledItemDelegate):
 
         return editor
 
-    def setEditorData(self, spinBox, index):
+    def setEditorData(self, spin_box, index):
         value = index.model().data(index, Qt.EditRole)
-        spinBox.setValue(value)
+        spin_box.setValue(value)
 
-    def setModelData(self, spinBox, model, index):
-        spinBox.interpretText()
-        value = spinBox.value()
+    def setModelData(self, spin_box, model, index):
+        spin_box.interpretText()
+        value = spin_box.value()
         model.setData(index, value, Qt.EditRole)
 
     def updateEditorGeometry(self, editor, option, index):

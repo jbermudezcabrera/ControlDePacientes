@@ -261,7 +261,7 @@ class PatientForm(QWidget):
                                 'Algunos campos contienen información inválida')
         return valid
 
-    def show_error(self, error='', title='Error',
+    def show_error(self, error=None, title='Error',
                    msg='Ha ocurrido el siguiente error:\n\n'):
-        text = msg + str(error)
+        text = msg + (str(error) if error else '')
         QMessageBox.critical(self, title, text)

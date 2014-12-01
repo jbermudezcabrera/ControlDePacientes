@@ -27,6 +27,7 @@ class CalcioScoreTableModel(QAbstractTableModel):
     def data(self, model_index=QModelIndex(), role=Qt.DisplayRole):
         if role == Qt.DisplayRole and model_index.isValid():
             row = model_index.row()
+            col = model_index.column()
 
             # is the Total row?
             if row == self.rowCount():
@@ -35,7 +36,6 @@ class CalcioScoreTableModel(QAbstractTableModel):
                 return self.__get_total(col)
 
             artery = self.arteries[row]
-            col = model_index.column()
 
             if col != ARTERY_COLUMN:
                 return getattr(artery, self.__index_to_field_name[col])
