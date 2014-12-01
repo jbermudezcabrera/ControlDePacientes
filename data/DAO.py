@@ -99,16 +99,21 @@ def update_ac(ac_id, hb, gli, crea, col, trig, au):
 
 
 @db_session
-def set_patient_tac(patient_id, date, angio, arteries):
-    tac = TAC(paciente=Paciente[patient_id], fecha=date, angio_ct=angio)
+def set_patient_tac(patient_id, tac_date, angio, art_data):
+    tac = TAC(paciente=Paciente[patient_id], fecha=tac_date, angio_ct=angio)
     commit()
 
-    for artery, data in arteries.items():
+    for artery, data in art_data.items():
         Arteria(tipo=TipoArteria[artery], lesiones=data[0], volumen=data[1],
                 masa=data[2], calcio=data[3], tac=tac)
 
 
 @db_session
-def update_tac(tac_id, date, angio, arteries):
-    pass
-    # TODO: make the update
+def update_tac(tac_id, tac_date, angio, art_data):
+    tac = TAC[tac_id]
+    tac.set(fecha=tac_date, angio_ct=angio)
+
+    for artery, data in art_data.items():
+        at = TipoArteria[artery]
+        art = select(a for a in Arteria if a.tipo == at and a.tac == tac).first()
+        art.set(lesiones=data[0], volumen=data[1], masa=data[2], calcio=data[3])

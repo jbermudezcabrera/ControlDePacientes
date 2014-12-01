@@ -59,7 +59,7 @@ class Complementario(db.Entity):
 
 class TAC(db.Entity):
     fecha = Required(date)
-    angio_ct = Required(str)
+    angio_ct = Optional(str)
 
     arterias = Set(Arteria, cascade_delete=True)
     paciente = Required('Paciente')

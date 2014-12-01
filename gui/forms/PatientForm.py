@@ -206,6 +206,7 @@ class PatientForm(QWidget):
                     self.show_error(ex)
                     return
 
+        # collect TAC data
         if self.__tac_dialog.data_collected:
             date = self.__tac_dialog.date
             angio = self.__tac_dialog.angio
@@ -218,15 +219,15 @@ class PatientForm(QWidget):
                 except Exception as ex:
                     self.show_error(ex)
                     return
-        else:
-            # update AC
-            tac_id = self.patient.tac.id
+            else:
+                # update TAC
+                tac_id = self.patient.tac.id
 
-            try:
-                self.controller.update_tac(tac_id, date, angio, arteries)
-            except Exception as ex:
-                self.show_error(ex)
-                return
+                try:
+                    self.controller.update_tac(tac_id, date, angio, arteries)
+                except Exception as ex:
+                    self.show_error(ex)
+                    return
 
         # collect patient data
         ci = self.ciInput.text().strip()
