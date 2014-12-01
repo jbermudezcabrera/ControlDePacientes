@@ -40,6 +40,8 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="exitAction"/>
+   <addaction name="separator"/>
    <addaction name="searchAction"/>
    <addaction name="addPatientAction"/>
   </widget>
@@ -67,7 +69,36 @@
     <string>Buscar Paciente</string>
    </property>
   </action>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/exit 128.png</normaloff>../icons/exit 128.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+   <property name="toolTip">
+    <string>Salir de la aplicación</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>exitAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
