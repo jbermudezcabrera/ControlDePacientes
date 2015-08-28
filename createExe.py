@@ -3,6 +3,7 @@
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 import sys
+
 from cx_Freeze import setup, Executable
 
 base = None
@@ -19,7 +20,7 @@ executables = [
     Executable('StartApp.py', base=base)
 ]
 
-setup(name='Mario',
+setup(name='ControlDePacientes',
       version='0.1',
       description='Sample cx_Freeze PyQt4 script',
       executables=executables

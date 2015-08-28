@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="applying some code analysis suggestions">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Pacientes.sqlite" afterPath="$PROJECT_DIR$/resources/Pacientes.sqlite" />
+    <list default="true" id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="Renombrando el proyecto y el directorio">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createExe.py" afterPath="$PROJECT_DIR$/createExe.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Proyectos\PyCharm Projects\ControlDePacientes\.idea\Mario.iml" afterPath="$PROJECT_DIR$/.idea/ControlDePacientes.iml" />
     </list>
     <ignored path="Mario.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,23 +22,20 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mario$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1416336131398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$rename.coverage" NAME="rename Coverage Results" MODIFIED="1418756539849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$model.coverage" NAME="model Coverage Results" MODIFIED="1416596739321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/Mario$createExe.coverage" NAME="createExe Coverage Results" MODIFIED="1417036306917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
-    <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1417443972243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mario$rename.coverage" NAME="rename Coverage Results" MODIFIED="1418756539849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario" />
+    <SUITE FILE_PATH="coverage/Mario$createDB.coverage" NAME="createDB Coverage Results" MODIFIED="1416433352302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario" />
+    <SUITE FILE_PATH="coverage/Mario$createExe.coverage" NAME="createExe Coverage Results" MODIFIED="1417036306917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario" />
     <SUITE FILE_PATH="coverage/Mario$renameFiles.coverage" NAME="renameFiles Coverage Results" MODIFIED="1419619274298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
-    <SUITE FILE_PATH="coverage/Mario$shuffleFiles.coverage" NAME="shuffleFiles Coverage Results" MODIFIED="1419619277392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/Mario$MainWindow.coverage" NAME="MainWindow Coverage Results" MODIFIED="1416336131398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario" />
     <SUITE FILE_PATH="coverage/Mario$shuffleFiles__1_.coverage" NAME="shuffleFiles (1) Coverage Results" MODIFIED="1419619165863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/Mario$model.coverage" NAME="model Coverage Results" MODIFIED="1416596739321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario/core" />
+    <SUITE FILE_PATH="coverage/Mario$shuffleFiles.coverage" NAME="shuffleFiles Coverage Results" MODIFIED="1419619277392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/Mario$model__1_.coverage" NAME="model (1) Coverage Results" MODIFIED="1416598065429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario/data" />
+    <SUITE FILE_PATH="coverage/Mario$createDBPony.coverage" NAME="createDBPony Coverage Results" MODIFIED="1416597579076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario" />
+    <SUITE FILE_PATH="coverage/Mario$StartApp.coverage" NAME="StartApp Coverage Results" MODIFIED="1417443972243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Mario" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
   </component>
   <component name="DatabaseView">
     <flatten value="false" />
@@ -60,26 +64,18 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gui/forms/MainWindow.py" />
-        <option value="$PROJECT_DIR$/gui/forms/SearchPatientForm.py" />
-        <option value="$PROJECT_DIR$/data/PersonsTableModel.py" />
-        <option value="$PROJECT_DIR$/gui/forms/ArteryDialog.py" />
-        <option value="$PROJECT_DIR$/StartApp.py" />
-        <option value="$PROJECT_DIR$/gui/Controller.py" />
-        <option value="$PROJECT_DIR$/data/model.py" />
-        <option value="$PROJECT_DIR$/data/DAO.py" />
-        <option value="$PROJECT_DIR$/gui/forms/TACDialog.py" />
-        <option value="$PROJECT_DIR$/gui/forms/PatientForm.py" />
-        <option value="$PROJECT_DIR$/data/CalcioScoreTableModel.py" />
         <option value="$PROJECT_DIR$/createExe.py" />
-        <option value="$PROJECT_DIR$/rename.py" />
-        <option value="$PROJECT_DIR$/shuffleFiles.py" />
-        <option value="$PROJECT_DIR$/../../shuffleFiles.py" />
-        <option value="$PROJECT_DIR$/../../renameFiles.py" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -120,7 +116,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -132,21 +128,36 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mario" />
+              <option name="myItemId" value="ControlDePacientes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mario" />
+              <option name="myItemId" value="ControlDePacientes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Mario" />
+              <option name="myItemId" value="ControlDePacientes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ControlDePacientes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ControlDePacientes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -169,7 +180,7 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="101" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="96" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../shuffleFiles.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="106" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="781" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="107" />
@@ -185,11 +196,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
-  </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <PyConsoleSettings />
-    </option>
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -213,14 +221,15 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Mario" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Mario" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StartApp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Mario/StartApp.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -242,6 +251,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../shuffleFiles.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -261,6 +271,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../renameFiles.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -285,6 +296,149 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ControlDePacientes" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ControlDePacientes" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Mario" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Mario" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Mario" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Mario" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Mario" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -312,108 +466,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mario" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mario" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mario" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mario" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Mario" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.StartApp" />
       <item index="1" class="java.lang.String" itemvalue="Python.shuffleFiles" />
@@ -428,313 +480,309 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="true" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing" myAutoUpdateAfterCommit="true" cleanupOnStartRun="true">
     <configuration useDefault="false">C:\Users\Juan\AppData\Roaming\Subversion</configuration>
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2924ebcb-25d2-47fd-a20f-bde73a39490b" name="Default" comment="" />
       <created>1416232289198</created>
+      <option name="number" value="Default" />
       <updated>1416232289198</updated>
-    </task>
-    <task id="LOCAL-00001">
-      <created>1416238935210</created>
-      <updated>1416238935210</updated>
-    </task>
-    <task id="LOCAL-00002">
-      <created>1416243977776</created>
-      <updated>1416243977776</updated>
-    </task>
-    <task id="LOCAL-00003" summary="agregado el campo de fecha al formulario de TAC.">
-      <created>1416322779481</created>
-      <updated>1416322779481</updated>
-    </task>
-    <task id="LOCAL-00004" summary="creadas las clases para todos los formularios.">
-      <created>1416323695714</created>
-      <updated>1416323695714</updated>
-    </task>
-    <task id="LOCAL-00005" summary="forms package created.">
-      <created>1416323754839</created>
-      <updated>1416323754839</updated>
-    </task>
-    <task id="LOCAL-00006" summary="menu buttons reacting correctly.">
-      <created>1416331109025</created>
-      <updated>1416331109025</updated>
-    </task>
-    <task id="LOCAL-00007" summary="all main buttons reacting correctly.">
-      <created>1416335852021</created>
-      <updated>1416335852021</updated>
-    </task>
-    <task id="LOCAL-00008" summary="adding a few horizontal lines">
-      <created>1416336158784</created>
-      <updated>1416336158784</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Moved start application code to StartApp script">
-      <created>1416336784072</created>
-      <updated>1416336784072</updated>
-    </task>
-    <task id="LOCAL-00010" summary="renamed some forms to dialog">
-      <created>1416337063238</created>
-      <updated>1416337063238</updated>
-    </task>
-    <task id="LOCAL-00011" summary="translating default text in DialogButtonBoxes">
-      <created>1416343328986</created>
-      <updated>1416343328986</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added input mask to ci input field in PatientForm">
-      <created>1416345045700</created>
-      <updated>1416345045700</updated>
-    </task>
-    <task id="LOCAL-00013" summary="restructuring project">
-      <created>1416415916544</created>
-      <updated>1416415916544</updated>
-    </task>
-    <task id="LOCAL-00014" summary="implementing something in DAO">
-      <created>1416421094266</created>
-      <updated>1416421094266</updated>
-    </task>
-    <task id="LOCAL-00015" summary="re-adding forms to VCS, i don't know why they left it">
-      <created>1416421159874</created>
-      <updated>1416421159874</updated>
-    </task>
-    <task id="LOCAL-00016" summary="implementing search function and other fixes">
-      <created>1416519828630</created>
-      <updated>1416519828630</updated>
-    </task>
-    <task id="LOCAL-00017" summary="d">
-      <created>1416583021893</created>
-      <updated>1416583021893</updated>
-    </task>
-    <task id="LOCAL-00018" summary="integrating wit Pony ORM">
-      <created>1416598105906</created>
-      <updated>1416598105906</updated>
-    </task>
-    <task id="LOCAL-00019" summary="integrating wit Pony ORM">
-      <created>1416598133511</created>
-      <updated>1416598133511</updated>
-    </task>
-    <task id="LOCAL-00020" summary="old sql queries replaced for Pony ORM">
-      <created>1416599585731</created>
-      <updated>1416599585731</updated>
-    </task>
-    <task id="LOCAL-00021" summary="adding patients works">
-      <created>1416601789070</created>
-      <updated>1416601789070</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adding some behaviour to forms actions">
-      <created>1416617652763</created>
-      <updated>1416617652763</updated>
     </task>
     <task id="LOCAL-00023" summary="two more provinces added">
       <created>1416618396597</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1416618396597</updated>
     </task>
     <task id="LOCAL-00024" summary="showing  patients">
       <created>1416627542768</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1416627542768</updated>
     </task>
     <task id="LOCAL-00025" summary="showing  patients">
       <created>1416648185954</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
       <updated>1416648185954</updated>
     </task>
     <task id="LOCAL-00026" summary="can modify selected patients, no saving of modifications done yet.">
       <created>1416651851183</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
       <updated>1416651851183</updated>
     </task>
     <task id="LOCAL-00027" summary="showing toolbar instead menubar and some bugfixes">
       <created>1416843094089</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
       <updated>1416843094089</updated>
     </task>
     <task id="LOCAL-00028" summary="delete patients now available">
       <created>1416844310681</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
       <updated>1416844310681</updated>
     </task>
     <task id="LOCAL-00029" summary="modified DB some model restrictions">
       <created>1416845581682</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
       <updated>1416845581682</updated>
     </task>
     <task id="LOCAL-00030" summary="save a patient with APP data correctly, but there are some DB issues when removing patients">
       <created>1416861366235</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
       <updated>1416861366235</updated>
     </task>
     <task id="LOCAL-00031" summary="added icons">
       <created>1416865067316</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
       <updated>1416865067316</updated>
     </task>
     <task id="LOCAL-00032" summary="temp step">
       <created>1416865083717</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
       <updated>1416865083717</updated>
     </task>
     <task id="LOCAL-00033" summary="icons added">
       <created>1416865113697</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
       <updated>1416865113697</updated>
     </task>
     <task id="LOCAL-00034" summary="icons added">
       <created>1416926744865</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
       <updated>1416926744865</updated>
     </task>
     <task id="LOCAL-00035" summary="deb model change">
       <created>1416929044735</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
       <updated>1416929044735</updated>
     </task>
     <task id="LOCAL-00036" summary="deleting patients and related APP works but is not done using the cleanest way(with cascade_delete)">
       <created>1416935858909</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
       <updated>1416935858909</updated>
     </task>
     <task id="LOCAL-00037" summary="updating patients data including APP">
       <created>1416941194741</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
       <updated>1416941194741</updated>
     </task>
     <task id="LOCAL-00038" summary="updating patients data including APP(bug fixed) and AC">
       <created>1416946411592</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
       <updated>1416946411592</updated>
     </task>
     <task id="LOCAL-00039" summary="bug fixed in main window actions">
       <created>1416948351043</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
       <updated>1416948351043</updated>
     </task>
     <task id="LOCAL-00040" summary="bug fixed in main window actions">
       <created>1416948502922</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
       <updated>1416948502922</updated>
     </task>
     <task id="LOCAL-00041" summary="adding validators to PatientForm">
       <created>1416951189531</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
       <updated>1416951189531</updated>
     </task>
     <task id="LOCAL-00042" summary="adding validators to PatientForm">
       <created>1416951516220</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
       <updated>1416951516220</updated>
     </task>
     <task id="LOCAL-00043" summary="CIValidator finished">
       <created>1417010489647</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
       <updated>1417010489647</updated>
     </task>
     <task id="LOCAL-00044" summary="CIValidator finished">
       <created>1417010548479</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
       <updated>1417010548479</updated>
     </task>
     <task id="LOCAL-00045" summary="marking invalid fields in red and showing warning message in PatientForm">
       <created>1417013625775</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
       <updated>1417013625775</updated>
     </task>
     <task id="LOCAL-00046" summary="marking invalid fields in red and showing warning message in PatientForm">
       <created>1417014767347</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
       <updated>1417014767347</updated>
     </task>
     <task id="LOCAL-00047" summary="doing some exception catching in PatientForm">
       <created>1417018290454</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
       <updated>1417018290454</updated>
     </task>
     <task id="LOCAL-00048" summary="CIValidator removed">
       <created>1417018968346</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
       <updated>1417018968346</updated>
     </task>
     <task id="LOCAL-00049" summary="setting conditions to save TAC data&#10;- search patients is showed when app starts">
       <created>1417028316652</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
       <updated>1417028316652</updated>
     </task>
     <task id="LOCAL-00050" summary="showing province in search results&#10;bug fixed: when query is empty results aren't sorted.">
       <created>1417029375985</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
       <updated>1417029375986</updated>
     </task>
     <task id="LOCAL-00051" summary="sorting enabled and fully functional&#10;&#10;DAO.find operation no longer return ordered results">
       <created>1417036155673</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
       <updated>1417036155673</updated>
     </task>
     <task id="LOCAL-00052" summary="adding range restrictions to DB model">
       <created>1417095895847</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
       <updated>1417095895847</updated>
     </task>
     <task id="LOCAL-00053" summary="added NombreArteria to DB model">
       <created>1417098290182</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
       <updated>1417098290182</updated>
     </task>
     <task id="LOCAL-00054" summary="CalcioScoreTableModel implemented.">
       <created>1417103181505</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
       <updated>1417103181505</updated>
     </task>
     <task id="LOCAL-00055" summary="changing to table widget in arteries showing part">
       <created>1417107702721</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
       <updated>1417107702721</updated>
     </task>
     <task id="LOCAL-00056" summary="changing to table widget in arteries showing part">
       <created>1417108092891</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
       <updated>1417108092891</updated>
     </task>
     <task id="LOCAL-00057" summary="changing to table widget in arteries showing part">
       <created>1417116503786</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
       <updated>1417116503786</updated>
     </task>
     <task id="LOCAL-00058" summary="changing to table widget in arteries showing part">
       <created>1417117230643</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
       <updated>1417117230643</updated>
     </task>
     <task id="LOCAL-00059" summary="changing to table widget in arteries showing part">
       <created>1417118977869</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
       <updated>1417118977869</updated>
     </task>
     <task id="LOCAL-00060" summary="changing to table widget in arteries showing part">
       <created>1417120828515</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
       <updated>1417120828515</updated>
     </task>
     <task id="LOCAL-00061" summary="changing to table widget in arteries showing part">
       <created>1417124153988</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
       <updated>1417124153988</updated>
     </task>
     <task id="LOCAL-00062" summary="changing to table widget in arteries showing part">
       <created>1417192216375</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
       <updated>1417192216375</updated>
     </task>
     <task id="LOCAL-00063" summary="changing to table widget in arteries showing part">
       <created>1417193136934</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
       <updated>1417193136934</updated>
     </task>
     <task id="LOCAL-00064" summary="changing to table widget in arteries showing part">
       <created>1417194720753</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
       <updated>1417194720753</updated>
     </task>
     <task id="LOCAL-00065" summary="collecting arteries data">
       <created>1417202676990</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
       <updated>1417202676990</updated>
     </task>
     <task id="LOCAL-00066" summary="inserting tac data">
       <created>1417204336933</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
       <updated>1417204336933</updated>
     </task>
     <task id="LOCAL-00067" summary="restoring TAC data">
       <created>1417206847210</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
       <updated>1417206847210</updated>
     </task>
     <task id="LOCAL-00068" summary="preparing to make tac update">
       <created>1417207121275</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
       <updated>1417207121275</updated>
     </task>
     <task id="LOCAL-00069" summary="doing TAC updates">
       <created>1417442909946</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
       <updated>1417442909946</updated>
     </task>
     <task id="LOCAL-00070" summary="added Exit action with icon">
       <created>1417443287530</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
       <updated>1417443287530</updated>
     </task>
     <task id="LOCAL-00071" summary="applying some code analysis suggestions">
       <created>1417444010453</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
       <updated>1417444010453</updated>
     </task>
     <option name="localTasksCounter" value="72" />
@@ -764,57 +812,63 @@
     <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32788798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18042071" sideWeight="0.7269545" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32788798" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17504051" sideWeight="0.7269545" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38973162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20502432" sideWeight="0.4084014" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32865497" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2730455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24311183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32788798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20502432" sideWeight="0.4084014" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2730455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38973162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33017752" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21069692" sideWeight="0.6733728" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39905548" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821724" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33017752" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289941" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21069692" sideWeight="0.6733728" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32662722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
-    <MESSAGE value="icons added" />
     <MESSAGE value="deb model change" />
     <MESSAGE value="deleting patients and related APP works but is not done using the cleanest way(with cascade_delete)" />
     <MESSAGE value="updating patients data including APP" />
@@ -839,7 +893,9 @@
     <MESSAGE value="doing TAC updates" />
     <MESSAGE value="added Exit action with icon" />
     <MESSAGE value="applying some code analysis suggestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="applying some code analysis suggestions" />
+    <MESSAGE value="Renombrando el proyecto y el directorio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renombrando el proyecto y el directorio" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,94 +908,109 @@
       </breakpoints>
       <option name="time" value="45" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gui/forms/SearchPatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="29" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.7160048" vertical-offset="0" max-vertical-offset="1088" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python34/Lib/site-packages/pony/orm/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="359" column="0" selection-start="13044" selection-end="13044" vertical-scroll-proportion="0.0" vertical-offset="5484" max-vertical-offset="80257" />
+        <state vertical-scroll-proportion="0.7160048">
+          <caret line="42" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/Controller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="21" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.774427" vertical-offset="293" max-vertical-offset="1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="28" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.41013268" vertical-offset="646" max-vertical-offset="1632" />
+        <state vertical-scroll-proportion="0.774427">
+          <caret line="55" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/DAO.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="30" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="2125" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/PersonsTableModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="445" selection-end="445" vertical-scroll-proportion="0.24607961" vertical-offset="68" max-vertical-offset="1105" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StartApp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="457" selection-end="457" vertical-scroll-proportion="0.38962606" vertical-offset="0" max-vertical-offset="829" />
+        <state vertical-scroll-proportion="0.24607961">
+          <caret line="16" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/PatientForm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="32" selection-start="4197" selection-end="4197" vertical-scroll-proportion="0.19541617" vertical-offset="1623" max-vertical-offset="4471" />
+        <state vertical-scroll-proportion="0.19541617">
+          <caret line="115" column="32" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/forms/TACDialog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="43" selection-start="5688" selection-end="5688" vertical-scroll-proportion="0.42581424" vertical-offset="667" max-vertical-offset="1496" />
+        <state vertical-scroll-proportion="0.42581424">
+          <caret line="160" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="466" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/CalcioScoreTableModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="703" selection-end="703" vertical-scroll-proportion="0.19541617" vertical-offset="161" max-vertical-offset="1394" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createExe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="7" selection-start="443" selection-end="443" vertical-scroll-proportion="0.49097472" vertical-offset="0" max-vertical-offset="831" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://C:/Python34/Lib/random.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="0" selection-start="9746" selection-end="9746" vertical-scroll-proportion="0.33199194" vertical-offset="4340" max-vertical-offset="12614" />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1164" selection-end="1164" vertical-scroll-proportion="-15.8" vertical-offset="217" max-vertical-offset="714" />
+        <state vertical-scroll-proportion="0.33199194">
+          <caret line="271" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../renameFiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="473" selection-end="473" vertical-scroll-proportion="0.47051746" vertical-offset="0" max-vertical-offset="831">
-          <folding>
-            <element signature="e#71#80#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.47051746">
+          <caret line="23" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../shuffleFiles.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="0.34777376" vertical-offset="0" max-vertical-offset="831">
+        <state vertical-scroll-proportion="0.34777376">
+          <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StartApp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37910798">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createExe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15981199">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.157277">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/CalcioScoreTableModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37910798">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
