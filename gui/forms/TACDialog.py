@@ -1,27 +1,22 @@
-# -*- coding: utf-8 -*-
-
-__author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
+import os
 from datetime import date
 
-from PyQt5.uic import loadUi
+from PyQt4 import uic
+from PyQt4.QtCore import pyqtSlot, Qt
+from PyQt4.QtGui import (QDialog, QDialogButtonBox, QTableWidgetItem, QSpinBox, QDoubleSpinBox,
+                         QStyledItemDelegate)
 
-from PyQt5.QtCore import pyqtSlot, Qt
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QTableWidgetItem
-from PyQt5.QtWidgets import QSpinBox, QDoubleSpinBox, QStyledItemDelegate
-
-from data.CalcioScoreTableModel import CalcioScoreTableModel
+__author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class TACDialog(QDialog):
     def __init__(self, controller, *args):
         super(TACDialog, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'TACDialog.ui'), self)
+        uic.loadUi(os.path.join('resources', 'uis', 'TACDialog.ui'), self)
 
         self.controller = controller
-        self.__data_collected = False
+        self._data_collected = False
 
         self.date = date.today()
         self.angio = None
@@ -31,23 +26,23 @@ class TACDialog(QDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')
 
         self.buttonBox.accepted.connect(self.on_save)
-        self.dateInput.setDate(self.date)   # set today's date
+        self.dateInput.setDate(self.date)  # set today's date
 
-        self.__init_table()
+        self._init_table()
         self.calcioScoreTable.cellChanged.connect(self.on_cell_changed)
 
     def modify_tac(self, tac):
-        self.__init_table()
+        self._init_table()
 
         if tac is not None:
             self.dateInput.setDate(tac.fecha)
             self.angioInput.setPlainText(tac.angio_ct)
-            self.__fill_table(tac.arterias)
+            self._fill_table(tac.arterias)
             pass
 
     @property
     def data_collected(self):
-        return self.__data_collected
+        return self._data_collected
 
     @pyqtSlot()
     def on_save(self):
@@ -64,24 +59,24 @@ class TACDialog(QDialog):
 
             self.artery_to_data[artery_id] = lessions, volume, mass, calcium
 
-        self.__data_collected = True
+        self._data_collected = True
         self.close()
 
-    @pyqtSlot(int,int)
+    @pyqtSlot(int, int)
     def on_cell_changed(self, row, column):
         totals_row = self.calcioScoreTable.rowCount() - 1
 
         if column > 0 and row < totals_row:
-             total = 0
+            total = 0
 
-             for r in range(totals_row):
+            for r in range(totals_row):
                 item = self.calcioScoreTable.item(r, column)
                 total += item.data(Qt.DisplayRole)
 
-             item = self.calcioScoreTable.item(totals_row, column)
-             item.setData(Qt.DisplayRole, total)
+            item = self.calcioScoreTable.item(totals_row, column)
+            item.setData(Qt.DisplayRole, total)
 
-    def __init_table(self):
+    def _init_table(self):
         types = self.controller.arteries
         row_count = len(types) + 1
         self.calcioScoreTable.setRowCount(row_count)
@@ -128,7 +123,7 @@ class TACDialog(QDialog):
         int_delegate = SpinBoxDelegate(self, maximum=150)
         self.calcioScoreTable.setItemDelegateForColumn(1, int_delegate)
 
-    def __fill_table(self, arteries):
+    def _fill_table(self, arteries):
         for artery in arteries:
             # find the corresponding row in the table
             for row in range(self.calcioScoreTable.rowCount()):
@@ -148,7 +143,7 @@ class TACDialog(QDialog):
 
                     item = self.calcioScoreTable.item(row, 4)
                     item.setData(Qt.DisplayRole, artery.calcio)
-                    break   # go to next artery
+                    break  # go to next artery
 
 
 class SpinBoxDelegate(QStyledItemDelegate):

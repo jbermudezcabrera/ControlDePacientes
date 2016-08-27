@@ -59,9 +59,6 @@
         <property name="placeholderText">
          <string>Parte del CI o del Nombre</string>
         </property>
-        <property name="clearButtonEnabled">
-         <bool>false</bool>
-        </property>
        </widget>
       </item>
       <item>

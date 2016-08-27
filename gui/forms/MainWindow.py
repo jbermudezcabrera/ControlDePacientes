@@ -1,25 +1,21 @@
-# -*- coding: utf-8 -*-
+import os
 
-__author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
-
-from PyQt5.uic import loadUi, compileUi
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow
+from PyQt4 import uic
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QMainWindow
 
 from gui.Controller import Controller
 from gui.forms.PatientForm import PatientForm
 from gui.forms.SearchPatientForm import SearchPatientForm
+
+__author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class MainWindow(QMainWindow):
     def __init__(self, *args):
         super(MainWindow, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'MainWindow.ui'), self)
-        #compileUi(os.path.join('resources', 'uis', 'PatientForm.ui'),
-        #open('test.py', 'w'))
+        uic.loadUi(os.path.join('resources', 'uis', 'MainWindow.ui'), self)
 
         self.controller = Controller()
 

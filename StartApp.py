@@ -1,13 +1,9 @@
-# -*- coding: utf-8 -*-
-from gui.forms import MainWindow
-
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 if __name__ == '__main__':
     import sys
 
-    from PyQt5.QtWidgets import QApplication
-    from PyQt5.QtGui import  QIcon, QPixmap
+    from PyQt4.QtGui import QApplication, QIcon, QPixmap
 
     from gui.forms.MainWindow import MainWindow
 
@@ -19,4 +15,4 @@ if __name__ == '__main__':
 
     widget = MainWindow()
     widget.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

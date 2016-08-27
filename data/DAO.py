@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
+from data.model import *
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
-import os.path
-import sqlite3 as sql
-
-from data.model import *
 
 @db_session
 def provinces():

@@ -1,14 +1,13 @@
-# -*- coding: utf-8 -*-
-
-__author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
+import os
 from datetime import date
 
 from pony.orm import *
 
+__author__ = 'Juan Manuel Bermúdez Cabrera'
+
 db_path = os.path.join('../resources', 'Pacientes.sqlite')
 db = Database("sqlite", db_path, create_db=True)
+
 
 class Provincia(db.Entity):
     nombre = Required(str)
@@ -79,7 +78,6 @@ class Paciente(db.Entity):
 db.generate_mapping(check_tables=True, create_tables=True)
 
 with db_session:
-
     if not Provincia.select():
         Provincia(nombre='Villa Clara')
         Provincia(nombre='Cienfuegos')

@@ -1,20 +1,18 @@
-# -*- coding: utf-8 -*-
+import os
+
+from PyQt4 import uic
+
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
-
-from PyQt5.uic import loadUi
-
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 
 class ACDialog(QDialog):
     def __init__(self, controller, *args):
         super(ACDialog, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'ACDialog.ui'), self)
+        uic.loadUi(os.path.join('resources', 'uis', 'ACDialog.ui'), self)
 
         self.controller = controller
 
@@ -30,7 +28,7 @@ class ACDialog(QDialog):
         self.trig = None
         self.au = None
 
-        self.__data_collected = False
+        self._data_collected = False
 
     def modify_ac(self, ac):
         if ac is not None:
@@ -43,7 +41,7 @@ class ACDialog(QDialog):
 
     @property
     def data_collected(self):
-        return self.__data_collected
+        return self._data_collected
 
     @pyqtSlot()
     def on_save(self):
@@ -54,5 +52,5 @@ class ACDialog(QDialog):
         self.trig = self.trigInput.value()
         self.au = self.acidInput.value()
 
-        self.__data_collected = True
+        self._data_collected = True
         self.close()

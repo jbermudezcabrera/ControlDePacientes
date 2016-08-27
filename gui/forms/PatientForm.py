@@ -1,58 +1,55 @@
-# -*- coding: utf-8 -*-
+import os
+from functools import partial
 
-__author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
-
-from PyQt5.uic import loadUi
-
-from PyQt5.QtCore import pyqtSlot, QRegExp, Qt
-from PyQt5.QtGui import QValidator, QRegExpValidator
-from PyQt5.QtWidgets import QWidget, QMessageBox
+from PyQt4 import uic
+from PyQt4.QtCore import pyqtSlot, QRegExp, Qt
+from PyQt4.QtGui import QValidator, QRegExpValidator, QWidget, QMessageBox
 
 from gui.forms.APPDialog import APPDialog
 from gui.forms.TACDialog import TACDialog
 from gui.forms.ACDialog import ACDialog
+
+__author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class PatientForm(QWidget):
     def __init__(self, controller, *args):
         super(PatientForm, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'PatientForm.ui'), self)
+        uic.loadUi(os.path.join('resources', 'uis', 'PatientForm.ui'), self)
 
         self.patient = None
         self.controller = controller
-        self.__input_to_sheet = {}
-        self.__validator_to_input = {}
+        self._input_to_sheet = {}
+        self._validator_to_input = {}
 
-        self.__app_dialog = APPDialog(self.controller)
-        self.__ac_dialog = ACDialog(self.controller)
-        self.__tac_dialog = TACDialog(self.controller)
+        self._app_dialog = APPDialog(self.controller)
+        self._ac_dialog = ACDialog(self.controller)
+        self._tac_dialog = TACDialog(self.controller)
 
-        self.__init_provinces()
-        self.__init_validators()
+        self._init_provinces()
+        self._init_validators()
 
-        self.appBtn.clicked.connect(self.__app_dialog.show)
-        self.acBtn.clicked.connect(self.__ac_dialog.show)
-        self.tacBtn.clicked.connect(self.__tac_dialog.show)
+        self.appBtn.clicked.connect(self._app_dialog.show)
+        self.acBtn.clicked.connect(self._ac_dialog.show)
+        self.tacBtn.clicked.connect(self._tac_dialog.show)
 
         self.saveBtn.clicked.connect(self.on_save_clicked)
 
-    def __init_provinces(self):
+    def _init_provinces(self):
         for p in self.controller.provinces:
             self.provinceCombo.addItem(p.nombre, p.id)
 
-    def __init_validators(self):
-        regexp = QRegExpValidator(QRegExp('[a-z\s]+', Qt.CaseInsensitive), self)
+    def _init_validators(self):
+        regexp = QRegExpValidator(QRegExp('[a-záéíóú\s]+', Qt.CaseInsensitive), self)
         self.nameInput.setValidator(regexp)
-        self.__validator_to_input[regexp] = self.nameInput
+        self._validator_to_input[regexp] = self.nameInput
 
         civ = QRegExpValidator(QRegExp('\d{11,11}'), self)
         self.ciInput.setValidator(civ)
-        self.__validator_to_input[civ] = self.ciInput
+        self._validator_to_input[civ] = self.ciInput
 
-    def modify_patient(self, patient):
+    def modify_patient(self, patient, cancel_cb):
         self.patient = patient
 
         # fill input fields with patient data
@@ -63,24 +60,22 @@ class PatientForm(QWidget):
         index = self.provinceCombo.findData(patient.provincia.id)
 
         if index >= 0:
-           self.provinceCombo.setCurrentIndex(index)
+            self.provinceCombo.setCurrentIndex(index)
         else:
             msg = 'No se ha podido cargar la provincia {}'
             self.show_error(msg=msg.format(patient.provincia.nombre))
 
-        # modify form behaviour
-        # cancel no longer closes form, now closes form's container
-        self.cancelBtn.clicked.disconnect(self.close)
-        self.cancelBtn.clicked.connect(lambda: self.parent().close())
+        # callback invoked when cancel button is pressed
+        self.cancelBtn.clicked.connect(cancel_cb)
 
         # make an update not an insert
         self.saveBtn.clicked.disconnect(self.on_save_clicked)
         self.saveBtn.clicked.connect(self.on_save_modified_clicked)
 
         # put app, ac and tac forms in modify mode
-        self.__app_dialog.modify_app(self.patient.app)
-        self.__ac_dialog.modify_ac(self.patient.complementario)
-        self.__tac_dialog.modify_tac(self.patient.tac)
+        self._app_dialog.modify_app(self.patient.app)
+        self._ac_dialog.modify_ac(self.patient.complementario)
+        self._tac_dialog.modify_tac(self.patient.tac)
 
     @pyqtSlot()
     def on_save_clicked(self):
@@ -91,7 +86,7 @@ class PatientForm(QWidget):
         ci = self.ciInput.text().strip()
         name = self.nameInput.text().strip()
         age = self.ageInput.value()
-        selected_prov_id = self.provinceCombo.currentData()
+        selected_prov_id = self.provinceCombo.itemData(self.provinceCombo.currentIndex())
 
         try:
             patient_id = self.controller.add_patient(ci, name, age,
@@ -101,41 +96,41 @@ class PatientForm(QWidget):
             return
 
         # insert patient APP
-        if self.__app_dialog.data_collected:
+        if self._app_dialog.data_collected:
             try:
                 self.controller.set_patient_app(patient_id,
-                                                self.__app_dialog.hta,
-                                                self.__app_dialog.ci,
-                                                self.__app_dialog.hc,
-                                                self.__app_dialog.ht,
-                                                self.__app_dialog.dm,
-                                                self.__app_dialog.smoker,
-                                                self.__app_dialog.other,
-                                                self.__app_dialog.idiag)
+                                                self._app_dialog.hta,
+                                                self._app_dialog.ci,
+                                                self._app_dialog.hc,
+                                                self._app_dialog.ht,
+                                                self._app_dialog.dm,
+                                                self._app_dialog.smoker,
+                                                self._app_dialog.other,
+                                                self._app_dialog.idiag)
             except Exception as ex:
                 self.show_error(ex)
                 return
 
         # insert patient AC
-        if self.__ac_dialog.data_collected:
+        if self._ac_dialog.data_collected:
             try:
                 self.controller.set_patient_ac(patient_id,
-                                               self.__ac_dialog.hb,
-                                               self.__ac_dialog.gli,
-                                               self.__ac_dialog.crea,
-                                               self.__ac_dialog.col,
-                                               self.__ac_dialog.trig,
-                                               self.__ac_dialog.au)
+                                               self._ac_dialog.hb,
+                                               self._ac_dialog.gli,
+                                               self._ac_dialog.crea,
+                                               self._ac_dialog.col,
+                                               self._ac_dialog.trig,
+                                               self._ac_dialog.au)
             except Exception as ex:
                 self.show_error(ex)
                 return
 
-        if self.__tac_dialog.data_collected:
+        if self._tac_dialog.data_collected:
             try:
                 self.controller.set_patient_tac(patient_id,
-                                                self.__tac_dialog.date,
-                                                self.__tac_dialog.angio,
-                                                self.__tac_dialog.artery_to_data)
+                                                self._tac_dialog.date,
+                                                self._tac_dialog.angio,
+                                                self._tac_dialog.artery_to_data)
             except Exception as ex:
                 self.show_error(ex)
                 return
@@ -150,15 +145,15 @@ class PatientForm(QWidget):
             return
 
         # collect APP data
-        if self.__app_dialog.data_collected:
-            hta = self.__app_dialog.hta
-            ci = self.__app_dialog.ci
-            hc = self.__app_dialog.hc
-            ht = self.__app_dialog.ht
-            dm = self.__app_dialog.dm
-            smoker = self.__app_dialog.smoker
-            other = self.__app_dialog.other
-            idiag = self.__app_dialog.idiag
+        if self._app_dialog.data_collected:
+            hta = self._app_dialog.hta
+            ci = self._app_dialog.ci
+            hc = self._app_dialog.hc
+            ht = self._app_dialog.ht
+            dm = self._app_dialog.dm
+            smoker = self._app_dialog.smoker
+            other = self._app_dialog.other
+            idiag = self._app_dialog.idiag
 
             if not self.patient.app:
                 try:
@@ -180,13 +175,13 @@ class PatientForm(QWidget):
                     return
 
         # collect AC data
-        if self.__ac_dialog.data_collected:
-            hb = self.__ac_dialog.hb
-            gli = self.__ac_dialog.gli
-            crea = self.__ac_dialog.crea
-            col = self.__ac_dialog.col
-            trig = self.__ac_dialog.trig
-            au = self.__ac_dialog.au
+        if self._ac_dialog.data_collected:
+            hb = self._ac_dialog.hb
+            gli = self._ac_dialog.gli
+            crea = self._ac_dialog.crea
+            col = self._ac_dialog.col
+            trig = self._ac_dialog.trig
+            au = self._ac_dialog.au
 
             if not self.patient.complementario:
                 try:
@@ -207,10 +202,10 @@ class PatientForm(QWidget):
                     return
 
         # collect TAC data
-        if self.__tac_dialog.data_collected:
-            date = self.__tac_dialog.date
-            angio = self.__tac_dialog.angio
-            arteries = self.__tac_dialog.artery_to_data
+        if self._tac_dialog.data_collected:
+            date = self._tac_dialog.date
+            angio = self._tac_dialog.angio
+            arteries = self._tac_dialog.artery_to_data
 
             if not self.patient.tac:
                 try:
@@ -233,7 +228,7 @@ class PatientForm(QWidget):
         ci = self.ciInput.text().strip()
         name = self.nameInput.text().strip()
         age = self.ageInput.value()
-        selected_prov_id = self.provinceCombo.currentData()
+        selected_prov_id = self.provinceCombo.itemData(self.provinceCombo.currentIndex())
 
         # update patient
         try:
@@ -248,13 +243,13 @@ class PatientForm(QWidget):
     def validate_input(self):
         valid = True
 
-        for v, i in self.__validator_to_input.items():
+        for v, i in self._validator_to_input.items():
             if v.validate(i.text(), len(i.text()))[0] != QValidator.Acceptable:
                 valid = False
-                self.__input_to_sheet[i] = i.styleSheet()
+                self._input_to_sheet[i] = i.styleSheet()
                 i.setStyleSheet('border: 1px solid red')
-            elif i in self.__input_to_sheet:
-                i.setStyleSheet(self.__input_to_sheet[i])
+            elif i in self._input_to_sheet:
+                i.setStyleSheet(self._input_to_sheet[i])
 
         if not valid:
             QMessageBox.warning(self, 'Valores incorrectos',

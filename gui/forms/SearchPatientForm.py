@@ -1,22 +1,21 @@
-# -*- coding: utf-8 -*-
+import os
+from functools import partial
 
-__author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
-
-from PyQt5.uic import loadUi
-from PyQt5.QtCore import Qt, pyqtSlot
-from PyQt5.QtWidgets import QWidget, QDialog, QMessageBox
+from PyQt4 import uic
+from PyQt4.QtCore import Qt, pyqtSlot
+from PyQt4.QtGui import QWidget, QDialog, QMessageBox
 
 from gui.forms.PatientForm import PatientForm
 from data.PersonsTableModel import PersonsTableModel
+
+__author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class SearchPatientForm(QWidget):
     def __init__(self, controller, *args):
         super(SearchPatientForm, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'SearchPatientForm.ui'), self)
+        uic.loadUi(os.path.join('resources', 'uis', 'SearchPatientForm.ui'), self)
 
         self.controller = controller
 
@@ -25,8 +24,8 @@ class SearchPatientForm(QWidget):
         self.deleteBtn.clicked.connect(self.on_delete_clicked)
         self.patientsTable.doubleClicked.connect(self.on_modify_clicked)
 
-        self.patientsTable.clicked.connect(lambda: self.modifyBtn.setEnabled(True))
-        self.patientsTable.clicked.connect(lambda: self.deleteBtn.setEnabled(True))
+        self.patientsTable.clicked.connect(partial(self.modifyBtn.setEnabled, True))
+        self.patientsTable.clicked.connect(partial(self.deleteBtn.setEnabled, True))
 
     @pyqtSlot()
     def on_search_clicked(self):
@@ -44,11 +43,13 @@ class SearchPatientForm(QWidget):
         dialog.setWindowTitle('Modificar paciente')
         dialog.finished.connect(self.on_search_clicked)
 
+        patient = self.controller.patient(self._selected_patient_id())
+
         form = PatientForm(self.controller)
         form.setParent(dialog)
-        form.modify_patient(self.controller.patient(self.__selected_patient_id()))
+        form.modify_patient(patient, dialog.close)
 
-        dialog.show()
+        dialog.exec()
 
     @pyqtSlot()
     def on_delete_clicked(self):
@@ -56,10 +57,10 @@ class SearchPatientForm(QWidget):
                                      '¿Desea eliminar el paciente seleccionado?',
                                      QMessageBox.Yes | QMessageBox.No)
         if reply == QMessageBox.Yes:
-            self.controller.delete_patient(self.__selected_patient_id())
+            self.controller.delete_patient(self._selected_patient_id())
             self.on_search_clicked()
 
-    def __selected_patient_id(self):
+    def _selected_patient_id(self):
         index_model = self.patientsTable.selectedIndexes()[0]
         patient_id = self.patientsTable.model().data(index_model, Qt.UserRole)
         return patient_id

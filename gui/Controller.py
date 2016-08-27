@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
+from data import DAO
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
-from data import DAO
 
-
-class Controller():
-
+class Controller:
     @property
     def provinces(self):
         return DAO.provinces()

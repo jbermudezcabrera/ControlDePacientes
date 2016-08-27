@@ -1,19 +1,17 @@
-# -*- coding: utf-8 -*-
+import os
+
+from PyQt4 import uic
+from PyQt4.QtCore import pyqtSlot
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
-
-import os.path
-
-from PyQt5.uic import loadUi
-from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 
 class APPDialog(QDialog):
     def __init__(self, controller, *args):
         super(APPDialog, self).__init__(*args)
 
-        loadUi(os.path.join('resources', 'uis', 'APPDialog.ui'), self)
+        uic.loadUi(os.path.join('resources', 'uis', 'APPDialog.ui'), self)
 
         self.controller = controller
 
@@ -31,18 +29,18 @@ class APPDialog(QDialog):
         self.other = None
         self.idiag = None
 
-        self.__data_collected = False
+        self._data_collected = False
 
-        self.__init_dm()
-        self.__init_smoker()
+        self._init_dm()
+        self._init_smoker()
 
-    def __init_dm(self):
+    def _init_dm(self):
         self.dmCombo.clear()
         self.dmCombo.addItem('No', 0)
         self.dmCombo.addItem('Tipo I', 1)
         self.dmCombo.addItem('Tipo II', 2)
 
-    def __init_smoker(self):
+    def _init_smoker(self):
         self.smokerCombo.clear()
         self.smokerCombo.addItem('No', 0)
         self.smokerCombo.addItem('Ex', 1)
@@ -50,7 +48,7 @@ class APPDialog(QDialog):
 
     @property
     def data_collected(self):
-        return self.__data_collected
+        return self._data_collected
 
     def modify_app(self, app):
         if app is not None:
@@ -71,10 +69,10 @@ class APPDialog(QDialog):
         self.ci = self.ciCheck.isChecked()
         self.hc = self.hclCheck.isChecked()
         self.ht = self.htdCheck.isChecked()
-        self.dm = self.dmCombo.currentData()
-        self.smoker = self.smokerCombo.currentData()
+        self.dm = self.dmCombo.itemData(self.dmCombo.currentIndex())
+        self.smoker = self.smokerCombo.itemData(self.smokerCombo.currentIndex())
         self.other = self.otherInput.text().strip()
         self.idiag = self.idInput.toPlainText().strip()
 
-        self.__data_collected = True
+        self._data_collected = True
         self.close()
