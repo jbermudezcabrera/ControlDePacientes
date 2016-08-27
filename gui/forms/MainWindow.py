@@ -4,7 +4,6 @@ from PyQt4 import uic
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QMainWindow
 
-from gui.Controller import Controller
 from gui.forms.PatientForm import PatientForm
 from gui.forms.SearchPatientForm import SearchPatientForm
 
@@ -17,8 +16,6 @@ class MainWindow(QMainWindow):
 
         uic.loadUi(os.path.join('resources', 'uis', 'MainWindow.ui'), self)
 
-        self.controller = Controller()
-
         self.addPatientAction.triggered.connect(self.on_add_patient)
         self.searchAction.triggered.connect(self.on_search_patient)
 
@@ -29,11 +26,11 @@ class MainWindow(QMainWindow):
         central = self.centralWidget()
 
         if not (isinstance(central, PatientForm) and central.isVisible()):
-            self.setCentralWidget(PatientForm(self.controller))
+            self.setCentralWidget(PatientForm())
 
     @pyqtSlot()
     def on_search_patient(self):
         central = self.centralWidget()
 
         if not isinstance(central, SearchPatientForm) or not central.isVisible():
-            self.setCentralWidget(SearchPatientForm(self.controller))
+            self.setCentralWidget(SearchPatientForm())

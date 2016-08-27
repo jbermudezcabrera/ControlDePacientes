@@ -9,12 +9,10 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class ACDialog(QDialog):
-    def __init__(self, controller, *args):
+    def __init__(self, *args):
         super(ACDialog, self).__init__(*args)
 
         uic.loadUi(os.path.join('resources', 'uis', 'ACDialog.ui'), self)
-
-        self.controller = controller
 
         self.buttonBox.button(QDialogButtonBox.Save).setText('Guardar')
         self.buttonBox.button(QDialogButtonBox.Cancel).setText('Cancelar')

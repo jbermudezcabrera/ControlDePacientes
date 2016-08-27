@@ -6,16 +6,17 @@ from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import (QDialog, QDialogButtonBox, QTableWidgetItem, QSpinBox, QDoubleSpinBox,
                          QStyledItemDelegate)
 
+from gui import controller
+
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class TACDialog(QDialog):
-    def __init__(self, controller, *args):
+    def __init__(self, *args):
         super(TACDialog, self).__init__(*args)
 
         uic.loadUi(os.path.join('resources', 'uis', 'TACDialog.ui'), self)
 
-        self.controller = controller
         self._data_collected = False
 
         self.date = date.today()
@@ -77,7 +78,7 @@ class TACDialog(QDialog):
             item.setData(Qt.DisplayRole, total)
 
     def _init_table(self):
-        types = self.controller.arteries
+        types = controller.arteries()
         row_count = len(types) + 1
         self.calcioScoreTable.setRowCount(row_count)
 

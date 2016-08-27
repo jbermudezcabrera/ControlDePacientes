@@ -1,57 +1,55 @@
-from data import DAO
+from data import dao
 
 __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
-class Controller:
-    @property
-    def provinces(self):
-        return DAO.provinces()
+def provinces():
+    return dao.provinces()
 
-    @property
-    def arteries(self):
-        return DAO.arteries()
 
-    @staticmethod
-    def patient(patient_id):
-        return DAO.get_patient(patient_id)
+def arteries():
+    return dao.arteries()
 
-    @staticmethod
-    def find_patients(search_text):
-        return DAO.find_patients(search_text)
 
-    @staticmethod
-    def add_patient(ci, name, age, province_id):
-        return DAO.insert_patient(ci, name, age, province_id)
+def find_patients(search_text):
+    return dao.find_patients(search_text)
 
-    @staticmethod
-    def update_patient(patient_id, ci, name, age, province_id):
-        DAO.update_patient(patient_id, ci, name, age, province_id)
 
-    @staticmethod
-    def delete_patient(patient_id):
-        DAO.delete_patient(patient_id)
+def add_patient(ci, name, age, province_id):
+    return dao.insert_patient(ci, name, age, province_id)
 
-    @staticmethod
-    def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
-        DAO.set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag)
 
-    @staticmethod
-    def update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag):
-        DAO.update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag)
+def update_patient(patient_id, ci, name, age, province_id):
+    dao.update_patient(patient_id, ci, name, age, province_id)
 
-    @staticmethod
-    def set_patient_ac(patient_id, hb, gli, crea, col, trig, au):
-        DAO.set_patient_ac(patient_id, hb, gli, crea, col, trig, au)
 
-    @staticmethod
-    def update_ac(ac_id, hb, gli, crea, col, trig, au):
-        DAO.update_ac(ac_id, hb, gli, crea, col, trig, au)
+def delete_patient(patient_id):
+    dao.delete_patient(patient_id)
 
-    @staticmethod
-    def set_patient_tac(patient_id, date, angio, arteries):
-        DAO.set_patient_tac(patient_id, date, angio, arteries)
 
-    @staticmethod
-    def update_tac(tac_id, date, angio, arteries):
-        DAO.update_tac(tac_id, date, angio, arteries)
+def set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+    dao.set_patient_app(patient_id, hta, ci, hc, ht, dm, smoker, other, idiag)
+
+
+def update_tac(tac_id, date, angio, arteries):
+    dao.update_tac(tac_id, date, angio, arteries)
+
+
+def set_patient_tac(patient_id, date, angio, arteries):
+    dao.set_patient_tac(patient_id, date, angio, arteries)
+
+
+def update_ac(ac_id, hb, gli, crea, col, trig, au):
+    dao.update_ac(ac_id, hb, gli, crea, col, trig, au)
+
+
+def set_patient_ac(patient_id, hb, gli, crea, col, trig, au):
+    dao.set_patient_ac(patient_id, hb, gli, crea, col, trig, au)
+
+
+def update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag):
+    dao.update_app(app_id, hta, ci, hc, ht, dm, smoker, other, idiag)
+
+
+def patient(patient_id):
+    return dao.get_patient(patient_id)

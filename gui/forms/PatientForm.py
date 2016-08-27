@@ -1,10 +1,10 @@
 import os
-from functools import partial
 
 from PyQt4 import uic
 from PyQt4.QtCore import pyqtSlot, QRegExp, Qt
 from PyQt4.QtGui import QValidator, QRegExpValidator, QWidget, QMessageBox
 
+from gui import controller
 from gui.forms.APPDialog import APPDialog
 from gui.forms.TACDialog import TACDialog
 from gui.forms.ACDialog import ACDialog
@@ -13,19 +13,18 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class PatientForm(QWidget):
-    def __init__(self, controller, *args):
+    def __init__(self, *args):
         super(PatientForm, self).__init__(*args)
 
         uic.loadUi(os.path.join('resources', 'uis', 'PatientForm.ui'), self)
 
         self.patient = None
-        self.controller = controller
         self._input_to_sheet = {}
         self._validator_to_input = {}
 
-        self._app_dialog = APPDialog(self.controller)
-        self._ac_dialog = ACDialog(self.controller)
-        self._tac_dialog = TACDialog(self.controller)
+        self._app_dialog = APPDialog()
+        self._ac_dialog = ACDialog()
+        self._tac_dialog = TACDialog()
 
         self._init_provinces()
         self._init_validators()
@@ -37,7 +36,7 @@ class PatientForm(QWidget):
         self.saveBtn.clicked.connect(self.on_save_clicked)
 
     def _init_provinces(self):
-        for p in self.controller.provinces:
+        for p in controller.provinces():
             self.provinceCombo.addItem(p.nombre, p.id)
 
     def _init_validators(self):
@@ -89,8 +88,7 @@ class PatientForm(QWidget):
         selected_prov_id = self.provinceCombo.itemData(self.provinceCombo.currentIndex())
 
         try:
-            patient_id = self.controller.add_patient(ci, name, age,
-                                                     selected_prov_id)
+            patient_id = controller.add_patient(ci, name, age, selected_prov_id)
         except Exception as ex:
             self.show_error(ex)
             return
@@ -98,15 +96,15 @@ class PatientForm(QWidget):
         # insert patient APP
         if self._app_dialog.data_collected:
             try:
-                self.controller.set_patient_app(patient_id,
-                                                self._app_dialog.hta,
-                                                self._app_dialog.ci,
-                                                self._app_dialog.hc,
-                                                self._app_dialog.ht,
-                                                self._app_dialog.dm,
-                                                self._app_dialog.smoker,
-                                                self._app_dialog.other,
-                                                self._app_dialog.idiag)
+                controller.set_patient_app(patient_id,
+                                           self._app_dialog.hta,
+                                           self._app_dialog.ci,
+                                           self._app_dialog.hc,
+                                           self._app_dialog.ht,
+                                           self._app_dialog.dm,
+                                           self._app_dialog.smoker,
+                                           self._app_dialog.other,
+                                           self._app_dialog.idiag)
             except Exception as ex:
                 self.show_error(ex)
                 return
@@ -114,23 +112,23 @@ class PatientForm(QWidget):
         # insert patient AC
         if self._ac_dialog.data_collected:
             try:
-                self.controller.set_patient_ac(patient_id,
-                                               self._ac_dialog.hb,
-                                               self._ac_dialog.gli,
-                                               self._ac_dialog.crea,
-                                               self._ac_dialog.col,
-                                               self._ac_dialog.trig,
-                                               self._ac_dialog.au)
+                controller.set_patient_ac(patient_id,
+                                          self._ac_dialog.hb,
+                                          self._ac_dialog.gli,
+                                          self._ac_dialog.crea,
+                                          self._ac_dialog.col,
+                                          self._ac_dialog.trig,
+                                          self._ac_dialog.au)
             except Exception as ex:
                 self.show_error(ex)
                 return
 
         if self._tac_dialog.data_collected:
             try:
-                self.controller.set_patient_tac(patient_id,
-                                                self._tac_dialog.date,
-                                                self._tac_dialog.angio,
-                                                self._tac_dialog.artery_to_data)
+                controller.set_patient_tac(patient_id,
+                                           self._tac_dialog.date,
+                                           self._tac_dialog.angio,
+                                           self._tac_dialog.artery_to_data)
             except Exception as ex:
                 self.show_error(ex)
                 return
@@ -157,9 +155,9 @@ class PatientForm(QWidget):
 
             if not self.patient.app:
                 try:
-                    self.controller.set_patient_app(self.patient.id, hta, ci,
-                                                    hc, ht, dm, smoker, other,
-                                                    idiag)
+                    controller.set_patient_app(self.patient.id, hta, ci,
+                                               hc, ht, dm, smoker, other,
+                                               idiag)
                 except Exception as ex:
                     self.show_error(ex)
                     return
@@ -168,8 +166,8 @@ class PatientForm(QWidget):
                 app_id = self.patient.app.id
 
                 try:
-                    self.controller.update_app(app_id, hta, ci, hc, ht, dm,
-                                               smoker, other, idiag)
+                    controller.update_app(app_id, hta, ci, hc, ht, dm,
+                                          smoker, other, idiag)
                 except Exception as ex:
                     self.show_error(ex)
                     return
@@ -185,8 +183,8 @@ class PatientForm(QWidget):
 
             if not self.patient.complementario:
                 try:
-                    self.controller.set_patient_ac(self.patient.id, hb, gli,
-                                                   crea, col, trig, au)
+                    controller.set_patient_ac(self.patient.id, hb, gli,
+                                              crea, col, trig, au)
                 except Exception as ex:
                     self.show_error(ex)
                     return
@@ -195,8 +193,8 @@ class PatientForm(QWidget):
                 ac_id = self.patient.complementario.id
 
                 try:
-                    self.controller.update_ac(ac_id, hb, gli, crea, col,
-                                              trig, au)
+                    controller.update_ac(ac_id, hb, gli, crea, col,
+                                         trig, au)
                 except Exception as ex:
                     self.show_error(ex)
                     return
@@ -209,8 +207,8 @@ class PatientForm(QWidget):
 
             if not self.patient.tac:
                 try:
-                    self.controller.set_patient_tac(self.patient.id, date,
-                                                    angio, arteries)
+                    controller.set_patient_tac(self.patient.id, date,
+                                               angio, arteries)
                 except Exception as ex:
                     self.show_error(ex)
                     return
@@ -219,7 +217,7 @@ class PatientForm(QWidget):
                 tac_id = self.patient.tac.id
 
                 try:
-                    self.controller.update_tac(tac_id, date, angio, arteries)
+                    controller.update_tac(tac_id, date, angio, arteries)
                 except Exception as ex:
                     self.show_error(ex)
                     return
@@ -232,8 +230,8 @@ class PatientForm(QWidget):
 
         # update patient
         try:
-            self.controller.update_patient(self.patient.id, ci, name, age,
-                                           selected_prov_id)
+            controller.update_patient(self.patient.id, ci, name, age,
+                                      selected_prov_id)
             QMessageBox.information(self, 'Información',
                                     'Paciente actualizado correctamente')
             self.parent().close()

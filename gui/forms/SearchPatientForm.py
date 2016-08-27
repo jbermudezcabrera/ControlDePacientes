@@ -5,6 +5,7 @@ from PyQt4 import uic
 from PyQt4.QtCore import Qt, pyqtSlot
 from PyQt4.QtGui import QWidget, QDialog, QMessageBox
 
+from gui import controller
 from gui.forms.PatientForm import PatientForm
 from data.PersonsTableModel import PersonsTableModel
 
@@ -12,12 +13,10 @@ __author__ = 'Juan Manuel Bermúdez Cabrera'
 
 
 class SearchPatientForm(QWidget):
-    def __init__(self, controller, *args):
+    def __init__(self, *args):
         super(SearchPatientForm, self).__init__(*args)
 
         uic.loadUi(os.path.join('resources', 'uis', 'SearchPatientForm.ui'), self)
-
-        self.controller = controller
 
         self.searchBtn.clicked.connect(self.on_search_clicked)
         self.modifyBtn.clicked.connect(self.on_modify_clicked)
@@ -29,7 +28,7 @@ class SearchPatientForm(QWidget):
 
     @pyqtSlot()
     def on_search_clicked(self):
-        patients = self.controller.find_patients(self.queryInput.text().strip())
+        patients = controller.find_patients(self.queryInput.text().strip())
         model = PersonsTableModel(patients)
         self.patientsTable.setModel(model)
 
@@ -43,9 +42,9 @@ class SearchPatientForm(QWidget):
         dialog.setWindowTitle('Modificar paciente')
         dialog.finished.connect(self.on_search_clicked)
 
-        patient = self.controller.patient(self._selected_patient_id())
+        patient = controller.patient(self._selected_patient_id())
 
-        form = PatientForm(self.controller)
+        form = PatientForm()
         form.setParent(dialog)
         form.modify_patient(patient, dialog.close)
 
@@ -57,7 +56,7 @@ class SearchPatientForm(QWidget):
                                      '¿Desea eliminar el paciente seleccionado?',
                                      QMessageBox.Yes | QMessageBox.No)
         if reply == QMessageBox.Yes:
-            self.controller.delete_patient(self._selected_patient_id())
+            controller.delete_patient(self._selected_patient_id())
             self.on_search_clicked()
 
     def _selected_patient_id(self):
