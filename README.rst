@@ -15,11 +15,14 @@ de estos.
 Requerimientos de uso
 ---------------------
 
-python >= 3
-pony-orm
-PyQt4
+* python >= 3
+* pony-orm
+* PyQt4
 
-* Para crear ejecutable de Windows - cx_Freeze
+Para crear ejecutable de Windows
+--------------------------------
+
+* cx_Freeze
 
 License
 -------
